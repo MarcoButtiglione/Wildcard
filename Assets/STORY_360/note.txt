@@ -1,0 +1,18 @@
+-ambient lowpoly: https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-simple-nature-pack-162153
+-personaggi fattoria: https://assetstore.unity.com/packages/3d/farm-animals-set-97945
+-pupazzi animali: https://assetstore.unity.com/packages/3d/characters/6-x-3d-cute-toy-models-105033
+-pollo lowpoly: https://assetstore.unity.com/packages/3d/characters/animals/meshtint-free-chicken-mega-toon-series-151842
+-pulcino lowpoly: https://assetstore.unity.com/packages/3d/characters/animals/meshtint-free-chick-mega-toon-series-152777
+-vegetazione: https://assetstore.unity.com/packages/3d/vegetation/lowpoly-vegetation-season-pack-lite-96083
+-forest lowpoly:https://assetstore.unity.com/packages/3d/environments/landscapes/free-low-poly-nature-forest-205742
+-cat: https://assetstore.unity.com/packages/3d/characters/animals/mammals/cartoon-cat-70180
+
+
+-shiba inu :https://poly.pizza/m/y4wdQpg767
+-alpaca: https://poly.pizza/m/bCVFD48i2l
+-omino: https://poly.pizza/m/DgOCW9ZCRJ
+-omino cartoon: https://poly.pizza/m/kKtL4zvS3n
+-robottino:  https://poly.pizza/m/QCm7qe9uNJ
+-coniglio: https://poly.pizza/m/irZjWFARyl
+-doggo: https://poly.pizza/m/a0GNnW8q2IH
+-gatto: https://poly.pizza/m/4Pp1CY3bC43
