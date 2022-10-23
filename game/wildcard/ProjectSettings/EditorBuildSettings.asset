@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Research360_Piggy.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 112665d6d3b1df9449c313e563bbcece, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e1aba473c1f4c6b4da644926d2469198, type: 2}
