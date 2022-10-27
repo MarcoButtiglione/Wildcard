@@ -1,29 +1,29 @@
 RESEARCH 360: SUZY-> TEMA MARE
 SOTRY360             env:https://poly.pizza/m/1jUt3HwyHfn (?)
-                     suzy:?
+                     suzy:https://assetstore.unity.com/packages/3d/characters/animals/lovely-animals-pack-92629
                      suzy vuole passare una giornata all' insegna del divertimento, cosi' decide di andare in spiaggia.
                      Per prima cosa dovrà trovare un ombrellone (https://poly.pizza/m/2li3sdSkmCI) per potersi riparare dal sole cocente della giornata.
                      Dopo aver trovato l' ombrellone le servirà una sdraio(https://poly.pizza/m/8ir-Gw1ZObm) per potersi finalmente sedere e riposare.
                      Suzy decide che vuole divertirsi un po', cosi va alla ricerca di una palla(https://poly.pizza/m/4IwPTeOmq6c). Bene adesso le manca soltanto 
                      un compagno di giochi: fortunatamente li' vicino ci sono un granchio (https://poly.pizza/m/fdvCZS-mwQW) e più in la' un gabbiano(https://poly.pizza/m/dUFuQoM-k3s).
                      I tre diventano amici e cosi' la giornata di suzy si conclude nel migliore dei modi
-               Giulio->TEMA FATTORIA
+               Tullio->TEMA FATTORIA
                        env:https://assetstore.unity.com/packages/3d/environments/landscapes/free-low-poly-nature-forest-205742(?)
-                       giulio:?
+                       Tullio:https://poly.pizza/m/kKtL4zvS3n
                        ANIMALI https://poly.pizza/bundle/Farm-Animal-Pack-1kUvRTPLzT
-                       Giulio il coniglio abita in una grande fattoria insieme a tanti amici.Tra qualche giorno sarà il suo compleano così decide di andare ad invitare tutti
-                       gli abitanti della fattoria. Per primo va a trovare il suo amico porcellino, lui accetta l invito. Cosi' giulio continua a passeggiare nella fattoria
-                       ed incontra la mucca che stava mangiando un po' di erba. la sua amica mucca accetta l' invito e consiglia a giulio di invitare il cavallo, Giulio si mette
+                       Tullio il coniglio abita in una grande fattoria insieme a tanti amici.Tra qualche giorno sarà il suo compleano così decide di andare ad invitare tutti
+                       gli abitanti della fattoria. Per primo va a trovare il suo amico porcellino, lui accetta l invito. Cosi' Tullio continua a passeggiare nella fattoria
+                       ed incontra la mucca che stava mangiando un po' di erba. la sua amica mucca accetta l' invito e consiglia a Tullio di invitare il cavallo, Tullio si mette
                        alla ricerca del cavallo. Eccolo! il cavallo accetta l' invito e dice che porterà tanti palloncini cosi' potranno giocare tutti insieme.
-                       Nella lista degli invitati c'è anche la pecorella. Giulio si guatda intorno e trova la sua amica pecorella che purtroppo non potrà venire alla festa
-                       Così Giulio decide di invitare il suo amico di scuola cane.Eccolo è proprio li difronte!Giulio controlla la lista degliinvitati... ne manca uno è il
+                       Nella lista degli invitati c'è anche la pecorella. Tullio si guatda intorno e trova la sua amica pecorella che purtroppo non potrà venire alla festa
+                       Così Tullio decide di invitare il suo amico di scuola cane.Eccolo è proprio li difronte!Tullio controlla la lista degliinvitati... ne manca uno è il
                        lama! Adesso che tutti sono stati invitati non resta che aspettare il giorno della festa!
                
 
 
                Tobia->TEMA CUCINA
                       env:https://poly.pizza/m/42OaqleENRS
-                      Tobia:?
+                      Tobia:https://assetstore.unity.com/packages/3d/characters/humanoids/character-pack-free-sample-79870
                       https://poly.pizza/bundle/Food-Kit-vOc58LJ0ge
                       Tobia vuole preparare una torta di mele per il compleanno della mamma, si trova nella cucina di casa sua cosi' inizia a cercare un foglio(https://poly.pizza/m/7-99AhSn6qj) dove c'è
                      scritta la ricetta della torta  che a sua mamma piace tanto.Una volta trovato il foglio inizia con il cercare una ciotola (https://poly.pizza/m/1EwfmPQ-8ur)per mettere tutti insieme 
@@ -36,7 +36,7 @@ SOTRY360             env:https://poly.pizza/m/1jUt3HwyHfn (?)
 
                Laura->TEMA STRUMENTI MUSICALI
                       env:https://poly.pizza/m/8NsrLwbXhfl
-                      Laura:?
+                      Laura:https://assetstore.unity.com/packages/3d/characters/animals/lovely-animals-pack-92629
                       Laura vuole formare una band musicale e va alla ricerca degli strumenti musicali migliori. Laura pensa che in una band musicale non possa mancare la 
                       il piano (https://poly.pizza/m/7U-93vxPOER), eccolo è proprio li davanti! Per accompagnare il suono dolce del piano è necessario una chitarra (https://poly.pizza/m/ccd__UcZBye). Trovato la chitarra serve andare alla ricerca
                       di strumenti a fiato come il sassofono(https://poly.pizza/m/6A2UAKdCNy7). Ma ecco che una volta trovato il sassofono abbiamo bisogno anche della trombetta (https://poly.pizza/m/dKjB2Gm4-rj).Per dare un po' di ritmo ed energia
@@ -44,5 +44,14 @@ SOTRY360             env:https://poly.pizza/m/1jUt3HwyHfn (?)
 
 		
 		   Bendy->TEMA SPAZIO
-			    env:
+			    env:https://sketchfab.com/3d-models/colony-on-mars-3d-low-poly-models-3f9fd099b0e742f9a2b05a4dc6a374c8
+			    Bendy:https://poly.pizza/m/QCm7qe9uNJ
+			    Bendy é appena arrivato su Marte e vuole esplorare il nuovo pianeta. A un certo punto si accorge che lì vicino
+			    c'é proprio una navicella spaziale (https://poly.pizza/m/b0N_HeT_Ttb)! Dalla navicella sente arrivare dei rumori, così si avvicina e vede uscire 
+		          fuori un alieno (https://poly.pizza/m/9qGe3grmPlK) con cui si ferma a parlare. L'alieno si chiama Martillo e i due diventano subito amici e insieme 
+			    costruiscono una radio(https://poly.pizza/m/56XYDxnVVM3) per ascoltare un pò di musica insieme. Dopo aver ascoltato la musica, Martillo presta a 
+			    Bendy un monopattino spaziale (https://poly.pizza/m/aQ_Us04oiz1) per farlo tornare velocemente alla sua navicella (https://poly.pizza/m/4mPkOKdzAk-). Ecco la navicella, adesso Bendy
+			    é pronto per raccontare la sua avventura su Marte ai suoi amici sulla Terra. 
+			   
+			    
                       
