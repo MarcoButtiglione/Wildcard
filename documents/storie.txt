@@ -1,0 +1,44 @@
+RESEARCH 360: SUZY-> TEMA MARE
+SOTRY360             env:https://assetstore.unity.com/packages/3d/vegetation/cartoon-palmtree-and-umbrellas-58457(?)
+                     suzy:?
+                     suzy vuole passare una giornata all' insegna del divertimento, cosi' decide di andare in spiaggia.
+                     Per prima cosa dovrà trovare un ombrellone (https://poly.pizza/m/2li3sdSkmCI) per potersi riparare dal sole cocente della giornata.
+                     Dopo aver trovato l' ombrellone le servirà una sdraio(https://poly.pizza/m/8ir-Gw1ZObm) per potersi finalmente sedere e riposare.
+                     Suzy decide che vuole divertirsi un po', cosi va alla ricerca di una palla(https://poly.pizza/m/4IwPTeOmq6c). Bene adesso le manca soltanto 
+                     un compagno di giochi: fortunatamente li' vicino ci sono un granchio (https://poly.pizza/m/fdvCZS-mwQW) e più in la' un gabbiano(https://poly.pizza/m/dUFuQoM-k3s).
+                     I tre diventano amici e cosi' la giornata di suzy si conclude nel migliore dei modi
+               Giulio->TEMA FATTORIA
+                       env:https://assetstore.unity.com/packages/3d/environments/landscapes/free-low-poly-nature-forest-205742(?)
+                       giulio:?
+                       ANIMALI https://poly.pizza/bundle/Farm-Animal-Pack-1kUvRTPLzT
+                       Giulio il coniglio abita in una grande fattoria insieme a tanti amici.Tra qualche giorno sarà il suo compleano così decide di andare ad invitare tutti
+                       gli abitanti della fattoria. Per primo va a trovare il suo amico porcellino, lui accetta l invito. Cosi' giulio continua a passeggiare nella fattoria
+                       ed incontra la mucca che stava mangiando un po' di erba. la sua amica mucca accetta l' invito e consiglia a giulio di invitare il cavallo, Giulio si mette
+                       alla ricerca del cavallo. Eccolo! il cavallo accetta l' invito e dice che porterà tanti palloncini cosi' potranno giocare tutti insieme.
+                       Nella lista degli invitati c'è anche la pecorella. Giulio si guatda intorno e trova la sua amica pecorella che purtroppo non potrà venire alla festa
+                       Così Giulio decide di invitare il suo amico di scuola cane.Eccolo è proprio li difronte!Giulio controlla la lista degliinvitati... ne manca uno è il
+                       lama! Adesso che tutti sono stati invitati non resta che aspettare il giorno della festa!
+               
+
+
+               Tobia->TEMA CUCINA
+                      env:https://poly.pizza/m/42OaqleENRS
+                      Tobia:?
+                      https://poly.pizza/bundle/Food-Kit-vOc58LJ0ge
+                      Tobia vuole preparare una torta per il compleanno della mamma, si trova nella cucina di casa sua cosi' inizia a cercare un foglio(https://poly.pizza/m/7-99AhSn6qj) dove c'è
+                     scritta la ricetta della torta  che a sua mamma piace tanto.Una volta trovato il foglio inizia con il cercare una ciotola (https://poly.pizza/m/1EwfmPQ-8ur)per mettere tutti insieme 
+                     gli ingredienti. Una volta trovata la ciotola Tobia piò iniziare la ricerca degli ingredienti per prima cosa va alla 
+                     ricerca della farina(?). Una volta trovata la farina servono le uova(https://poly.pizza/m/6IlWtCejyrO). Eccole sono li proprio difornte a te! Adesso la ricetta è quasi conclusa, adesso 
+                     manca il latte(https://poly.pizza/m/9upNan7f8q)...trovato!Bene adesso Tobia mescola tutto e la torta è pronta per andare in forno.
+        
+
+
+
+               Laura->TEMA STRUMENTI MUSICALI
+                      env:stanza colorata?
+                      Laura:?
+                      Laura vuole formare una band musicale e va alla ricerca degli strumenti musicali migliori. Laura pensa che in una band musicale non possa mancare la 
+                      il piano, eccolo è proprio li davanti! Per accompagnare il suono dolce del piano è necessario una chitarra. Trovato la chitarra serve andare alla ricerca
+                      di strumenti a fiato come il sassofono. Ma ecco che una volta trovato il sassofono abbiamo bisogno anche della tromba.Per dare un po' di ritmo ed energia
+                      Laura vuole trovare un tamburo. Eccolo! Manca qualcosa, il violino! Laura è contenta e pu' iniziare a fare le prove con la sua bellissima band!
+                      
