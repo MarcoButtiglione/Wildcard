@@ -25,10 +25,10 @@ SOTRY360             env:https://poly.pizza/m/1jUt3HwyHfn (?)
                       env:https://poly.pizza/m/42OaqleENRS
                       Tobia:?
                       https://poly.pizza/bundle/Food-Kit-vOc58LJ0ge
-                      Tobia vuole preparare una torta per il compleanno della mamma, si trova nella cucina di casa sua cosi' inizia a cercare un foglio(https://poly.pizza/m/7-99AhSn6qj) dove c'è
+                      Tobia vuole preparare una torta di mele per il compleanno della mamma, si trova nella cucina di casa sua cosi' inizia a cercare un foglio(https://poly.pizza/m/7-99AhSn6qj) dove c'è
                      scritta la ricetta della torta  che a sua mamma piace tanto.Una volta trovato il foglio inizia con il cercare una ciotola (https://poly.pizza/m/1EwfmPQ-8ur)per mettere tutti insieme 
                      gli ingredienti. Una volta trovata la ciotola Tobia piò iniziare la ricerca degli ingredienti per prima cosa va alla 
-                     ricerca della farina(?). Una volta trovata la farina servono le uova(https://poly.pizza/m/6IlWtCejyrO). Eccole sono li proprio difornte a te! Adesso la ricetta è quasi conclusa, adesso 
+                     ricerca di una mela(https://poly.pizza/m/4tOmpD9-xsV). Una volta trovata la mela servono le uova(https://poly.pizza/m/6IlWtCejyrO). Eccole sono li proprio difornte a te! Adesso la ricetta è quasi conclusa, adesso 
                      manca il latte(https://poly.pizza/m/9upNan7f8q)...trovato!Bene adesso Tobia mescola tutto e la torta è pronta per andare in forno.
         
 
@@ -41,4 +41,8 @@ SOTRY360             env:https://poly.pizza/m/1jUt3HwyHfn (?)
                       il piano (https://poly.pizza/m/7U-93vxPOER), eccolo è proprio li davanti! Per accompagnare il suono dolce del piano è necessario una chitarra (https://poly.pizza/m/ccd__UcZBye). Trovato la chitarra serve andare alla ricerca
                       di strumenti a fiato come il sassofono(https://poly.pizza/m/6A2UAKdCNy7). Ma ecco che una volta trovato il sassofono abbiamo bisogno anche della trombetta (https://poly.pizza/m/dKjB2Gm4-rj).Per dare un po' di ritmo ed energia
                       Laura vuole trovare un tamburo (https://poly.pizza/m/c3RNKJflc4O). Eccolo! Manca qualcosa, il violino(https://poly.pizza/m/fhj0GK-0kJu)! Laura è contenta e pu' iniziare a fare le prove con la sua bellissima band!
+
+		
+		   Bendy->TEMA SPAZIO
+			    env:
                       
