@@ -1,5 +1,5 @@
 RESEARCH 360: SUZY-> TEMA MARE
-SOTRY360             env:https://assetstore.unity.com/packages/3d/vegetation/cartoon-palmtree-and-umbrellas-58457(?)
+SOTRY360             env:https://poly.pizza/m/1jUt3HwyHfn (?)
                      suzy:?
                      suzy vuole passare una giornata all' insegna del divertimento, cosi' decide di andare in spiaggia.
                      Per prima cosa dovrà trovare un ombrellone (https://poly.pizza/m/2li3sdSkmCI) per potersi riparare dal sole cocente della giornata.
@@ -35,10 +35,10 @@ SOTRY360             env:https://assetstore.unity.com/packages/3d/vegetation/car
 
 
                Laura->TEMA STRUMENTI MUSICALI
-                      env:stanza colorata?
+                      env:https://poly.pizza/m/8NsrLwbXhfl
                       Laura:?
                       Laura vuole formare una band musicale e va alla ricerca degli strumenti musicali migliori. Laura pensa che in una band musicale non possa mancare la 
-                      il piano, eccolo è proprio li davanti! Per accompagnare il suono dolce del piano è necessario una chitarra. Trovato la chitarra serve andare alla ricerca
-                      di strumenti a fiato come il sassofono. Ma ecco che una volta trovato il sassofono abbiamo bisogno anche della tromba.Per dare un po' di ritmo ed energia
-                      Laura vuole trovare un tamburo. Eccolo! Manca qualcosa, il violino! Laura è contenta e pu' iniziare a fare le prove con la sua bellissima band!
+                      il piano (https://poly.pizza/m/7U-93vxPOER), eccolo è proprio li davanti! Per accompagnare il suono dolce del piano è necessario una chitarra (https://poly.pizza/m/ccd__UcZBye). Trovato la chitarra serve andare alla ricerca
+                      di strumenti a fiato come il sassofono(https://poly.pizza/m/6A2UAKdCNy7). Ma ecco che una volta trovato il sassofono abbiamo bisogno anche della trombetta (https://poly.pizza/m/dKjB2Gm4-rj).Per dare un po' di ritmo ed energia
+                      Laura vuole trovare un tamburo (https://poly.pizza/m/c3RNKJflc4O). Eccolo! Manca qualcosa, il violino(https://poly.pizza/m/fhj0GK-0kJu)! Laura è contenta e pu' iniziare a fare le prove con la sua bellissima band!
                       
