@@ -1,5 +1,6 @@
-RESEARCH 360: SUZY-> TEMA MARE
-SOTRY360             env:https://poly.pizza/m/1jUt3HwyHfn (?)
+STORY 360  
+               SUZY-> TEMA MARE
+	               env:https://poly.pizza/m/1jUt3HwyHfn 
                      suzy:https://assetstore.unity.com/packages/3d/characters/animals/lovely-animals-pack-92629
                      suzy vuole passare una giornata all' insegna del divertimento, cosi' decide di andare in spiaggia.
                      Per prima cosa dovrà trovare un ombrellone (https://poly.pizza/m/2li3sdSkmCI) per potersi riparare dal sole cocente della giornata.
@@ -7,8 +8,9 @@ SOTRY360             env:https://poly.pizza/m/1jUt3HwyHfn (?)
                      Suzy decide che vuole divertirsi un po', cosi va alla ricerca di una palla(https://poly.pizza/m/4IwPTeOmq6c). Bene adesso le manca soltanto 
                      un compagno di giochi: fortunatamente li' vicino ci sono un granchio (https://poly.pizza/m/fdvCZS-mwQW) e più in la' un gabbiano(https://poly.pizza/m/dUFuQoM-k3s).
                      I tre diventano amici e cosi' la giornata di suzy si conclude nel migliore dei modi
+			   
                Tullio->TEMA FATTORIA
-                       env:https://assetstore.unity.com/packages/3d/environments/landscapes/free-low-poly-nature-forest-205742(?)
+                       env:https://assetstore.unity.com/packages/3d/environments/landscapes/free-low-poly-nature-forest-205742
                        Tullio:https://poly.pizza/m/kKtL4zvS3n
                        ANIMALI https://poly.pizza/bundle/Farm-Animal-Pack-1kUvRTPLzT
                        Tullio il coniglio abita in una grande fattoria insieme a tanti amici.Tra qualche giorno sarà il suo compleano così decide di andare ad invitare tutti
@@ -19,21 +21,16 @@ SOTRY360             env:https://poly.pizza/m/1jUt3HwyHfn (?)
                        Così Tullio decide di invitare il suo amico di scuola cane.Eccolo è proprio li difronte!Tullio controlla la lista degliinvitati... ne manca uno è il
                        lama! Adesso che tutti sono stati invitati non resta che aspettare il giorno della festa!
                
-
-
                Tobia->TEMA CUCINA
                       env:https://poly.pizza/m/42OaqleENRS
                       Tobia:https://assetstore.unity.com/packages/3d/characters/humanoids/character-pack-free-sample-79870
                       https://poly.pizza/bundle/Food-Kit-vOc58LJ0ge
                       Tobia vuole preparare una torta di mele per il compleanno della mamma, si trova nella cucina di casa sua cosi' inizia a cercare un foglio(https://poly.pizza/m/7-99AhSn6qj) dove c'è
-                     scritta la ricetta della torta  che a sua mamma piace tanto.Una volta trovato il foglio inizia con il cercare una ciotola (https://poly.pizza/m/1EwfmPQ-8ur)per mettere tutti insieme 
-                     gli ingredienti. Una volta trovata la ciotola Tobia piò iniziare la ricerca degli ingredienti per prima cosa va alla 
-                     ricerca di una mela(https://poly.pizza/m/4tOmpD9-xsV). Una volta trovata la mela servono le uova(https://poly.pizza/m/6IlWtCejyrO). Eccole sono li proprio difornte a te! Adesso la ricetta è quasi conclusa, adesso 
-                     manca il latte(https://poly.pizza/m/9upNan7f8q)...trovato!Bene adesso Tobia mescola tutto e la torta è pronta per andare in forno.
+                      scritta la ricetta della torta  che a sua mamma piace tanto.Una volta trovato il foglio inizia con il cercare una ciotola (https://poly.pizza/m/1EwfmPQ-8ur)per mettere tutti insieme 
+                      gli ingredienti. Una volta trovata la ciotola Tobia piò iniziare la ricerca degli ingredienti per prima cosa va alla 
+                      ricerca di una mela(https://poly.pizza/m/4tOmpD9-xsV). Una volta trovata la mela servono le uova(https://poly.pizza/m/6IlWtCejyrO). Eccole sono li proprio difornte a te! Adesso la ricetta è quasi conclusa, adesso 
+                      manca il latte(https://poly.pizza/m/9upNan7f8q)...trovato!Bene adesso Tobia mescola tutto e la torta è pronta per andare in forno.
         
-
-
-
                Laura->TEMA STRUMENTI MUSICALI
                       env:https://poly.pizza/m/8NsrLwbXhfl
                       Laura:https://assetstore.unity.com/packages/3d/characters/animals/lovely-animals-pack-92629
@@ -42,7 +39,6 @@ SOTRY360             env:https://poly.pizza/m/1jUt3HwyHfn (?)
                       di strumenti a fiato come il sassofono(https://poly.pizza/m/6A2UAKdCNy7). Ma ecco che una volta trovato il sassofono abbiamo bisogno anche della trombetta (https://poly.pizza/m/dKjB2Gm4-rj).Per dare un po' di ritmo ed energia
                       Laura vuole trovare un tamburo (https://poly.pizza/m/c3RNKJflc4O). Eccolo! Manca qualcosa, il violino(https://poly.pizza/m/fhj0GK-0kJu)! Laura è contenta e pu' iniziare a fare le prove con la sua bellissima band!
 
-		
 		   Bendy->TEMA SPAZIO
 			    env:https://sketchfab.com/3d-models/colony-on-mars-3d-low-poly-models-3f9fd099b0e742f9a2b05a4dc6a374c8
 			    Bendy:https://poly.pizza/m/QCm7qe9uNJ
@@ -52,6 +48,50 @@ SOTRY360             env:https://poly.pizza/m/1jUt3HwyHfn (?)
 			    costruiscono una radio(https://poly.pizza/m/56XYDxnVVM3) per ascoltare un pò di musica insieme. Dopo aver ascoltato la musica, Martillo presta a 
 			    Bendy un monopattino spaziale (https://poly.pizza/m/aQ_Us04oiz1) per farlo tornare velocemente alla sua navicella (https://poly.pizza/m/4mPkOKdzAk-). Ecco la navicella, adesso Bendy
 			    é pronto per raccontare la sua avventura su Marte ai suoi amici sulla Terra. 
+RESEARCH 360
+	
+	Storia 1-> Paesaggio con neve (https://poly.pizza/m/1a1z56n7u67)
+	Personaggio: Suzy
+	Descrizione: Suzy va in vacanza sulla neve, e decide di divertirsi costruendo un pupazzo di neve. Per prima cosa costruisce delle
+	palle di neve. Poi cerca dei pezzetti di legno per fare le braccia del pupazzo di neve (https://poly.pizza/m/8qYeGscm0mc). Dopo aver fatto le braccia, decide di 
+	trovare un cappello (https://poly.pizza/m/1PP65IsuNwv) da mettere al suo nuovo amico fatto di neve! Poi le servirà una carota (https://poly.pizza/m/7LRJbAGkFZd) e come ultimo tocco dei bottoni! 
+	Suzy trova delle pietre (https://poly.pizza/m/OQvi8PIZ40) che fanno al caso suo, e il gioco é fatto! Adesso é pronta a giocare col suo nuovo amico, manca solo una
+	macchina fotografica(https://poly.pizza/m/eAoNPV5bfmK) per scattare una foto insieme!
+
+	Storia 2-> Deserto (https://assetstore.unity.com/packages/3d/environments/free-low-poly-raft-on-the-desert-141948) OR (https://assetstore.unity.com/packages/3d/environments/free-low-poly-desert-pack-106709)
+	Personaggio: Tobia
+	Descrizione: Tobia decide di fare una passeggiata nel deserto per poter andare alla ricerca della famosa piramide di keope. Dopo tante ore di cammino finalmente trova un palma(https://poly.pizza/m/ficLBIjGliK) dove potersi riparare dal sole cocente.
+      Dopo essersi riposato un po' decide di ricominciare la passeggiata.Ad un certo punto vede un cammello di nome Lello(https://poly.pizza/m/cyuwV4fg0B1), si avvicina e inizia a parlare con lui.
+      cosi tobia e Lello diventano amici.lello indica al suo nuovo amico la strada da seguire per proseguire il cammino. tobia adesso ha sete, ecco prprio fifronte a lui c'è un pozzo(https://poly.pizza/m/QlqncKYxXb)
+      Dopo essersi dissetato prosegue la ricerca della piramide, ad un certo punto nota un cactus(https://poly.pizza/m/fr1vXosiRgr) pungente cosi' decide subito di cambiare strada.Dopo un lungo cammino finalmente trova la piramide(https://poly.pizza/m/5fksyItujX1)di keope
+
+	Storia 3-> Campeggio (https://poly.pizza/m/3nj59_uuCbM) //GLI OGGETTI SONO PRESENTI ALL'INTERNO
+	Personaggio: Tullio
+	Descrizione: Tullio ha deciso di andare in campeggio per godersi un pò di natura, ma deve organizzarsi correttamente per il viaggio!
+	Dovrà prendere uno zaino () per poter portarsi dietro il cibo e le bevande. Gli servirà 
+	sicuramente un sacco a pelo () per poter dormire comodamente tra gli alberi, e una lampada ()
+	per avere un pò di luce durante la notte. Dovrà anche accendere un fuoco () per tenersi al 
+	caldo, e gli servirà una tenda () per ripararsi in caso di pioggia!
+	Adesso che ha preso tutto quello che gli serve, Tullio é pronto per un campeggio da sogno!
+
+	Storia 4-> ParcoGiochi (https://poly.pizza/m/4ePoQxr3J7Y)
+	Personaggio: Laura
+	env:https://poly.pizza/m/4ePoQxr3J7Y
+	laura decide di passare il pomeriggio al parcogiochi. la prima giostra su cui vuole divertirsi è lo scivolo(https://poly.pizza/m/dDe3njWPbg0), il suo preferito!
+	Adesso laura vuole provare un altra giostra vicina,l'altalena(https://poly.pizza/m/e-IJdcqZH4p), quanto è divertente dondolare sull' altalena. Adesso vuole giocare
+	un po' con la palla(https://poly.pizza/m/57u6P7Sr7K0) eccola è proprio li!Ora è il momento di ballare unpo', laura va alla ricerca di una radio(https://poly.pizza/m/ShNRjTDU3i)
+	Per concludere al megliola giornata di giochi decide di provare una nuova altalena(https://poly.pizza/m/8Ha-8ms-TJb). Ecco adesso puo' torare a casa felice e raccontare a tutti 
+	il bellissimo pomeriggi appena trascorso!
+
+	Storia 5-> Pulizie di casa (https://poly.pizza/m/AQQ2g0YE2D)
+	Personaggio: Bendy
+	Bendy é a casa e decide di fare un pò di pulizie. Per pulire casa, come prima cosa prende
+	una scopa (https://poly.pizza/m/eH6PcHmWOdK) per togliere un pò di polvere. Decide poi di mettere
+	in ordine delle magliette (https://poly.pizza/m/8HBhazMls_z) e alla fine decide di lavare per terra.
+	Per lavare gli serviranno un secchio(https://poly.pizza/m/5HPoa3eX0Jb) e dell'acqua (https://poly.pizza/m/b54HnwJAXsb).
+	Una volta finite le pulizie, Bendy prepara in anticipo lo zaino (https://poly.pizza/m/26m92LMKK4e) per andare a scuola il giorno dopo, e poi
+	potrà finalmente rilassarsi nella sua casa più pulita che mai!
+	
 			   
 			    
                       
