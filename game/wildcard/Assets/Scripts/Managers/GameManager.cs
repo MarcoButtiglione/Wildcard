@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject[] _gameObject;
     [SerializeField] private GameObject _arrow;
-    [SerializeField] private double _radius=1.5f;
+    [SerializeField] private double _radius=3f;
     private void Awake()
     {
         Instance = this;
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         {
             var x = _radius * Math.Sin((i / _gameObject.Length) * Math.PI);
             var z = _radius * Math.Cos((i / _gameObject.Length) * Math.PI);
-            Instantiate(_gameObject[0], new Vector3(Convert.ToSingle(x), 1, Convert.ToSingle(z)), Quaternion.identity);
+            Instantiate(_gameObject[i], new Vector3(i, 1, 0), Quaternion.identity);
         }
         UpdateGameState(0);
     }
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     {
         var x = _radius * Math.Sin((newState / _gameObject.Length) * Math.PI);
         var z = _radius * Math.Cos((newState / _gameObject.Length) * Math.PI);
-        _arrow.transform.position = new Vector3(Convert.ToSingle(x), 1.5f, Convert.ToSingle(z));
+        _arrow.transform.position = new Vector3(Convert.ToSingle(x), 4f, Convert.ToSingle(z));
         _state = newState;
         OnGameStateChanged?.Invoke(newState);
     }
