@@ -49,7 +49,10 @@ public class MenuManager : MonoBehaviour
     
     public void PlayResearchSuzy()
     {
-        Debug.Log("BANANA");
-        LevelManager.Instance.PlayLevel(Level.Research1);
+        LevelManager.Instance.PlayLevel(Level.ResearchSuzy);
+    }
+    public void PlayResearchTullio()
+    {
+        LevelManager.Instance.PlayLevel(Level.ResearchTullio);
     }
 }
