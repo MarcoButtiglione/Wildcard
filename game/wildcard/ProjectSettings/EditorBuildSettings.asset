@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 0dfef1971e513454887b582f2349fbcd
+  - enabled: 1
     path: Assets/Scenes/Research360_Piggy.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
