@@ -82,16 +82,17 @@ public class LevelManager : MonoBehaviour
                 break;
             case Level.StoryBendy:
                 break;
-            case Level.Research1:
-                LoadScene("Research360_Piggy");
+            case Level.ResearchSuzy:
+                LoadScene("Suzy");
                 break;
-            case Level.Research2:
+            case Level.ResearchTullio:
+                LoadScene("Tullio");
                 break;
-            case Level.Research3:
+            case Level.ResearchTobia:
                 break;
-            case Level.Research4:
+            case Level.ResearchLaura:
                 break;
-            case Level.Research5:
+            case Level.ResearchBendy:
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(level), level, null);
@@ -114,11 +115,11 @@ public enum Level
     StoryTobia,
     StoryLaura,
     StoryBendy,
-    Research1,
-    Research2,
-    Research3,
-    Research4,
-    Research5,
+    ResearchSuzy,
+    ResearchTullio,
+    ResearchTobia,
+    ResearchLaura,
+    ResearchBendy,
     
 }
 
