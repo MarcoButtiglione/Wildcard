@@ -9,6 +9,8 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
     private Level _currentLevel=Level.Menu;
+    private GameType _currentGameType;
+    
 
     /*
     [SerializeField] private GameObject _loaderCanvas;
@@ -73,26 +75,36 @@ public class LevelManager : MonoBehaviour
             case Level.Menu:
                 break;
             case Level.StorySuzy:
+                _currentGameType = GameType.Story;
                 break;
             case Level.StoryTullio:
+                _currentGameType = GameType.Story;
                 break;
             case Level.StoryTobia:
+                _currentGameType = GameType.Story;
                 break;
             case Level.StoryLaura:
+                _currentGameType = GameType.Story;
                 break;
             case Level.StoryBendy:
+                _currentGameType = GameType.Story;
                 break;
             case Level.ResearchSuzy:
+                _currentGameType = GameType.Research;
                 LoadScene("Suzy");
                 break;
             case Level.ResearchTullio:
+                _currentGameType = GameType.Research;
                 LoadScene("Tullio");
                 break;
             case Level.ResearchTobia:
+                _currentGameType = GameType.Research;
                 break;
             case Level.ResearchLaura:
+                _currentGameType = GameType.Research;
                 break;
             case Level.ResearchBendy:
+                _currentGameType = GameType.Research;
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(level), level, null);
@@ -104,6 +116,11 @@ public class LevelManager : MonoBehaviour
     {
         LoadScene("MainMenu");
         _currentLevel = 0;
+    }
+
+    public GameType GetCurrentGame()
+    {
+        return _currentGameType;
     }
 }
 
@@ -120,6 +137,11 @@ public enum Level
     ResearchTobia,
     ResearchLaura,
     ResearchBendy,
-    
 }
 
+public enum GameType
+{
+    Story,
+    Research,
+    Exploration
+}
