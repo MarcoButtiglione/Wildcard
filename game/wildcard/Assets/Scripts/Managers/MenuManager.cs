@@ -63,4 +63,8 @@ public class MenuManager : MonoBehaviour
     { 
         LevelManager.Instance.PlayLevel(Level.ResearchLaura);
     }
+    public void PlayResearchBendy()
+    { 
+        LevelManager.Instance.PlayLevel(Level.ResearchBendy);
+    }
 }
