@@ -9,29 +9,29 @@ public class GameManager : MonoBehaviour
 
     private GameType _currentGame;
     private int _state;
-    public static event Action<int> OnGameStateChanged;
+    //public static event Action<int> OnGameStateChanged;
 
     [SerializeField] private GameObject[] _gameObject;
-    [SerializeField] private GameObject _arrow;
+    private GameObject _arrow;
     [SerializeField] private double _radius=3f;
     private void Awake()
     {
-        Instance = this;
         if (LevelManager.Instance)
         {
             _currentGame = LevelManager.Instance.GetCurrentGame();
         }
+        _arrow= GameObject.Find("Arrow");
     }
-
+    
     private void Start()
     {
         for (var i = 0; i < _gameObject.Length; i++)
         {
-            var x = _radius * Math.Sin((i / _gameObject.Length) * Math.PI);
-            var z = _radius * Math.Cos((i / _gameObject.Length) * Math.PI);
-            Instantiate(_gameObject[i], new Vector3(i, 1, 0), Quaternion.identity);
+            Instantiate(_gameObject[i], new Vector3(i, 1,0), Quaternion.identity);
         }
-        UpdateGameState(0);
+
+        _arrow.transform.position =new Vector3(0, 2, 0);
+        _state = 0;
     }
 
     private void OnDestroy()
@@ -41,23 +41,32 @@ public class GameManager : MonoBehaviour
 
     private void UpdateGameState(int newState)
     {
-        var x = _radius * Math.Sin((newState / _gameObject.Length) * Math.PI);
-        var z = _radius * Math.Cos((newState / _gameObject.Length) * Math.PI);
-        _arrow.transform.position = new Vector3(Convert.ToSingle(x), 4f, Convert.ToSingle(z));
+        _arrow.transform.position =new Vector3(newState, 2, 0);
         _state = newState;
-        OnGameStateChanged?.Invoke(newState);
+        //OnGameStateChanged?.Invoke(newState);
     }
 
 
-    public void NextState()
+    private void NextState()
     {
-        if (_state +1< _gameObject.Length-1)
+        
+        if (_state +1== _gameObject.Length)
         {
-            UpdateGameState(_state+1);
+            LevelManager.Instance.PlayMainMenu();
         }
         else
         {
-            LevelManager.Instance.PlayMainMenu();
+            UpdateGameState(_state+1);
+        }
+    }
+
+    public void OnSelectGameObj(int id)
+    {
+        Debug.Log("Current id: "+id+ "  Current state: "+_state);
+        
+        if (id == _state)
+        {
+            NextState();
         }
     }
 

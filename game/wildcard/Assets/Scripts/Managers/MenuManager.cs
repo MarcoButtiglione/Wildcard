@@ -55,8 +55,12 @@ public class MenuManager : MonoBehaviour
     {
         LevelManager.Instance.PlayLevel(Level.ResearchTullio);
     }
+    public void PlayResearchTobia()
+    {
+        LevelManager.Instance.PlayLevel(Level.ResearchTobia);
+    }
     public void PlayResearchLaura()
-        {
-            LevelManager.Instance.PlayLevel(Level.ResearchLaura);
-        }
+    { 
+        LevelManager.Instance.PlayLevel(Level.ResearchLaura);
+    }
 }

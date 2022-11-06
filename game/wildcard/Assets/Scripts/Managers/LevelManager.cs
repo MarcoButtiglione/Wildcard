@@ -91,18 +91,19 @@ public class LevelManager : MonoBehaviour
                 break;
             case Level.ResearchSuzy:
                 _currentGameType = GameType.Research;
-                LoadScene("Suzy");
+                LoadScene("SuzyR");
                 break;
             case Level.ResearchTullio:
                 _currentGameType = GameType.Research;
-                LoadScene("Tullio");
+                LoadScene("TullioR");
                 break;
             case Level.ResearchTobia:
                 _currentGameType = GameType.Research;
+                LoadScene("TobiaR");
                 break;
             case Level.ResearchLaura:
                 _currentGameType = GameType.Research;
-                LoadScene("Laura");
+                LoadScene("LauraR");
                 break;
             case Level.ResearchBendy:
                 _currentGameType = GameType.Research;
