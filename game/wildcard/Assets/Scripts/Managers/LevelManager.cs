@@ -107,6 +107,7 @@ public class LevelManager : MonoBehaviour
                 break;
             case Level.ResearchBendy:
                 _currentGameType = GameType.Research;
+                LoadScene("Bendy");
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(level), level, null);
