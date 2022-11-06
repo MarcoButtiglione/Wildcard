@@ -102,6 +102,7 @@ public class LevelManager : MonoBehaviour
                 break;
             case Level.ResearchLaura:
                 _currentGameType = GameType.Research;
+                LoadScene("Laura");
                 break;
             case Level.ResearchBendy:
                 _currentGameType = GameType.Research;
