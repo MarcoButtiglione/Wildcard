@@ -14,12 +14,12 @@ STORY 360
                        Tullio:https://poly.pizza/m/kKtL4zvS3n
                        ANIMALI https://poly.pizza/bundle/Farm-Animal-Pack-1kUvRTPLzT
                        Tullio il coniglio abita in una grande fattoria insieme a tanti amici.Tra qualche giorno sarà il suo compleano così decide di andare ad invitare tutti
-                       gli abitanti della fattoria. Per primo va a trovare il suo amico porcellino, lui accetta l invito. Cosi' Tullio continua a passeggiare nella fattoria
-                       ed incontra la mucca che stava mangiando un po' di erba. la sua amica mucca accetta l' invito e consiglia a Tullio di invitare il cavallo, Tullio si mette
+                       gli abitanti della fattoria. Per primo va a trovare il suo amico porcellino (1), lui accetta l invito. Cosi' Tullio continua a passeggiare nella fattoria
+                       ed incontra la mucca (2) che stava mangiando un po' di erba. la sua amica mucca accetta l' invito e consiglia a Tullio di invitare il cavallo (3), Tullio si mette
                        alla ricerca del cavallo. Eccolo! il cavallo accetta l' invito e dice che porterà tanti palloncini cosi' potranno giocare tutti insieme.
-                       Nella lista degli invitati c'è anche la pecorella. Tullio si guatda intorno e trova la sua amica pecorella che purtroppo non potrà venire alla festa
-                       Così Tullio decide di invitare il suo amico di scuola cane.Eccolo è proprio li difronte!Tullio controlla la lista degliinvitati... ne manca uno è il
-                       lama! Adesso che tutti sono stati invitati non resta che aspettare il giorno della festa!
+                       Nella lista degli invitati c'è anche la pecorella (4). Tullio si guatda intorno e trova la sua amica pecorella che purtroppo non potrà venire alla festa
+                       Così Tullio decide di invitare il suo amico di scuola cane (5).Eccolo è proprio li difronte!Tullio controlla la lista degliinvitati... ne manca uno è il
+                       lama (6)! Adesso che tutti sono stati invitati non resta che aspettare il giorno della festa!
                
                Tobia->TEMA CUCINA
                       env:https://poly.pizza/m/42OaqleENRS
