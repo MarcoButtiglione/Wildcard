@@ -35,9 +35,9 @@ STORY 360
                       env:https://poly.pizza/m/8NsrLwbXhfl
                       Laura:https://assetstore.unity.com/packages/3d/characters/animals/lovely-animals-pack-92629
                       Laura vuole formare una band musicale e va alla ricerca degli strumenti musicali migliori. Laura pensa che in una band musicale non possa mancare la
-                      il piano (https://poly.pizza/m/7U-93vxPOER), eccolo è proprio li davanti! Per accompagnare il suono dolce del piano è necessario una chitarra (https://poly.pizza/m/ccd__UcZBye). Trovato la chitarra serve andare alla ricerca
-                      di strumenti a fiato come il sassofono(https://poly.pizza/m/6A2UAKdCNy7). Ma ecco che una volta trovato il sassofono abbiamo bisogno anche della trombetta (https://poly.pizza/m/dKjB2Gm4-rj).Per dare un po' di ritmo ed energia
-                      Laura vuole trovare un tamburo (https://poly.pizza/m/c3RNKJflc4O). Eccolo! Manca qualcosa, il violino(https://poly.pizza/m/fhj0GK-0kJu)! Laura è contenta e pu' iniziare a fare le prove con la sua bellissima band!
+                      il piano (https://poly.pizza/m/7U-93vxPOER), eccolo è proprio li davanti! Per accompagnare il suono dolce del piano è necessario una chitarra (https://poly.pizza/m/afr6GCpce_I). Trovato la chitarra serve andare alla ricerca
+                      di strumenti a fiato come il sassofono(https://poly.pizza/m/6A2UAKdCNy7). Ma ecco che una volta trovato il sassofono abbiamo bisogno anche della trombetta (https://poly.pizza/m/dXISS4OsDQv).Per dare un po' di ritmo ed energia
+                      Laura vuole trovare un tamburo (https://poly.pizza/m/5Wp2emwd7xw). Eccolo! Manca qualcosa, il violino(https://poly.pizza/m/fhj0GK-0kJu)! Laura è contenta e pu' iniziare a fare le prove con la sua bellissima band!
 
 		   Bendy->TEMA SPAZIO
 			    env:https://sketchfab.com/3d-models/colony-on-mars-3d-low-poly-models-3f9fd099b0e742f9a2b05a4dc6a374c8
