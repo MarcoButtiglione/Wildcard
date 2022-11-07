@@ -160,8 +160,8 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3510705027354697313, guid: 5cc4f10040601df4685e002b5279f7ff, type: 3}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 8435851187158168421, guid: bbbd193002cd39b4cac5fb1e44ce7285, type: 3}
+        m_TargetAssemblyTypeName: ResearchManager, Assembly-CSharp
         m_MethodName: OnSelectGameObj
         m_Mode: 3
         m_Arguments:
