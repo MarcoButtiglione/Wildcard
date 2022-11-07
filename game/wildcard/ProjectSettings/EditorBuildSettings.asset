@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Research360/Bendy.unity
     guid: 21e89a5b14f94a143b3142269977378b
   - enabled: 1
-    path: Assets/Scenes/Story/SuzyS.unity
+    path: Assets/Scenes/Story/TullioS.unity
     guid: 7e3bc7cce8a032543bbff7443c0e139c
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 112665d6d3b1df9449c313e563bbcece, type: 2}
