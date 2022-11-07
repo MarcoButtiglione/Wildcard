@@ -76,6 +76,7 @@ public class LevelManager : MonoBehaviour
                 break;
             case Level.StorySuzy:
                 _currentGameType = GameType.Story;
+                LoadScene("SuzyS");
                 break;
             case Level.StoryTullio:
                 _currentGameType = GameType.Story;
