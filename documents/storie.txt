@@ -59,14 +59,14 @@ RESEARCH 360
 	macchina fotografica(https://poly.pizza/m/eAoNPV5bfmK) per scattare una foto insieme!
 
 	Storia 2-> Deserto (https://assetstore.unity.com/packages/3d/environments/free-low-poly-raft-on-the-desert-141948) OR (https://assetstore.unity.com/packages/3d/environments/free-low-poly-desert-pack-106709)
-	Personaggio: Tobia
+	Personaggio: Tullio
 	Descrizione: Tobia decide di fare una passeggiata nel deserto per poter andare alla ricerca della famosa piramide di keope. Dopo tante ore di cammino finalmente trova un palma(https://poly.pizza/m/ficLBIjGliK) dove potersi riparare dal sole cocente.
       Dopo essersi riposato un po' decide di ricominciare la passeggiata.Ad un certo punto vede un cammello di nome Lello(https://poly.pizza/m/cyuwV4fg0B1), si avvicina e inizia a parlare con lui.
       cosi tobia e Lello diventano amici.lello indica al suo nuovo amico la strada da seguire per proseguire il cammino. tobia adesso ha sete, ecco prprio fifronte a lui c'è un pozzo(https://poly.pizza/m/QlqncKYxXb)
       Dopo essersi dissetato prosegue la ricerca della piramide, ad un certo punto nota un cactus(https://poly.pizza/m/fr1vXosiRgr) pungente cosi' decide subito di cambiare strada.Dopo un lungo cammino finalmente trova la piramide(https://poly.pizza/m/5fksyItujX1)di keope
 
 	Storia 3-> Campeggio (https://poly.pizza/m/3nj59_uuCbM) //GLI OGGETTI SONO PRESENTI ALL'INTERNO
-	Personaggio: Tullio
+	Personaggio: Tobia
 	Descrizione: Tullio ha deciso di andare in campeggio per godersi un pò di natura, ma deve organizzarsi correttamente per il viaggio!
 	Dovrà prendere uno zaino () per poter portarsi dietro il cibo e le bevande. Gli servirà 
 	sicuramente un sacco a pelo () per poter dormire comodamente tra gli alberi, e una lampada ()
