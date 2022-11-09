@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Research360/LauraR.unity
     guid: 8b23fad711e5a6649a9129498aa6d08d
   - enabled: 1
-    path: Assets/Scenes/Research360/Bendy.unity
+    path: Assets/Scenes/Research360/BendyR.unity
     guid: 21e89a5b14f94a143b3142269977378b
   - enabled: 1
     path: Assets/Scenes/Story/TullioS.unity
