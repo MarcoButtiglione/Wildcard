@@ -12,6 +12,7 @@ public class ResearchManager : MonoBehaviour
     private GameObject _arrow;
     
     
+    [SerializeField] private float _initRot = 90;
     [SerializeField] private float _radius=3f;
     [SerializeField] private float _heigth=1f;
     [SerializeField] private float _deltaArrow=1f;
@@ -44,6 +45,7 @@ public class ResearchManager : MonoBehaviour
         _arrow = GameObject.Find("Arrow");
         Vector3 posObj = GameObject.Find("ResearchObj").transform.GetChild(0).gameObject.transform.position;
         _arrow.transform.position = posObj + new Vector3(0,_deltaArrow,0);
+        _arrow.transform.eulerAngles = new Vector3(0, _initRot, 0);
     }
 
     private void UpdateGameState(int newState)
@@ -56,7 +58,7 @@ public class ResearchManager : MonoBehaviour
         Debug.Log(angle);
 
         _arrow.transform.position = posObj + new Vector3(0,_deltaArrow,0);
-        _arrow.transform.eulerAngles += new Vector3(0, angle, 0);
+        _arrow.transform.eulerAngles =  new Vector3(0, _initRot -angle, 0);
         
         _state = newState;
     }
