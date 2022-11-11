@@ -18,6 +18,7 @@ public class StoryManager : MonoBehaviour
     
     [SerializeField] private float _radius=3f;
     [SerializeField] private float _heigth=3f;
+    [SerializeField] private float _deltaTaken = 0.3f;
     
     
     private void Awake()
@@ -27,7 +28,7 @@ public class StoryManager : MonoBehaviour
         
         _character = GameObject.Find("CharacterParent");
         _character.transform.position = new Vector3(_radius+_cameraPos.x , _heigth+_cameraPos.y, _cameraPos.z);
-        _character.transform.rotation = new Quaternion(0, _initRot, 0, 0);
+        _character.transform.eulerAngles = new Vector3(0, _initRot, 0);
         
         _isMoving = false;
         _characterProgression = 0;
@@ -59,18 +60,19 @@ public class StoryManager : MonoBehaviour
         
         float angle = _characterProgression * Mathf.PI*2f / (_gameObject.Length+1);
         float x =(Mathf.Cos(angle)*_radius)+_cameraPos.x ;
-        float y = _heigth+_cameraPos.y;
+        //float y = _heigth+_cameraPos.y;
+        float y = _character.transform.position.y;
         float z = (Mathf.Sin(angle) * _radius)+_cameraPos.z;
         Vector3 newPos = new Vector3(x, y, z);
         
         _character.transform.position = newPos;
 
-        float rotY = _initRot + (_characterProgression * 360 / _gameObject.Length);
+        float rotY = _initRot - (_characterProgression * 360 / (_gameObject.Length+1));
         
-        _character.transform.rotation = new Quaternion(0, rotY, 0, 0);
+        _character.transform.eulerAngles = new Vector3(0, rotY, 0);
         
         //If the position have overpassed the position of next object in the scene...
-        if (_characterProgression>_state+1)
+        if (_characterProgression+_deltaTaken>_state+1)
         {
             //If the game is finished
             if (_state +1== _gameObject.Length)
@@ -109,6 +111,11 @@ public class StoryManager : MonoBehaviour
         {
             MoveCharacter();
         }
-            //_character.transform.position += new Vector3(_speed*Time.fixedDeltaTime,0f,0f);
+
+        if (Input.GetButton("Jump"))
+        {
+            MoveCharacter();
+        }
+            
     }
 }
