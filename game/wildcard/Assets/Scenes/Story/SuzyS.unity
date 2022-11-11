@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17317283, g: 0.21644503, b: 0.29846862, a: 1}
+  m_IndirectSpecularColor: {r: 0.17317311, g: 0.2164453, b: 0.29846942, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -863,6 +863,18 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8863791848739954089, guid: 92542cbde245d4341a637fbdd44b8cf8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863791848739954089, guid: 92542cbde245d4341a637fbdd44b8cf8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863791848739954089, guid: 92542cbde245d4341a637fbdd44b8cf8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863791848739954089, guid: 92542cbde245d4341a637fbdd44b8cf8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -901,6 +913,10 @@ PrefabInstance:
     - target: {fileID: 8863791848739954089, guid: 92542cbde245d4341a637fbdd44b8cf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863791848739954089, guid: 92542cbde245d4341a637fbdd44b8cf8, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1636013638108148678, guid: 92542cbde245d4341a637fbdd44b8cf8, type: 3}
@@ -2859,7 +2875,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082262586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.7997558, y: 0, z: 8.774685}
+  m_LocalPosition: {x: 2.7997558, y: -0.32, z: -4.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
