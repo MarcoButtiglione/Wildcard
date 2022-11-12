@@ -8,8 +8,6 @@ using UnityEngine.UI;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
-    private Level _currentLevel=Level.Menu;
-    private GameType _currentGameType;
     
 
     /*
@@ -30,7 +28,6 @@ public class LevelManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        _currentLevel = 0;
     }
 
     
@@ -68,47 +65,48 @@ public class LevelManager : MonoBehaviour
     
     public void PlayLevel(Level level)
     {
-        _currentLevel = level;
 
         switch (level)
         {
             case Level.Menu:
+                LoadScene("MainMenu");
                 break;
             case Level.StorySuzy:
-                _currentGameType = GameType.Story;
                 LoadScene("SuzyS");
                 break;
             case Level.StoryTullio:
-                _currentGameType = GameType.Story;
                 break;
             case Level.StoryTobia:
-                _currentGameType = GameType.Story;
                 break;
             case Level.StoryLaura:
-                _currentGameType = GameType.Story;
                 break;
             case Level.StoryBendy:
-                _currentGameType = GameType.Story;
                 break;
             case Level.ResearchSuzy:
-                _currentGameType = GameType.Research;
                 LoadScene("SuzyR");
                 break;
             case Level.ResearchTullio:
-                _currentGameType = GameType.Research;
                 LoadScene("TullioR");
                 break;
             case Level.ResearchTobia:
-                _currentGameType = GameType.Research;
                 LoadScene("TobiaR");
                 break;
             case Level.ResearchLaura:
-                _currentGameType = GameType.Research;
                 LoadScene("LauraR");
                 break;
             case Level.ResearchBendy:
-                _currentGameType = GameType.Research;
                 LoadScene("BendyR");
+                break;
+            case Level.ExplorationSuzy:
+                LoadScene("Maze1");
+                break;
+            case Level.ExplorationTullio:
+                break;
+            case Level.ExplorationTobia:
+                break;
+            case Level.ExplorationLaura:
+                break;
+            case Level.ExplorationBendy:
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(level), level, null);
@@ -118,13 +116,7 @@ public class LevelManager : MonoBehaviour
     
     public void PlayMainMenu()
     {
-        LoadScene("MainMenu");
-        _currentLevel = 0;
-    }
-
-    public GameType GetCurrentGame()
-    {
-        return _currentGameType;
+        PlayLevel(Level.Menu);
     }
 }
 
@@ -141,11 +133,9 @@ public enum Level
     ResearchTobia,
     ResearchLaura,
     ResearchBendy,
-}
-
-public enum GameType
-{
-    Story,
-    Research,
-    Exploration
+    ExplorationSuzy,
+    ExplorationTullio,
+    ExplorationTobia,
+    ExplorationLaura,
+    ExplorationBendy,
 }

@@ -87,4 +87,26 @@ public class MenuManager : MonoBehaviour
     { 
         LevelManager.Instance.PlayLevel(Level.StoryBendy);
     }
+    public void PlayExplorationSuzy()
+    {
+        LevelManager.Instance.PlayLevel(Level.ExplorationSuzy);
+    }
+    public void PlayExplorationTullio()
+    {
+        LevelManager.Instance.PlayLevel(Level.ExplorationTullio);
+    }
+    public void PlayExplorationTobia()
+    {
+        LevelManager.Instance.PlayLevel(Level.ExplorationTobia);
+    }
+    public void PlayExplorationLaura()
+    { 
+        LevelManager.Instance.PlayLevel(Level.ExplorationLaura);
+    }
+    public void PlayExplorationBendy()
+    { 
+        LevelManager.Instance.PlayLevel(Level.ExplorationBendy);
+    }
+    
+    
 }

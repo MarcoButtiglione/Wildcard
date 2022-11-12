@@ -55,7 +55,6 @@ public class ResearchManager : MonoBehaviour
         Vector3 posObj = researchObj.transform.GetChild(newState).gameObject.transform.position;
         
         float angle = newState * 360f / researchObj.transform.childCount;
-        Debug.Log(angle);
 
         _arrow.transform.position = posObj + new Vector3(0,_deltaArrow,0);
         _arrow.transform.eulerAngles =  new Vector3(0, _initRot -angle, 0);
