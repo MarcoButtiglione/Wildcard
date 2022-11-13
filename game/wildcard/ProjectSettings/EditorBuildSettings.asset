@@ -12,13 +12,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Research/SuzyR.unity
     guid: 2f3e084746039934a911afbb41e678de
   - enabled: 1
-    path: Assets/Scenes/Research/TobiaR.unity
+    path: Assets/Scenes/Story/TobiaS.unity
     guid: 5a2fad5cbdfcd7147a633c30d03df556
   - enabled: 1
     path: Assets/Scenes/Story/TullioS.unity
     guid: 9b763ad1a0bd68340b8b0178b1db712e
   - enabled: 1
-    path: Assets/Scenes/Research/LauraR.unity
+    path: Assets/Scenes/Story/LauraS.unity
     guid: 8b23fad711e5a6649a9129498aa6d08d
   - enabled: 1
     path: Assets/Scenes/Research/BendyR.unity
