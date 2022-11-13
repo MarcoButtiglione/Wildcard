@@ -33,10 +33,11 @@ public class ExplorationManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_isHover)
+        if (_isHover && !_isMovingChar)
         {
             MoveTo(_player,_checkpoints[_currentCheckpoint],_speedPlayer);
         }
+        
 
         if (_isMovingChar)
         {
@@ -52,7 +53,7 @@ public class ExplorationManager : MonoBehaviour
             
         }
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetButton("Jump")&& !_isMovingChar)
         {
             MoveTo(_player,_checkpoints[_currentCheckpoint],_speedPlayer);
         }
@@ -87,12 +88,6 @@ public class ExplorationManager : MonoBehaviour
                 _currentCheckpoint++;
                 _isMovingChar = true;
             }
-            
-            
         }
-        
-        
     }
-    
-    
 }

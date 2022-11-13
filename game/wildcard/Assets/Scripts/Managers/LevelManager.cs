@@ -75,12 +75,16 @@ public class LevelManager : MonoBehaviour
                 LoadScene("SuzyS");
                 break;
             case Level.StoryTullio:
+                LoadScene("TullioS");
                 break;
             case Level.StoryTobia:
+                LoadScene("TobiaS");
                 break;
             case Level.StoryLaura:
+                LoadScene("LauraS");
                 break;
             case Level.StoryBendy:
+                LoadScene("BendyS");
                 break;
             case Level.ResearchSuzy:
                 LoadScene("SuzyR");

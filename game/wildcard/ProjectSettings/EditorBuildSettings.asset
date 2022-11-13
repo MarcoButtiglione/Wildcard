@@ -12,13 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Research/SuzyR.unity
     guid: 2f3e084746039934a911afbb41e678de
   - enabled: 1
-    path: Assets/Scenes/Story/TobiaS.unity
+    path: Assets/Scenes/Research/TobiaR.unity
     guid: 5a2fad5cbdfcd7147a633c30d03df556
   - enabled: 1
-    path: Assets/Scenes/Story/TullioS.unity
-    guid: 9b763ad1a0bd68340b8b0178b1db712e
-  - enabled: 1
-    path: Assets/Scenes/Story/LauraS.unity
+    path: Assets/Scenes/Research/LauraR.unity
     guid: 8b23fad711e5a6649a9129498aa6d08d
   - enabled: 1
     path: Assets/Scenes/Research/BendyR.unity
@@ -29,6 +26,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Story/SuzyS.unity
     guid: f538eeb762ba391449f4b2eca7f8e585
+  - enabled: 1
+    path: Assets/Scenes/Story/TullioS.unity
+    guid: 9b763ad1a0bd68340b8b0178b1db712e
+  - enabled: 1
+    path: Assets/Scenes/Story/TobiaS.unity
+    guid: 5ac24a4fddd03454bbd7e07e35b02cf3
+  - enabled: 1
+    path: Assets/Scenes/Story/LauraS.unity
+    guid: b40f8e9caf5898e4ba657fcad6ad0788
+  - enabled: 1
+    path: Assets/Scenes/Story/BendyS.unity
+    guid: fe3e452d2e5b97b4cb2e597917094481
   - enabled: 1
     path: Assets/Scenes/Exploration/Maze1.unity
     guid: 636f2348a96ad4a4ea2abc5ac0a7d0cb
