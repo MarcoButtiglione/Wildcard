@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8243672896918118022}
   - component: {fileID: 8772505011241303426}
   m_Layer: 0
-  m_Name: CharacterParent
+  m_Name: Suzy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

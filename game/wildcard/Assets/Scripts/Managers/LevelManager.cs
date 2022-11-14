@@ -102,15 +102,19 @@ public class LevelManager : MonoBehaviour
                 LoadScene("BendyR");
                 break;
             case Level.ExplorationSuzy:
-                LoadScene("Maze1");
+                LoadScene("SuzyE");
                 break;
             case Level.ExplorationTullio:
+                LoadScene("TullioE");
                 break;
             case Level.ExplorationTobia:
+                LoadScene("TobiaE");
                 break;
             case Level.ExplorationLaura:
+                LoadScene("LauraE");
                 break;
             case Level.ExplorationBendy:
+                LoadScene("BendyE");
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(level), level, null);
