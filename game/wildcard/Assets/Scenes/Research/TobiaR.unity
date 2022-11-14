@@ -1067,6 +1067,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: MilkParent
       objectReference: {fileID: 0}
+    - target: {fileID: 7044300313547191884, guid: 00588987cb97c954db8445924e116c4d, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044300313547191884, guid: 00588987cb97c954db8445924e116c4d, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1783924199}
+    - target: {fileID: 7044300313547191884, guid: 00588987cb97c954db8445924e116c4d, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnSelectGameObj
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044300313547191884, guid: 00588987cb97c954db8445924e116c4d, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ResearchManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044300313547191884, guid: 00588987cb97c954db8445924e116c4d, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044300313547191884, guid: 00588987cb97c954db8445924e116c4d, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00588987cb97c954db8445924e116c4d, type: 3}
 --- !u!4 &610941208 stripped
@@ -1274,6 +1298,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1448536084}
     m_Modifications:
+    - target: {fileID: 1691718670981340234, guid: c0bd1698d0e975140b44defd81e02241, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691718670981340234, guid: c0bd1698d0e975140b44defd81e02241, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1783924199}
+    - target: {fileID: 1691718670981340234, guid: c0bd1698d0e975140b44defd81e02241, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnSelectGameObj
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691718670981340234, guid: c0bd1698d0e975140b44defd81e02241, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ResearchManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691718670981340234, guid: c0bd1698d0e975140b44defd81e02241, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2662011421807898214, guid: c0bd1698d0e975140b44defd81e02241, type: 3}
       propertyPath: m_Name
       value: AppleParent
@@ -1858,6 +1902,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: PaperParent
       objectReference: {fileID: 0}
+    - target: {fileID: 8952476556573859088, guid: 7e6a9dace18b4b645a2877e51fe71a9c, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952476556573859088, guid: 7e6a9dace18b4b645a2877e51fe71a9c, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1783924199}
+    - target: {fileID: 8952476556573859088, guid: 7e6a9dace18b4b645a2877e51fe71a9c, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnSelectGameObj
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952476556573859088, guid: 7e6a9dace18b4b645a2877e51fe71a9c, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ResearchManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952476556573859088, guid: 7e6a9dace18b4b645a2877e51fe71a9c, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952476556573859088, guid: 7e6a9dace18b4b645a2877e51fe71a9c, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e6a9dace18b4b645a2877e51fe71a9c, type: 3}
 --- !u!4 &1113846396 stripped
@@ -1872,6 +1940,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1448536084}
     m_Modifications:
+    - target: {fileID: 8156009602043967039, guid: 87a099eecead52b43a82f20fdf15e82a, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156009602043967039, guid: 87a099eecead52b43a82f20fdf15e82a, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1783924199}
+    - target: {fileID: 8156009602043967039, guid: 87a099eecead52b43a82f20fdf15e82a, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnSelectGameObj
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156009602043967039, guid: 87a099eecead52b43a82f20fdf15e82a, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ResearchManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156009602043967039, guid: 87a099eecead52b43a82f20fdf15e82a, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156009602043967039, guid: 87a099eecead52b43a82f20fdf15e82a, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8299437078617947725, guid: 87a099eecead52b43a82f20fdf15e82a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2513,8 +2605,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456491752}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -3.4355779, y: -0.13552809, z: 2.5157595}
-  m_LocalScale: {x: 3.0916908, y: 3.0916908, z: 3.0916908}
+  m_LocalPosition: {x: -3.45, y: -0.12, z: 3.25}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5715499278001422288}
@@ -2847,6 +2939,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbbd193002cd39b4cac5fb1e44ce7285, type: 3}
+--- !u!114 &1783924199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8435851187158168421, guid: bbbd193002cd39b4cac5fb1e44ce7285, type: 3}
+  m_PrefabInstance: {fileID: 1783924198}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 008e2594ec59c594da44da207694c6c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1783924200 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8435851187236650389, guid: bbbd193002cd39b4cac5fb1e44ce7285, type: 3}
@@ -3006,6 +3109,30 @@ PrefabInstance:
     - target: {fileID: 2017134326375409400, guid: 55dceff3c77b93749845f778abb0a009, type: 3}
       propertyPath: m_Name
       value: BowlParent
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559562293229521793, guid: 55dceff3c77b93749845f778abb0a009, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559562293229521793, guid: 55dceff3c77b93749845f778abb0a009, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1783924199}
+    - target: {fileID: 6559562293229521793, guid: 55dceff3c77b93749845f778abb0a009, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnSelectGameObj
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559562293229521793, guid: 55dceff3c77b93749845f778abb0a009, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ResearchManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559562293229521793, guid: 55dceff3c77b93749845f778abb0a009, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559562293229521793, guid: 55dceff3c77b93749845f778abb0a009, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55dceff3c77b93749845f778abb0a009, type: 3}
@@ -3333,9 +3460,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082262586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.91, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -1.87, y: 0, z: -1.08}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 705507995}
   - {fileID: 1448812488}
@@ -4868,7 +4995,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5597010142442489989}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2.9370103, y: -0.3962731, z: 1.3986759}
+  m_LocalPosition: {x: -2.9370103, y: -0.3962731, z: 1.5}
   m_LocalScale: {x: 3.191977, y: 3.1919773, z: 3.191977}
   m_ConstrainProportionsScale: 1
   m_Children: []

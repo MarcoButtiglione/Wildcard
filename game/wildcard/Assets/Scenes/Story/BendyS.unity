@@ -25730,6 +25730,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 649272110981007211, guid: e98c49ff6947fa548a445b6e8de6df0d, type: 3}
+      propertyPath: _initRot
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 649272110981007211, guid: e98c49ff6947fa548a445b6e8de6df0d, type: 3}
       propertyPath: _deltaTaken
       value: 0.3
       objectReference: {fileID: 0}
