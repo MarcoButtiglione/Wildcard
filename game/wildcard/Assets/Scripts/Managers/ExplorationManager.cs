@@ -24,6 +24,13 @@ public class ExplorationManager : MonoBehaviour
 
         _currentCheckpoint = 0;
         _character.transform.position = _checkpoints[0].transform.position;
+        
+        //Rotate character to player
+        Vector3 movementDirection =_player.transform.position - _character.transform.position;
+        movementDirection.Normalize();
+        
+        if(movementDirection!=Vector3.zero)
+            _character.transform.forward = movementDirection;
 
 
         _isHover = false;
@@ -34,7 +41,7 @@ public class ExplorationManager : MonoBehaviour
     void Update()
     {
         if (_isHover && !_isMovingChar)
-        {
+        { 
             MoveTo(_player,_checkpoints[_currentCheckpoint],_speedPlayer);
         }
         
@@ -45,26 +52,50 @@ public class ExplorationManager : MonoBehaviour
                 Single.Epsilon)
             {
                 _isMovingChar = false;
+                //Rotate character to player
+                Vector3 movementDirection =_player.transform.position - _character.transform.position;
+                movementDirection.Normalize();
+                if(movementDirection!=Vector3.zero)
+                    _character.transform.forward = movementDirection;
+                
             }
             else
             {
-                MoveTo(_character,_checkpoints[_currentCheckpoint],_speedCharacter);
+                MoveToAndRotate(_character,_checkpoints[_currentCheckpoint],_speedCharacter);
+                if (Vector3.Distance(_player.transform.position, _checkpoints[_currentCheckpoint-1].transform.position) >
+                    Single.Epsilon)
+                {
+                    MoveTo(_player, _checkpoints[_currentCheckpoint - 1], _speedPlayer);
+                }
             }
-            
         }
-
-        if (Input.GetButton("Jump")&& !_isMovingChar)
+        
+        
+        //TEST
+        /*
+        if (!_isMovingChar)
         {
             MoveTo(_player,_checkpoints[_currentCheckpoint],_speedPlayer);
         }
-        
+        */
     }
 
     private void MoveTo(GameObject obj,GameObject to , float speed )
     {
         obj.transform.position = Vector3.MoveTowards(obj.transform.position, to.transform.position, speed*Time.deltaTime);
     }
-    
+    private void MoveToAndRotate(GameObject obj,GameObject to , float speed )
+    {
+        obj.transform.position = Vector3.MoveTowards(obj.transform.position, to.transform.position, speed*Time.deltaTime);
+
+        Vector3 movementDirection =to.transform.position - obj.transform.position;
+        movementDirection.Normalize();
+
+        if(movementDirection!=Vector3.zero)
+            obj.transform.forward = movementDirection;
+
+
+    }
     
     public void HoverEnteredCharacter()
     {
