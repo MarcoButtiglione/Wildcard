@@ -23,7 +23,7 @@ STORY 360
                
                Tobia->TEMA CUCINA
                       env:https://poly.pizza/m/42OaqleENRS
-                      Tobia:https://assetstore.unity.com/packages/3d/characters/humanoids/character-pack-free-sample-79870
+                      Tobia:https://assetstore.unity.com/packages/3d/characters/humanoids/character-pack-free-sample-79870 OR https://poly.pizza/m/gKLBoRsyKe
                       https://poly.pizza/bundle/Food-Kit-vOc58LJ0ge
                       Tobia vuole preparare una torta di mele per il compleanno della mamma, si trova nella cucina di casa sua cosi' inizia a cercare un foglio(https://poly.pizza/m/7-99AhSn6qj) dove c'è
                       scritta la ricetta della torta  che a sua mamma piace tanto.Una volta trovato il foglio inizia con il cercare una ciotola (https://poly.pizza/m/1EwfmPQ-8ur)per mettere tutti insieme 
@@ -32,7 +32,7 @@ STORY 360
                       manca il latte(https://poly.pizza/m/9upNan7f8q)...trovato!Bene adesso Tobia mescola tutto e la torta è pronta per andare in forno.
         
                Laura->TEMA STRUMENTI MUSICALI
-                      env:https://poly.pizza/m/8NsrLwbXhfl
+                      env:https://poly.pizza/m/8NsrLwbXhfl OR https://poly.pizza/m/bLpPabajax0 OR https://poly.pizza/m/10AHpl8A7Ut
                       Laura:https://assetstore.unity.com/packages/3d/characters/animals/lovely-animals-pack-92629
                       Laura vuole formare una band musicale e va alla ricerca degli strumenti musicali migliori. Laura pensa che in una band musicale non possa mancare la
                       il piano (https://poly.pizza/m/7U-93vxPOER), eccolo è proprio li davanti! Per accompagnare il suono dolce del piano è necessario una chitarra (https://poly.pizza/m/afr6GCpce_I). Trovato la chitarra serve andare alla ricerca
