@@ -1867,6 +1867,7 @@ GameObject:
   - component: {fileID: 8303030945930800662}
   - component: {fileID: 8856334469782289881}
   - component: {fileID: 1507359209772986109}
+  - component: {fileID: 8193637857781818339}
   m_Layer: 0
   m_Name: 'Robot '
   m_TagString: Untagged
@@ -2028,6 +2029,26 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &8193637857781818339
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3885151340462007663}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 54f5860bdc27d4a4ca2e38fb1b3aa39e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3917785871079779426
 GameObject:
   m_ObjectHideFlags: 0
