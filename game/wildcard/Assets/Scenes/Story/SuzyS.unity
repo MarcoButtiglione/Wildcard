@@ -4786,6 +4786,10 @@ PrefabInstance:
       propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1256200240}
+    - target: {fileID: 1327783256279218269, guid: 9699facafe07fe64ba85496593660e18, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5149cd08b4580674295a8d3e5a64aca9, type: 2}
     - target: {fileID: 6901422805654090577, guid: 9699facafe07fe64ba85496593660e18, type: 3}
       propertyPath: m_Name
       value: CharacterParent
