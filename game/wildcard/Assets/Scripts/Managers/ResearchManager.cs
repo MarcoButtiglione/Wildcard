@@ -56,6 +56,14 @@ public class ResearchManager : MonoBehaviour
             Vector3 newPos = new Vector3(x, y, z);
             GameObject _gameObject = researchObj.transform.GetChild(i).gameObject;
             _gameObject.transform.position = newPos;
+            
+            Vector3 _cameraPosCamera = new Vector3(_cameraPos.x,y,_cameraPos.z);
+        
+            Vector3 objDir =newPos - _cameraPosCamera;
+            objDir.Normalize();
+            if(objDir!=Vector3.zero)
+                _gameObject.transform.forward = objDir;
+            
         }
         
         _state = 0;
