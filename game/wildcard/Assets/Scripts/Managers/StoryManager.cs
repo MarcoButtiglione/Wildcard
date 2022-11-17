@@ -29,7 +29,7 @@ public class StoryManager : MonoBehaviour
         _character = GameObject.Find("CharacterParent");
         _character.transform.position = new Vector3(_radius+_cameraPos.x , _heigth+_cameraPos.y, _cameraPos.z);
         _character.transform.eulerAngles = new Vector3(0, _initRot, 0);
-        
+        //SetIdle(_character);
         _isMoving = false;
         _characterProgression = 0;
         
@@ -53,6 +53,20 @@ public class StoryManager : MonoBehaviour
         _gameObject[newState-1].SetActive(false);
     }
 
+    private void SetWalking(GameObject obj)
+    {
+        if (obj.GetComponentInChildren<Animator>())
+        {
+            obj.GetComponentInChildren<Animator>().SetTrigger("walk");
+        }
+    }
+    private void SetIdle(GameObject obj)
+    {
+        if (obj.GetComponentInChildren<Animator>())
+        {
+            obj.GetComponentInChildren<Animator>().SetTrigger("idle");
+        }
+    }
 
     private void MoveCharacter()
     {
@@ -99,10 +113,12 @@ public class StoryManager : MonoBehaviour
     public void HoverEnteredCharacter()
     {
         _isMoving = true;
+        SetWalking(_character);
     }
     public void HoverExitedCharacter()
     {
         _isMoving = false;
+        SetIdle(_character);
     }
 
     private void Update()
@@ -112,9 +128,13 @@ public class StoryManager : MonoBehaviour
             MoveCharacter();
         }
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
-            MoveCharacter();
+            HoverEnteredCharacter();
+        }
+        if (Input.GetButtonUp("Jump"))
+        {
+            HoverExitedCharacter();
         }
             
     }
