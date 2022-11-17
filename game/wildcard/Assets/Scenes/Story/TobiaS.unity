@@ -3653,6 +3653,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401336730}
   m_Mesh: {fileID: 8115796837615448351, guid: ca50fc12b87b9924986614b5007df673, type: 3}
+--- !u!136 &479885850 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 765267560500810104, guid: 31db14a9ece63034ba6084074b17502e, type: 3}
+  m_PrefabInstance: {fileID: 1633477236}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &482722885
 GameObject:
   m_ObjectHideFlags: 0
@@ -10486,6 +10491,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 731917520064491836, guid: 31db14a9ece63034ba6084074b17502e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8b9a677f24793ba45bdc27a1dab7745e, type: 2}
+    - target: {fileID: 765267560500810104, guid: 31db14a9ece63034ba6084074b17502e, type: 3}
+      propertyPath: m_Radius
+      value: 0.24491523
+      objectReference: {fileID: 0}
+    - target: {fileID: 765267560500810104, guid: 31db14a9ece63034ba6084074b17502e, type: 3}
+      propertyPath: m_Center.x
+      value: -0.003857701
+      objectReference: {fileID: 0}
+    - target: {fileID: 765267560500810104, guid: 31db14a9ece63034ba6084074b17502e, type: 3}
+      propertyPath: m_Center.z
+      value: 1.30399355e-11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390538067338390110, guid: 31db14a9ece63034ba6084074b17502e, type: 3}
+      propertyPath: m_Colliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 479885850}
+    - target: {fileID: 3390538067338390110, guid: 31db14a9ece63034ba6084074b17502e, type: 3}
+      propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2057270022}
+    - target: {fileID: 3390538067338390110, guid: 31db14a9ece63034ba6084074b17502e, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2057270022}
+    - target: {fileID: 3390538067338390110, guid: 31db14a9ece63034ba6084074b17502e, type: 3}
+      propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HoverExitedCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390538067338390110, guid: 31db14a9ece63034ba6084074b17502e, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HoverEnteredCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390538067338390110, guid: 31db14a9ece63034ba6084074b17502e, type: 3}
+      propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StoryManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390538067338390110, guid: 31db14a9ece63034ba6084074b17502e, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StoryManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390538067338390110, guid: 31db14a9ece63034ba6084074b17502e, type: 3}
+      propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390538067338390110, guid: 31db14a9ece63034ba6084074b17502e, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5714811997039926662, guid: 31db14a9ece63034ba6084074b17502e, type: 3}
       propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
