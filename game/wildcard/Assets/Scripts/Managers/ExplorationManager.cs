@@ -37,6 +37,21 @@ public class ExplorationManager : MonoBehaviour
         _isMovingChar = false;
     }
     
+    private void SetRun(GameObject obj)
+    {
+        if (obj.GetComponentInChildren<Animator>())
+        {
+            obj.GetComponentInChildren<Animator>().SetTrigger("run");
+        }
+    }
+    private void SetWave(GameObject obj)
+    {
+        if (obj.GetComponentInChildren<Animator>())
+        {
+            obj.GetComponentInChildren<Animator>().SetTrigger("wave");
+        }
+    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -51,6 +66,7 @@ public class ExplorationManager : MonoBehaviour
             if (Vector3.Distance(_character.transform.position, _checkpoints[_currentCheckpoint].transform.position) <
                 Single.Epsilon)
             {
+                SetWave(_character);
                 _isMovingChar = false;
                 //Rotate character to player
                 Vector3 movementDirection =_player.transform.position - _character.transform.position;
@@ -118,6 +134,7 @@ public class ExplorationManager : MonoBehaviour
             {
                 _currentCheckpoint++;
                 _isMovingChar = true;
+                SetRun(_character);
             }
         }
     }

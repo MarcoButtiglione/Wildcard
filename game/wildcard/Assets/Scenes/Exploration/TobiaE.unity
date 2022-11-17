@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17950809, g: 0.2247681, b: 0.30638558, a: 1}
+  m_IndirectSpecularColor: {r: 0.17950785, g: 0.22476767, b: 0.3063851, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -258,6 +258,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1192649445}
     m_Modifications:
+    - target: {fileID: 173937746426926236, guid: d029d166c03f0154b93fb8fe46939a34, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e009f49c1c6501247ad5efdc7416541b, type: 2}
     - target: {fileID: 228994198448970330, guid: d029d166c03f0154b93fb8fe46939a34, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -2429,7 +2433,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8105806615825246292, guid: c58467e08fefd7344a67ccbf5820995d, type: 3}
       propertyPath: _speedPlayer
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8105806615825246292, guid: c58467e08fefd7344a67ccbf5820995d, type: 3}
       propertyPath: _speedCharacter
