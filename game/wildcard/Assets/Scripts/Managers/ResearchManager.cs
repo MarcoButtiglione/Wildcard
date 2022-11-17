@@ -2,33 +2,54 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
+
 
 public class ResearchManager : MonoBehaviour
 {
     private int _state;
+    private List<int> _orderOfTheState;
     
     private GameObject _camera;
     private Vector3 _cameraPos;
     private GameObject _arrow;
-    
-    
-    [SerializeField] private float _initRot = 90;
+
     [SerializeField] private float _radius=3f;
     [SerializeField] private float _heigth=1f;
     [SerializeField] private float _deltaArrow=1f;
     
+    private static Random rng = new Random();  
+
+    public static void Shuffle (List<int> list)  
+    {  
+        int n = list.Count;  
+        while (n > 1) {  
+            n--;  
+            var k = rng.Next(n + 1);  
+            (list[k], list[n]) = (list[n], list[k]);
+        }
+    }
+    
+    
     private void Awake()
     {
+        
         _camera = GameObject.Find("XR Origin");
         _cameraPos = _camera.transform.position;
         float x,y,z ;
         float angle;
         
         GameObject researchObj = GameObject.Find("ResearchObj");
+        _orderOfTheState = new List<int>();
+        for (int i = 0; i < researchObj.transform.childCount; i++)
+        {
+            _orderOfTheState.Insert(i,i);
+        }
+        Shuffle(_orderOfTheState);
 
         for (int i = 0; i < researchObj.transform.childCount; i++)
         {
-            angle = i * Mathf.PI*2f / researchObj.transform.childCount;
+            angle = _orderOfTheState[i] * Mathf.PI*2f / researchObj.transform.childCount;
             x =(Mathf.Cos(angle)*_radius)+_cameraPos.x ; 
             y = _heigth+_cameraPos.y;
             z = (Mathf.Sin(angle) * _radius)+_cameraPos.z;
@@ -43,21 +64,31 @@ public class ResearchManager : MonoBehaviour
     private void Start()
     {
         _arrow = GameObject.Find("Arrow");
-        Vector3 posObj = GameObject.Find("ResearchObj").transform.GetChild(0).gameObject.transform.position;
+        Vector3 posObj = GameObject.Find("ResearchObj").transform.GetChild(_orderOfTheState[0]).gameObject.transform.position;
         _arrow.transform.position = posObj + new Vector3(0,_deltaArrow,0);
-        _arrow.transform.eulerAngles = new Vector3(0, _initRot, 0);
+
+        Vector3 _cameraPosCamera = new Vector3(_cameraPos.x,_deltaArrow,_cameraPos.z);
+        
+        Vector3 arrowDirection =_cameraPosCamera - _arrow.transform.position;
+        arrowDirection.Normalize();
+        if(arrowDirection!=Vector3.zero)
+            _arrow.transform.forward = arrowDirection;
     }
 
     private void UpdateGameState(int newState)
     {       
         _arrow = GameObject.Find("Arrow");
         GameObject researchObj = GameObject.Find("ResearchObj");
-        Vector3 posObj = researchObj.transform.GetChild(newState).gameObject.transform.position;
+        Vector3 posObj = researchObj.transform.GetChild(_orderOfTheState[newState]).gameObject.transform.position;
+        researchObj.transform.GetChild(_orderOfTheState[newState-1]).gameObject.SetActive(false);
         
-        float angle = newState * 360f / researchObj.transform.childCount;
-
         _arrow.transform.position = posObj + new Vector3(0,_deltaArrow,0);
-        _arrow.transform.eulerAngles =  new Vector3(0, _initRot -angle, 0);
+        
+        Vector3 _cameraPosCamera = new Vector3(_cameraPos.x,_deltaArrow,_cameraPos.z);
+        Vector3 arrowDirection =_cameraPosCamera - _arrow.transform.position;
+        arrowDirection.Normalize();
+        if(arrowDirection!=Vector3.zero)
+            _arrow.transform.forward = arrowDirection;
         
         _state = newState;
     }
@@ -69,9 +100,8 @@ public class ResearchManager : MonoBehaviour
         {
             LevelManager.Instance.PlayMainMenu();
             _state = 0;
-            _arrow = GameObject.Find("Arrow");
-            _arrow.transform.position =  GameObject.Find("ResearchObj").transform.GetChild(0).gameObject.transform.position
-                                         + new Vector3(0,_deltaArrow,0);
+            //_arrow = GameObject.Find("Arrow");
+            //_arrow.transform.position =  GameObject.Find("ResearchObj").transform.GetChild(0).gameObject.transform.position+ new Vector3(0,_deltaArrow,0);
         }
         else
         {
@@ -81,7 +111,7 @@ public class ResearchManager : MonoBehaviour
 
     public void OnSelectGameObj(int id)
     {
-        if (id == _state)
+        if (id == _orderOfTheState[_state])
         {
             NextState();
         }
