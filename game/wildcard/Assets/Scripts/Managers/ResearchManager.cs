@@ -17,6 +17,7 @@ public class ResearchManager : MonoBehaviour
     [SerializeField] private float _radius=3f;
     [SerializeField] private float _heigth=1f;
     [SerializeField] private float _deltaArrow=1f;
+    [SerializeField] private double _randomDirection = 0f;
     
     private static Random rng = new Random();  
 
@@ -56,8 +57,11 @@ public class ResearchManager : MonoBehaviour
             Vector3 newPos = new Vector3(x, y, z);
             GameObject _gameObject = researchObj.transform.GetChild(i).gameObject;
             _gameObject.transform.position = newPos;
+
+            float randx = (float) (_randomDirection*(rng.NextDouble()-0.5f));
+            float randz = (float) (_randomDirection*(rng.NextDouble()-0.5f));
             
-            Vector3 _cameraPosCamera = new Vector3(_cameraPos.x,y,_cameraPos.z);
+            Vector3 _cameraPosCamera = new Vector3(_cameraPos.x+randx,y,_cameraPos.z+randz);
         
             Vector3 objDir =newPos - _cameraPosCamera;
             objDir.Normalize();
