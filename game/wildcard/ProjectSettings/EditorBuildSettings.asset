@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Story/TobiaS.unity
     guid: 5ac24a4fddd03454bbd7e07e35b02cf3
   - enabled: 1
-    path: Assets/Scenes/Story/LauraS.unity
+    path: Assets/Scenes/LauraR23.unity
     guid: b40f8e9caf5898e4ba657fcad6ad0788
   - enabled: 1
     path: Assets/Scenes/Story/BendyS.unity
