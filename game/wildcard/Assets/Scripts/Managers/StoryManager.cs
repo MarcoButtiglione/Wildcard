@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class StoryManager : MonoBehaviour
 {
@@ -10,30 +11,74 @@ public class StoryManager : MonoBehaviour
     private GameObject _camera;
     private Vector3 _cameraPos;
     [SerializeField] private GameObject[] _gameObject;
+    private List<int> _orderOfTheObject;
+    
+    private GameObject _arrow;
+
     private GameObject _character;
     [SerializeField] private float _initRot;
     [SerializeField] private float _speed = 0.1f;
     private bool _isMoving;
     private float _characterProgression;
     
+    private GameObject _menu;
+    private bool _levelCompleted=false;
+    
     [SerializeField] private float _radius=3f;
     [SerializeField] private float _heigth=3f;
     [SerializeField] private float _deltaTaken = 0.3f;
+    [SerializeField] private float _deltaArrow = 1.7f;
+    [SerializeField] private double _randomDirection = 0f;
     
+    private static Random rng = new Random();  
+
+    public static void Shuffle (List<int> list)  
+    {  
+        int n = list.Count;  
+        while (n > 1) {  
+            n--;  
+            var k = rng.Next(n + 1);  
+            (list[k], list[n]) = (list[n], list[k]);
+        }
+    }
     
     private void Awake()
     {
+        _menu = GameObject.Find("MenuCanvas");
+        _levelCompleted = false;
+        _menu.SetActive(false);
+        
         _camera = GameObject.Find("XR Origin");
         _cameraPos = _camera.transform.position;
         
         _character = GameObject.Find("CharacterParent");
         _character.transform.position = new Vector3(_radius+_cameraPos.x , _heigth+_cameraPos.y, _cameraPos.z);
         _character.transform.eulerAngles = new Vector3(0, _initRot, 0);
+        
+        _arrow = GameObject.Find("Arrow");
+        Vector3 posObj = new Vector3(_radius+_cameraPos.x , _heigth+_cameraPos.y, _cameraPos.z);
+        _arrow.transform.position = posObj + new Vector3(0,_deltaArrow,0);
+
+        
+        Vector3 cameraPosCamera = new Vector3(_cameraPos.x,_deltaArrow,_cameraPos.z);
+        
+        Vector3 arrowDirection =cameraPosCamera - _arrow.transform.position;
+        arrowDirection.Normalize();
+        if(arrowDirection!=Vector3.zero)
+            _arrow.transform.forward = arrowDirection;
+        
         //SetIdle(_character);
         _isMoving = false;
         _characterProgression = 0;
         
         _state = 0;
+        
+        _orderOfTheObject = new List<int>();
+        for (int i = 0; i < _gameObject.Length; i++)
+        {
+            _orderOfTheObject.Insert(i,i);
+        }
+        Shuffle(_orderOfTheObject);
         
         for (int i = 0; i < _gameObject.Length; i++)
         {
@@ -42,7 +87,18 @@ public class StoryManager : MonoBehaviour
             float y = _heigth+_cameraPos.y;
             float z = (Mathf.Sin(angle) * _radius)+_cameraPos.z;
             Vector3 newPos = new Vector3(x, y, z);
-            _gameObject[i]=Instantiate(_gameObject[i], newPos, Quaternion.identity);
+            _gameObject[_orderOfTheObject[i]]=Instantiate(_gameObject[_orderOfTheObject[i]], newPos, Quaternion.identity);
+            
+            
+            float randx = (float) (_randomDirection*(rng.NextDouble()-0.5f));
+            float randz = (float) (_randomDirection*(rng.NextDouble()-0.5f));
+            
+            cameraPosCamera = new Vector3(_cameraPos.x+randx,y,_cameraPos.z+randz);
+        
+            Vector3 objDir =newPos - cameraPosCamera;
+            objDir.Normalize();
+            if(objDir!=Vector3.zero)
+                _gameObject[_orderOfTheObject[i]].transform.forward = objDir;
         }
     }
     
@@ -50,7 +106,7 @@ public class StoryManager : MonoBehaviour
     private void UpdateGameState(int newState)
     {
         _state = newState;
-        _gameObject[newState-1].SetActive(false);
+        _gameObject[_orderOfTheObject[newState-1]].SetActive(false);
     }
 
     private void SetWalking(GameObject obj)
@@ -70,6 +126,11 @@ public class StoryManager : MonoBehaviour
 
     private void MoveCharacter()
     {
+        if (_arrow.activeSelf)
+        {
+            _arrow.SetActive(false);
+        }
+        
         _characterProgression += _speed * Time.fixedDeltaTime;
         
         float angle = _characterProgression * Mathf.PI*2f / (_gameObject.Length+1);
@@ -91,7 +152,9 @@ public class StoryManager : MonoBehaviour
             //If the game is finished
             if (_state +1== _gameObject.Length)
             {
-                LevelManager.Instance.PlayMainMenu();
+                _levelCompleted = true;
+                _menu.SetActive(true);
+                //LevelManager.Instance.PlayMainMenu();
                 _state = 0;
                 _character.transform.position = new Vector3(0f, 0f, 0f);
                 for (var i = 0; i < _gameObject.Length; i++)
