@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.25371766, g: 0.51932967, b: 0.34942976, a: 1}
+  m_IndirectSpecularColor: {r: 0.25369963, g: 0.5194621, b: 0.34942797, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1774,6 +1774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f52234ad20dc0245a27f0427d13636c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boomEffect: {fileID: 1658140284247388912, guid: c9a2e98cb46210a47bc8a81d21f26d4a, type: 3}
   _deltaAngle: 90
   _radius: 10
   _heigth: -1

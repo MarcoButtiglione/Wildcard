@@ -13,6 +13,7 @@ public class ResearchManager_1 : MonoBehaviour
     private GameObject _camera;
     private Vector3 _cameraPos;
     private GameObject _arrow;
+    [SerializeField] private GameObject boomEffect;
 
     [SerializeField] private float _deltaAngle = 30f;
 
@@ -99,10 +100,16 @@ public class ResearchManager_1 : MonoBehaviour
         GameObject researchObj = GameObject.Find("ResearchObj");
         Vector3 posObj = researchObj.transform.GetChild(_orderOfTheState[newState]).gameObject.transform.position;
         researchObj.transform.GetChild(_orderOfTheState[newState-1]).gameObject.SetActive(false);
+
         
         _arrow.transform.position = posObj + new Vector3(0,_deltaArrow,0);
         
         Vector3 _cameraPosCamera = new Vector3(_cameraPos.x,_deltaArrow,_cameraPos.z);
+
+        boomEffect=Instantiate(boomEffect,researchObj.transform.GetChild(_orderOfTheState[newState-1]).gameObject.transform.position,Quaternion.identity);
+        boomEffect.transform.LookAt(_cameraPosCamera);
+
+
         Vector3 arrowDirection =_cameraPosCamera - _arrow.transform.position;
         arrowDirection.Normalize();
         if(arrowDirection!=Vector3.zero)

@@ -2162,6 +2162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f52234ad20dc0245a27f0427d13636c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boomEffect: {fileID: 1658140284247388912, guid: c9a2e98cb46210a47bc8a81d21f26d4a, type: 3}
   _deltaAngle: 90
   _radius: 12
   _heigth: -0.8
