@@ -9,42 +9,112 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject _buttonsStory;
     [SerializeField] private GameObject _buttonsResearch;
     [SerializeField] private GameObject _buttonsExploration;
+    [SerializeField] private GameObject _buttonsMenu2;
+    [SerializeField] private GameObject _buttonsStory2;
+    [SerializeField] private GameObject _buttonsResearch2;
+    [SerializeField] private GameObject _buttonsExploration2;
 
     private void Awake()
     {
-        _buttonsExploration.SetActive(false);
         _buttonsMenu.SetActive(true);
-        _buttonsResearch.SetActive(false);
         _buttonsStory.SetActive(false);
+        _buttonsResearch.SetActive(false);
+        _buttonsExploration.SetActive(false);
+        _buttonsMenu2.SetActive(false);
+        _buttonsExploration2.SetActive(false);
+        _buttonsResearch2.SetActive(false);
+        _buttonsStory2.SetActive(false);
     }
 
     public void ClickStory()
     {
-        _buttonsExploration.SetActive(false);
         _buttonsMenu.SetActive(false);
-        _buttonsResearch.SetActive(false);
         _buttonsStory.SetActive(true);
+        _buttonsResearch.SetActive(false);
+        _buttonsExploration.SetActive(false);
+        _buttonsMenu2.SetActive(false);
+        _buttonsExploration2.SetActive(false);
+        _buttonsResearch2.SetActive(false);
+        _buttonsStory2.SetActive(false);
     }
     public void ClickResearch()
     {
-        _buttonsExploration.SetActive(false);
         _buttonsMenu.SetActive(false);
-        _buttonsResearch.SetActive(true);
         _buttonsStory.SetActive(false);
+        _buttonsResearch.SetActive(true);
+        _buttonsExploration.SetActive(false);
+        _buttonsMenu2.SetActive(false);
+        _buttonsExploration2.SetActive(false);
+        _buttonsResearch2.SetActive(false);
+        _buttonsStory2.SetActive(false);
     }
     public void ClickExploration()
     {
-        _buttonsExploration.SetActive(true);
         _buttonsMenu.SetActive(false);
-        _buttonsResearch.SetActive(false);
         _buttonsStory.SetActive(false);
+        _buttonsResearch.SetActive(false);
+        _buttonsExploration.SetActive(true);
+        _buttonsMenu2.SetActive(false);
+        _buttonsExploration2.SetActive(false);
+        _buttonsResearch2.SetActive(false);
+        _buttonsStory2.SetActive(false);
     }
-    public void ClickReturn()
+    public void ClickStory2()
     {
-        _buttonsExploration.SetActive(false);
-        _buttonsMenu.SetActive(true);
-        _buttonsResearch.SetActive(false);
+        _buttonsMenu.SetActive(false);
         _buttonsStory.SetActive(false);
+        _buttonsResearch.SetActive(false);
+        _buttonsExploration.SetActive(false);
+        _buttonsMenu2.SetActive(false);
+        _buttonsExploration2.SetActive(false);
+        _buttonsResearch2.SetActive(false);
+        _buttonsStory2.SetActive(true);
+    }
+    public void ClickResearch2()
+    {
+        _buttonsMenu.SetActive(false);
+        _buttonsStory.SetActive(false);
+        _buttonsResearch.SetActive(false);
+        _buttonsExploration.SetActive(false);
+        _buttonsMenu2.SetActive(false);
+        _buttonsExploration2.SetActive(false);
+        _buttonsResearch2.SetActive(true);
+        _buttonsStory2.SetActive(false);
+ 
+    }
+    public void ClickExploration2()
+    {
+        _buttonsMenu.SetActive(false);
+        _buttonsStory.SetActive(false);
+        _buttonsResearch.SetActive(false);
+        _buttonsExploration.SetActive(false);
+        _buttonsMenu2.SetActive(false);
+        _buttonsExploration2.SetActive(true);
+        _buttonsResearch2.SetActive(false);
+        _buttonsStory2.SetActive(false);
+    }
+    public void ClickMenu()
+    {
+        _buttonsMenu.SetActive(true);
+        _buttonsStory.SetActive(false);
+        _buttonsResearch.SetActive(false);
+        _buttonsExploration.SetActive(false);
+        _buttonsMenu2.SetActive(false);
+        _buttonsExploration2.SetActive(false);
+        _buttonsResearch2.SetActive(false);
+        _buttonsStory2.SetActive(false);
+    }
+    
+    public void ClickMenu2()
+    {
+        _buttonsMenu.SetActive(false);
+        _buttonsStory.SetActive(false);
+        _buttonsResearch.SetActive(false);
+        _buttonsExploration.SetActive(false);
+        _buttonsMenu2.SetActive(true);
+        _buttonsExploration2.SetActive(false);
+        _buttonsResearch2.SetActive(false);
+        _buttonsStory2.SetActive(false);
     }
     
     //RESEARCH
