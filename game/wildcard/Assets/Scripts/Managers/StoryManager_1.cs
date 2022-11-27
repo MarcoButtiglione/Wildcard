@@ -33,7 +33,7 @@ public class StoryManager_1 : MonoBehaviour
         _character.transform.position = new Vector3(_cameraPos.x , _heigth+_cameraPos.y, _radius+_cameraPos.z);
 
         Vector3 camPos =  new Vector3(_cameraPos.x , _heigth+_cameraPos.y, _cameraPos.z); ;
-        Vector3 charDir =camPos - _character.transform.position ;
+        Vector3 charDir = _character.transform.position - camPos ;
         charDir.Normalize();
         if(charDir!=Vector3.zero)
             _character.transform.forward = charDir;
@@ -56,7 +56,7 @@ public class StoryManager_1 : MonoBehaviour
             
             Vector3 _cameraPosCamera = new Vector3(_cameraPos.x,y,_cameraPos.z);
         
-            Vector3 objDir = _cameraPosCamera-newPos ;
+            Vector3 objDir = newPos -  _cameraPosCamera;
             objDir.Normalize();
             if(objDir!=Vector3.zero)
                 _gameObject[i].transform.forward = objDir;
@@ -91,10 +91,10 @@ public class StoryManager_1 : MonoBehaviour
         _characterProgression += _speed * Time.fixedDeltaTime;
         
         float angle = _characterProgression * Mathf.PI*2f / (_gameObject.Length+1);
-        float x =(Mathf.Cos(angle)*_radius)+_cameraPos.x ;
+        float x =(Mathf.Sin(angle)*_radius)+_cameraPos.x ;
         //float y = _heigth+_cameraPos.y;
         float y = _character.transform.position.y;
-        float z = (Mathf.Sin(angle) * _radius)+_cameraPos.z;
+        float z = (Mathf.Cos(angle) * _radius)+_cameraPos.z;
         Vector3 newPos = new Vector3(x, y, z);
         
         _character.transform.position = newPos;
@@ -102,7 +102,7 @@ public class StoryManager_1 : MonoBehaviour
         
         Vector3 _cameraPosCamera = new Vector3(_cameraPos.x,y,_cameraPos.z);
         
-        Vector3 objDir = _cameraPosCamera-newPos ;
+        Vector3 objDir =newPos - _cameraPosCamera ;
         objDir.Normalize();
         if(objDir!=Vector3.zero)
             _character.transform.forward = objDir;
