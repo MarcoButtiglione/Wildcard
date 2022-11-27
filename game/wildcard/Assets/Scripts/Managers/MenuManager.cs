@@ -117,7 +117,9 @@ public class MenuManager : MonoBehaviour
         _buttonsStory2.SetActive(false);
     }
     
-    //RESEARCH
+    
+    
+    //RESEARCH2
     public void PlayResearchSuzy()
     {
         LevelManager.Instance.PlayLevel(Level.ResearchSuzy);
@@ -138,7 +140,7 @@ public class MenuManager : MonoBehaviour
     { 
         LevelManager.Instance.PlayLevel(Level.ResearchBendy);
     }
-    //STORY
+    //STORY2
     public void PlayStorySuzy()
     {
         LevelManager.Instance.PlayLevel(Level.StorySuzy);
@@ -159,7 +161,7 @@ public class MenuManager : MonoBehaviour
     { 
         LevelManager.Instance.PlayLevel(Level.StoryBendy);
     }
-    //EXPLORATION
+    //EXPLORATION2
     public void PlayExplorationSuzy()
     {
         LevelManager.Instance.PlayLevel(Level.ExplorationSuzy);
