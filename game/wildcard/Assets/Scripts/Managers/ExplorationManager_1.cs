@@ -7,12 +7,15 @@ public class ExplorationManager_1 : MonoBehaviour
 {
     private GameObject _player;
     private GameObject _character;
+    private bool _isHover=false;
+    
 
     private int _currentCheckpoint;
-    private bool _isHover;
     private bool _isMovingChar;
+    private int _pointedObject;
+    private Vector3[] _posPicture;
     
-    [SerializeField] private float _speedPlayer = 2f;
+    [SerializeField] private float _playerSpeed=2f;
     [SerializeField] private float _speedCharacter = 4f;
     [SerializeField] private GameObject[] _checkpoints;
     
@@ -21,6 +24,15 @@ public class ExplorationManager_1 : MonoBehaviour
     {
         _player = GameObject.Find("XR Origin");
         _character=GameObject.Find("Character");
+        
+        GameObject pictures = GameObject.Find("Picture");
+        _posPicture = new Vector3[pictures.transform.childCount];
+        
+        for (int i = 0; i < pictures.transform.childCount; i++)
+        {
+             _posPicture[i] = pictures.transform.GetChild(i).gameObject.transform.position;
+        }
+        _isHover = false;
 
         _currentCheckpoint = 0;
         _character.transform.position = _checkpoints[0].transform.position;
@@ -33,7 +45,6 @@ public class ExplorationManager_1 : MonoBehaviour
             _character.transform.forward = movementDirection;
 
 
-        _isHover = false;
         _isMovingChar = false;
     }
     
@@ -55,12 +66,11 @@ public class ExplorationManager_1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_isHover && !_isMovingChar)
-        { 
-            MoveTo(_player,_checkpoints[_currentCheckpoint],_speedPlayer);
+        if (_isHover)
+        {
+            MoveTo(_player,_posPicture[_pointedObject],_playerSpeed);
         }
         
-
         if (_isMovingChar)
         {
             if (Vector3.Distance(_character.transform.position, _checkpoints[_currentCheckpoint].transform.position) <
@@ -73,32 +83,12 @@ public class ExplorationManager_1 : MonoBehaviour
                 movementDirection.Normalize();
                 if(movementDirection!=Vector3.zero)
                     _character.transform.forward = movementDirection;
-                
             }
             else
             {
                 MoveToAndRotate(_character,_checkpoints[_currentCheckpoint],_speedCharacter);
-                if (Vector3.Distance(_player.transform.position, _checkpoints[_currentCheckpoint-1].transform.position) >
-                    Single.Epsilon)
-                {
-                    MoveTo(_player, _checkpoints[_currentCheckpoint - 1], _speedPlayer);
-                }
             }
         }
-        
-        
-        //TEST
-        /*
-        if (!_isMovingChar)
-        {
-            MoveTo(_player,_checkpoints[_currentCheckpoint],_speedPlayer);
-        }
-        */
-    }
-
-    private void MoveTo(GameObject obj,GameObject to , float speed )
-    {
-        obj.transform.position = Vector3.MoveTowards(obj.transform.position, to.transform.position, speed*Time.deltaTime);
     }
     private void MoveToAndRotate(GameObject obj,GameObject to , float speed )
     {
@@ -112,16 +102,6 @@ public class ExplorationManager_1 : MonoBehaviour
 
 
     }
-    
-    public void HoverEnteredCharacter()
-    {
-        _isHover = true; 
-    }
-    public void HoverExitedCharacter()
-    {
-        _isHover = false;
-    }
-
     public void NextStep()
     {
         if (!_isMovingChar)
@@ -137,5 +117,23 @@ public class ExplorationManager_1 : MonoBehaviour
                 SetRun(_character);
             }
         }
+    }
+    private void MoveTo(GameObject obj,Vector3 to , float speed )
+    {
+        Vector3 nextPos= Vector3.MoveTowards(obj.transform.position, to, speed*Time.deltaTime); 
+        Transform transform = obj.transform;
+        transform.position = new Vector3(nextPos.x, transform.position.y, nextPos.z);
+
+    }
+
+    public void HoverEnteredCharacter(int id)
+    {
+        _isHover = true;
+        _pointedObject = id;
+
+    }
+    public void HoverExitedCharacter()
+    {
+        _isHover = false;
     }
 }
