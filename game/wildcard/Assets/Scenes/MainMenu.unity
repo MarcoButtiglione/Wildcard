@@ -1260,7 +1260,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 352761843}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: PlayStoryTobia
+        m_MethodName: PlayStoryGiulio1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1699,7 +1699,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 352761843}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: PlayStoryTullio
+        m_MethodName: PlayStoryPimpa1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2010,7 +2010,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 352761843}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: PlayStoryTullio
+        m_MethodName: PlayExplorationPimpa1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3153,7 +3153,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 352761843}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: PlayStoryTobia
+        m_MethodName: PlayExplorationGiulio1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4493,7 +4493,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 352761843}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: PlayStoryTullio
+        m_MethodName: PlayResearchPimpa1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5041,7 +5041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &574507127
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7379,7 +7379,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 352761843}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: PlayStorySuzy
+        m_MethodName: PlayStoryTobia1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7644,7 +7644,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 352761843}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: PlayStoryLaura
+        m_MethodName: PlayStorySuzy1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8024,7 +8024,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 352761843}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: PlayStoryLaura
+        m_MethodName: PlayResearchSuzy1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8283,7 +8283,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1028828678
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8607,7 +8607,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 352761843}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: PlayStorySuzy
+        m_MethodName: PlayExplorationTobia1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11194,7 +11194,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 352761843}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: PlayStorySuzy
+        m_MethodName: PlayResearchTobia1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13241,7 +13241,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 352761843}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: PlayStoryTobia
+        m_MethodName: PlayResearchGiulio1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14778,7 +14778,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 352761843}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: PlayStoryLaura
+        m_MethodName: PlayExplorationSuzy1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
