@@ -123,8 +123,7 @@ public class ResearchManager_1 : MonoBehaviour
     {
         if (_state +1== GameObject.Find("ResearchObj").transform.childCount)
         {
-            LevelManager.Instance.PlayMainMenu();
-            _state = 0;
+            StartCoroutine("WaitFor");
             //_arrow = GameObject.Find("Arrow");
             //_arrow.transform.position =  GameObject.Find("ResearchObj").transform.GetChild(0).gameObject.transform.position+ new Vector3(0,_deltaArrow,0);
         }
@@ -147,6 +146,28 @@ public class ResearchManager_1 : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
             NextState();
+    }
+
+    IEnumerator WaitFor(){
+         _arrow = GameObject.Find("Arrow");
+         _arrow.SetActive(false);
+        GameObject researchObj = GameObject.Find("ResearchObj");
+        //Vector3 posObj = researchObj.transform.GetChild(_orderOfTheState[newState]).gameObject.transform.position;
+        researchObj.transform.GetChild(_orderOfTheState[_state]).gameObject.SetActive(false);
+
+        
+        //_arrow.transform.position = posObj + new Vector3(0,_deltaArrow,0);
+        
+        Vector3 _cameraPosCamera = new Vector3(_cameraPos.x,_deltaArrow,_cameraPos.z);
+
+        boomEffect=Instantiate(boomEffect,researchObj.transform.GetChild(_orderOfTheState[_state]).gameObject.transform.position,Quaternion.identity);
+        boomEffect.transform.LookAt(_cameraPosCamera);
+       
+        yield return new WaitForSecondsRealtime(1f);
+        
+        LevelManager.Instance.PlayMainMenu();
+
+        _state = 0;
     }
     
 }
