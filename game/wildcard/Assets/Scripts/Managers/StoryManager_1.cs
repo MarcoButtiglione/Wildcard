@@ -19,6 +19,9 @@ public class StoryManager_1 : MonoBehaviour
     [SerializeField] private float _radius=3f;
     [SerializeField] private float _heigth=3f;
     [SerializeField] private float _deltaTaken = 0.3f;
+
+    [SerializeField] private Sprite _spriteIdle;
+    [SerializeField] private Sprite _spriteWalking;
     
     
     private void Awake()
@@ -28,7 +31,13 @@ public class StoryManager_1 : MonoBehaviour
         
         _character = GameObject.Find("CharacterParent");
         _character.transform.position = new Vector3(_radius+_cameraPos.x , _heigth+_cameraPos.y, _cameraPos.z);
-        _character.transform.eulerAngles = new Vector3(0, _initRot, 0);
+
+        Vector3 camPos =  new Vector3(_cameraPos.x , _heigth+_cameraPos.y, _cameraPos.z); ;
+        Vector3 charDir =camPos - _character.transform.position ;
+        charDir.Normalize();
+        if(charDir!=Vector3.zero)
+            _character.transform.forward = charDir;
+        
         //SetIdle(_character);
         _isMoving = false;
         _characterProgression = 0;
@@ -47,7 +56,7 @@ public class StoryManager_1 : MonoBehaviour
             
             Vector3 _cameraPosCamera = new Vector3(_cameraPos.x,y,_cameraPos.z);
         
-            Vector3 objDir =newPos - _cameraPosCamera;
+            Vector3 objDir = _cameraPosCamera-newPos ;
             objDir.Normalize();
             if(objDir!=Vector3.zero)
                 _gameObject[i].transform.forward = objDir;
@@ -64,16 +73,16 @@ public class StoryManager_1 : MonoBehaviour
 
     private void SetWalking(GameObject obj)
     {
-        if (obj.GetComponentInChildren<Animator>())
+        if (obj.GetComponentInChildren<SpriteRenderer>())
         {
-            obj.GetComponentInChildren<Animator>().SetTrigger("walk");
+            obj.GetComponentInChildren<SpriteRenderer>().sprite=_spriteWalking;
         }
     }
     private void SetIdle(GameObject obj)
     {
-        if (obj.GetComponentInChildren<Animator>())
+        if (obj.GetComponentInChildren<SpriteRenderer>())
         {
-            obj.GetComponentInChildren<Animator>().SetTrigger("idle");
+            obj.GetComponentInChildren<SpriteRenderer>().sprite=_spriteIdle;
         }
     }
 
@@ -89,10 +98,15 @@ public class StoryManager_1 : MonoBehaviour
         Vector3 newPos = new Vector3(x, y, z);
         
         _character.transform.position = newPos;
-
-        float rotY = _initRot - (_characterProgression * 360 / (_gameObject.Length+1));
         
-        _character.transform.eulerAngles = new Vector3(0, rotY, 0);
+        
+        Vector3 _cameraPosCamera = new Vector3(_cameraPos.x,y,_cameraPos.z);
+        
+        Vector3 objDir = _cameraPosCamera-newPos ;
+        objDir.Normalize();
+        if(objDir!=Vector3.zero)
+            _character.transform.forward = objDir;
+        
         
         //If the position have overpassed the position of next object in the scene...
         if (_characterProgression+_deltaTaken>_state+1)
