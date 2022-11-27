@@ -30,7 +30,7 @@ public class StoryManager_1 : MonoBehaviour
         _cameraPos = _camera.transform.position;
         
         _character = GameObject.Find("CharacterParent");
-        _character.transform.position = new Vector3(_radius+_cameraPos.x , _heigth+_cameraPos.y, _cameraPos.z);
+        _character.transform.position = new Vector3(_cameraPos.x , _heigth+_cameraPos.y, _radius+_cameraPos.z);
 
         Vector3 camPos =  new Vector3(_cameraPos.x , _heigth+_cameraPos.y, _cameraPos.z); ;
         Vector3 charDir =camPos - _character.transform.position ;
@@ -47,9 +47,9 @@ public class StoryManager_1 : MonoBehaviour
         for (int i = 0; i < _gameObject.Length; i++)
         {
             float angle = (i+1) * Mathf.PI*2f / (_gameObject.Length+1);
-            float x =(Mathf.Cos(angle)*_radius)+_cameraPos.x ;
+            float x =(Mathf.Sin(angle)*_radius)+_cameraPos.x ;
             float y = _heigth+_cameraPos.y;
-            float z = (Mathf.Sin(angle) * _radius)+_cameraPos.z;
+            float z = (Mathf.Cos(angle) * _radius)+_cameraPos.z;
             Vector3 newPos = new Vector3(x, y, z);
             _gameObject[i]=Instantiate(_gameObject[i], newPos, Quaternion.identity);
             
