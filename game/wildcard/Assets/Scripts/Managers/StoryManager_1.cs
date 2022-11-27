@@ -9,6 +9,8 @@ public class StoryManager_1 : MonoBehaviour
 
     private GameObject _camera;
     private Vector3 _cameraPos;
+    private Vector3 _cameraPosCamera;
+    [SerializeField] private GameObject boomEffect;
     [SerializeField] private GameObject[] _gameObject;
     private GameObject _character;
     [SerializeField] private float _initRot;
@@ -54,7 +56,7 @@ public class StoryManager_1 : MonoBehaviour
             _gameObject[i]=Instantiate(_gameObject[i], newPos, Quaternion.identity);
             
             
-            Vector3 _cameraPosCamera = new Vector3(_cameraPos.x,y,_cameraPos.z);
+            _cameraPosCamera = new Vector3(_cameraPos.x,y,_cameraPos.z);
         
             Vector3 objDir = newPos -  _cameraPosCamera;
             objDir.Normalize();
@@ -69,6 +71,8 @@ public class StoryManager_1 : MonoBehaviour
     {
         _state = newState;
         _gameObject[newState-1].SetActive(false);
+        boomEffect = Instantiate(boomEffect,_gameObject[newState-1].transform.position,Quaternion.identity);
+        boomEffect.transform.LookAt(_cameraPosCamera);
     }
 
     private void SetWalking(GameObject obj)
