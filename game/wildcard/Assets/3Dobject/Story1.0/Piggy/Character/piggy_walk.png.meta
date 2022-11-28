@@ -39,10 +39,10 @@ TextureImporter:
     wrapU: 0
     wrapV: 0
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -53,7 +53,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -127,18 +127,546 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: piggy_walk_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 129
+        width: 82
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd992ec6f092314ba975516c2adf7f3
+      internalID: -477915567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 128
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930c56727a006e14e9f3f80b5b6c8404
+      internalID: 119885505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_2
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 128
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ebab7cadb3f60549ac647f68c03cda5
+      internalID: -2084583991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_3
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 128
+        width: 83
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed4e020149255640baab1975f90d1b8
+      internalID: 1992433519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_4
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 128
+        width: 83
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb12b1a9fb1ad948aad9168e63e4b4f
+      internalID: -1743401753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_5
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 128
+        width: 83
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9c4e8ac3a0a7a4591b576833742600
+      internalID: 1318021538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_6
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 129
+        width: 84
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11f971d5600af341bf5acdb2ef32386
+      internalID: -389196650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_7
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 129
+        width: 83
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d7192768a249144bb7c8e1926fa353
+      internalID: 355055887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 65
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd44675e4ebed4479c464765ea628ef
+      internalID: 732130459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_9
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 65
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d5be5f84c35b44f9ae72dc0714d520
+      internalID: 1395278010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_10
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 65
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7389f155878ed749a6eed2a03880e41
+      internalID: 1411417034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_11
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 65
+        width: 82
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a52681a76f2f4447bd9f4a7c9eb360d
+      internalID: -645105376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_12
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 65
+        width: 82
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52c177b5f6ab5547a353addda03f0b4
+      internalID: -429076564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_13
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 65
+        width: 83
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe6a4bf668ae0e8489168b3e373a7f49
+      internalID: 1120089942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_14
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 65
+        width: 83
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f61333b9420d246a4e316403bb8020
+      internalID: -1960165509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_15
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 65
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff89a0728dfe3944a83a237180a8d3a
+      internalID: 1875968855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_16
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a878c7fa5c8b047a617f7744f29231
+      internalID: -33156539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_17
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 1
+        width: 83
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b165938a69e7de04ea05269f766cc11a
+      internalID: 318388280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_18
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1
+        width: 84
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f76ded9b16beda4bb54ec55d298e9b0
+      internalID: -1457426391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_19
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1
+        width: 83
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b930c7c22b8c1419a9ad8d8f7ea5de
+      internalID: 1556439564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_20
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d57ba3282387641a949f69ea77065d
+      internalID: -1876373740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_21
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 1
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9408368019bce6640a946bf0f5bebc6f
+      internalID: -218057669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_22
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 2
+        width: 83
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4080639c24150240b7a1daff3ccdad5
+      internalID: -379277502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piggy_walk_23
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 2
+        width: 83
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88dbd2e9dc532f5468df86f235ca0399
+      internalID: 1488432232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0ddd09e60b62b2b43b04fe749efa6fc8
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      piggy_walk_10: 1411417034
+      piggy_walk_5: 1318021538
+      piggy_walk_17: 318388280
+      piggy_walk_18: -1457426391
+      piggy_walk_20: -1876373740
+      piggy_walk_1: 119885505
+      piggy_walk_6: -389196650
+      piggy_walk_19: 1556439564
+      piggy_walk_7: 355055887
+      piggy_walk_21: -218057669
+      piggy_walk_11: -645105376
+      piggy_walk_13: 1120089942
+      piggy_walk_15: 1875968855
+      piggy_walk_2: -2084583991
+      piggy_walk_4: -1743401753
+      piggy_walk_22: -379277502
+      piggy_walk_23: 1488432232
+      piggy_walk_3: 1992433519
+      piggy_walk_16: -33156539
+      piggy_walk_8: 732130459
+      piggy_walk_0: -477915567
+      piggy_walk_12: -429076564
+      piggy_walk_14: -1960165509
+      piggy_walk_9: 1395278010
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
