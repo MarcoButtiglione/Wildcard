@@ -6,7 +6,8 @@
       "source": "local",
       "dependencies": {
         "com.unity.xr.management": "3.2.16"
-      },
+      }
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
@@ -572,4 +573,4 @@
       }
     }
   }
-}}
+}
