@@ -119,6 +119,9 @@ public class LevelManager : MonoBehaviour
             case Level.StorySuzy1:
                 LoadScene("SuzyS.1");
                 break;
+            case Level.StoryPiggy1:
+                LoadScene("PiggyS.1");
+                break;
             case Level.StoryTobia1:
                 LoadScene("TobiaS.1");
                 break;
@@ -127,6 +130,9 @@ public class LevelManager : MonoBehaviour
                 break;
             case Level.StoryGiulio1:
                 LoadScene("GiulioS.1");
+                break;
+            case Level.ResearchPiggy1:
+                LoadScene("PiggyR1.0");
                 break;
             case Level.ResearchSuzy1:
                 LoadScene("SuzyR1.0");
@@ -167,10 +173,12 @@ public class LevelManager : MonoBehaviour
 public enum Level
 {
     Menu,
+    StoryPiggy1,
     StorySuzy1,
     StoryTobia1,
     StoryPimpa1,
     StoryGiulio1,
+    ResearchPiggy1,
     ResearchSuzy1,
     ResearchTobia1,
     ResearchPimpa1,

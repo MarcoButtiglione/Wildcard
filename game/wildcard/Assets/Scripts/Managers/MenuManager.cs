@@ -118,11 +118,13 @@ public class MenuManager : MonoBehaviour
     }
     
     //STORY1
+    public void PlayStoryPiggy1(){LevelManager.Instance.PlayLevel(Level.StoryPiggy1);}
     public void PlayStorySuzy1(){LevelManager.Instance.PlayLevel(Level.StorySuzy1);}
     public void PlayStoryTobia1(){LevelManager.Instance.PlayLevel(Level.StoryTobia1);}
     public void PlayStoryGiulio1(){LevelManager.Instance.PlayLevel(Level.StoryGiulio1);}
     public void PlayStoryPimpa1(){LevelManager.Instance.PlayLevel(Level.StoryPimpa1);}
     
+    public void PlayResearchPiggy1(){LevelManager.Instance.PlayLevel(Level.ResearchPiggy1);}
     public void PlayResearchSuzy1(){LevelManager.Instance.PlayLevel(Level.ResearchSuzy1);}
     public void PlayResearchTobia1(){LevelManager.Instance.PlayLevel(Level.ResearchTobia1);}
     public void PlayResearchGiulio1(){LevelManager.Instance.PlayLevel(Level.ResearchGiulio1);}

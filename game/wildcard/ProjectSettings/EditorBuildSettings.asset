@@ -89,6 +89,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Story1.0/TobiaS.1.unity
     guid: 8f8d1925a4261344292f2c87932e2443
+  - enabled: 1
+    path: Assets/Scenes/Research1.0/PiggyR1.0.unity
+    guid: 14d2cdbd36ee5b04283588cfdf125392
+  - enabled: 1
+    path: Assets/Scenes/Story1.0/PiggyS.1.unity
+    guid: cb5baa529fb59264aafa1862831c3590
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 112665d6d3b1df9449c313e563bbcece, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e1aba473c1f4c6b4da644926d2469198, type: 2}

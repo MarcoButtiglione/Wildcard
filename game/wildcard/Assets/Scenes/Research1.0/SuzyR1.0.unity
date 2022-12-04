@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.81192666, g: 0.81192666, b: 0.81192666, a: 1}
+  m_IndirectSpecularColor: {r: 0.81193477, g: 0.81193477, b: 0.81193477, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -857,6 +857,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3529423722452513282, guid: b15eccaef88925844a0673f3c4c6064a, type: 3}
       propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529423723333945290, guid: b15eccaef88925844a0673f3c4c6064a, type: 3}
+      propertyPath: m_ValidColorGradient.atime0
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529423723333945290, guid: b15eccaef88925844a0673f3c4c6064a, type: 3}
+      propertyPath: m_ValidColorGradient.ctime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529423723333945290, guid: b15eccaef88925844a0673f3c4c6064a, type: 3}
+      propertyPath: m_ValidColorGradient.key0.g
+      value: 0.94509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529423723333945290, guid: b15eccaef88925844a0673f3c4c6064a, type: 3}
+      propertyPath: m_ValidColorGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529423723333945290, guid: b15eccaef88925844a0673f3c4c6064a, type: 3}
+      propertyPath: m_ValidColorGradient.key1.g
+      value: 0.94509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529423723333945290, guid: b15eccaef88925844a0673f3c4c6064a, type: 3}
+      propertyPath: m_ValidColorGradient.key1.r
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
