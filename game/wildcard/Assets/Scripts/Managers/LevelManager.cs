@@ -116,6 +116,48 @@ public class LevelManager : MonoBehaviour
             case Level.ExplorationBendy:
                 LoadScene("BendyE");
                 break;
+            case Level.StorySuzy1:
+                LoadScene("SuzyS.1");
+                break;
+            case Level.StoryPiggy1:
+                LoadScene("PiggyS.1");
+                break;
+            case Level.StoryTobia1:
+                LoadScene("TobiaS.1");
+                break;
+            case Level.StoryPimpa1:
+                LoadScene("PimpaS.1");
+                break;
+            case Level.StoryGiulio1:
+                LoadScene("GiulioS.1");
+                break;
+            case Level.ResearchPiggy1:
+                LoadScene("PiggyR1.0");
+                break;
+            case Level.ResearchSuzy1:
+                LoadScene("SuzyR1.0");
+                break;
+            case Level.ResearchTobia1:
+                LoadScene("TobiaR1.0");
+                break;
+            case Level.ResearchPimpa1:
+                LoadScene("PimpaR1.0");
+                break;
+            case Level.ResearchGiulio1:
+                LoadScene("GiulioR1.0");
+                break;
+            case Level.ExplorationSuzy1:
+                LoadScene("SuzyE1.0");
+                break;
+            case Level.ExplorationTobia1:
+                LoadScene("TobiaE1.0");
+                break;
+            case Level.ExplorationPimpa1:
+                LoadScene("PimpaE1.0");
+                break;
+            case Level.ExplorationGiulio1:
+                LoadScene("GiulioE1.0");
+                break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(level), level, null);
         }
@@ -131,6 +173,20 @@ public class LevelManager : MonoBehaviour
 public enum Level
 {
     Menu,
+    StoryPiggy1,
+    StorySuzy1,
+    StoryTobia1,
+    StoryPimpa1,
+    StoryGiulio1,
+    ResearchPiggy1,
+    ResearchSuzy1,
+    ResearchTobia1,
+    ResearchPimpa1,
+    ResearchGiulio1,
+    ExplorationSuzy1,
+    ExplorationTobia1,
+    ExplorationPimpa1,
+    ExplorationGiulio1,
     StorySuzy,
     StoryTullio,
     StoryTobia,
