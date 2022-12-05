@@ -13,6 +13,7 @@ public class StoryManager_1 : MonoBehaviour
     [SerializeField] private GameObject boomEffect;
     [SerializeField] private GameObject[] _gameObject;
     private GameObject _character;
+    private FocusController _focusController;
     [SerializeField] private float _initRot;
     [SerializeField] private float _speed = 0.1f;
     private bool _isMoving;
@@ -24,6 +25,7 @@ public class StoryManager_1 : MonoBehaviour
 
     [SerializeField] private Sprite _spriteIdle;
     [SerializeField] private Sprite _spriteWalking;
+    private bool _isSpriteIdle=true;
     private bool isFinished = false;
 
 
@@ -34,6 +36,7 @@ public class StoryManager_1 : MonoBehaviour
 
         _character = GameObject.Find("CharacterParent");
         _character.transform.position = new Vector3(_cameraPos.x, _heigth + _cameraPos.y, _radius + _cameraPos.z);
+        _focusController=_character.GetComponentInChildren<FocusController>();
 
         Vector3 camPos = new Vector3(_cameraPos.x, _heigth + _cameraPos.y, _cameraPos.z); ;
         Vector3 charDir = _character.transform.position - camPos;
@@ -78,17 +81,28 @@ public class StoryManager_1 : MonoBehaviour
 
     private void SetWalking(GameObject obj)
     {
-        if (obj.GetComponentInChildren<SpriteRenderer>())
+        if (_isSpriteIdle)
         {
-            obj.GetComponentInChildren<SpriteRenderer>().sprite = _spriteWalking;
+            _isSpriteIdle = false;
+          if (obj.GetComponentInChildren<SpriteRenderer>())
+          {
+                      obj.GetComponentInChildren<SpriteRenderer>().sprite = _spriteWalking;
+            }  
         }
+        
+        
     }
     private void SetIdle(GameObject obj)
     {
-        if (obj.GetComponentInChildren<SpriteRenderer>())
+        if (!_isSpriteIdle)
         {
-            obj.GetComponentInChildren<SpriteRenderer>().sprite = _spriteIdle;
+            _isSpriteIdle = true;
+             if (obj.GetComponentInChildren<SpriteRenderer>())
+                    {
+                        obj.GetComponentInChildren<SpriteRenderer>().sprite = _spriteIdle;
+                    }
         }
+       
     }
 
     private void MoveCharacter()
@@ -140,7 +154,7 @@ public class StoryManager_1 : MonoBehaviour
     public void HoverEnteredCharacter()
     {
         _isMoving = true;
-        SetWalking(_character);
+        
     }
     public void HoverExitedCharacter()
     {
@@ -150,10 +164,12 @@ public class StoryManager_1 : MonoBehaviour
 
     private void Update()
     {
-        if (_isMoving)
+        if (_isMoving&&_focusController.getFocused())
         {
             MoveCharacter();
+            SetWalking(_character);
         }
+        SetIdle(_character);
 
         if (Input.GetButtonDown("Jump"))
         {
