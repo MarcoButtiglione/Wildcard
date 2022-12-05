@@ -524,6 +524,7 @@ GameObject:
   - component: {fileID: 229860358}
   - component: {fileID: 229860361}
   - component: {fileID: 229860360}
+  - component: {fileID: 229860362}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -704,6 +705,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.35, y: 7, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &229860362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229860357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf234cfe62f78a4c8284aa124bfa0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0, b: 0, a: 1}
+  animationTime: 0.1
 --- !u!1001 &250938657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1478,6 +1493,7 @@ GameObject:
   - component: {fileID: 810860970}
   - component: {fileID: 810860973}
   - component: {fileID: 810860972}
+  - component: {fileID: 810860974}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -1658,6 +1674,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12.49, y: 12.99, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &810860974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810860969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf234cfe62f78a4c8284aa124bfa0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0, b: 0, a: 1}
+  animationTime: 0.1
 --- !u!1001 &829145137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2441,6 +2471,7 @@ GameObject:
   - component: {fileID: 1135175561}
   - component: {fileID: 1135175564}
   - component: {fileID: 1135175563}
+  - component: {fileID: 1135175565}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -2622,6 +2653,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8, y: 8, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1135175565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135175560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf234cfe62f78a4c8284aa124bfa0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0, b: 0, a: 1}
+  animationTime: 0.1
 --- !u!1001 &1140989013
 PrefabInstance:
   m_ObjectHideFlags: 0

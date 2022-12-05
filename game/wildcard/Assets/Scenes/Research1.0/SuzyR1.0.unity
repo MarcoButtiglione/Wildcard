@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.81193477, g: 0.81193477, b: 0.81193477, a: 1}
+  m_IndirectSpecularColor: {r: 0.81192666, g: 0.81192666, b: 0.81192666, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 287503981}
   - component: {fileID: 287503984}
   - component: {fileID: 287503983}
+  - component: {fileID: 287503985}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -393,6 +394,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &287503985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287503980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf234cfe62f78a4c8284aa124bfa0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0, b: 0, a: 1}
+  animationTime: 0.1
 --- !u!1 &375949945
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +420,7 @@ GameObject:
   - component: {fileID: 375949946}
   - component: {fileID: 375949949}
   - component: {fileID: 375949948}
+  - component: {fileID: 375949950}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -586,6 +602,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &375949950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375949945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf234cfe62f78a4c8284aa124bfa0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0, b: 0, a: 1}
+  animationTime: 0.1
 --- !u!1001 &385266055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1247,6 +1277,7 @@ GameObject:
   - component: {fileID: 1456631665}
   - component: {fileID: 1456631668}
   - component: {fileID: 1456631667}
+  - component: {fileID: 1456631669}
   m_Layer: 0
   m_Name: 5
   m_TagString: Untagged
@@ -1428,6 +1459,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1456631669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456631664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf234cfe62f78a4c8284aa124bfa0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0, b: 0, a: 1}
+  animationTime: 0.1
 --- !u!1 &1817224738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,6 +1485,7 @@ GameObject:
   - component: {fileID: 1817224739}
   - component: {fileID: 1817224742}
   - component: {fileID: 1817224741}
+  - component: {fileID: 1817224743}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -1621,6 +1667,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1817224743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817224738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf234cfe62f78a4c8284aa124bfa0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0, b: 0, a: 1}
+  animationTime: 0.1
 --- !u!1 &1920482911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1633,6 +1693,7 @@ GameObject:
   - component: {fileID: 1920482912}
   - component: {fileID: 1920482915}
   - component: {fileID: 1920482914}
+  - component: {fileID: 1920482916}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -1814,6 +1875,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1920482916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920482911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf234cfe62f78a4c8284aa124bfa0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0, b: 0, a: 1}
+  animationTime: 0.1
 --- !u!1 &2032180182
 GameObject:
   m_ObjectHideFlags: 0
