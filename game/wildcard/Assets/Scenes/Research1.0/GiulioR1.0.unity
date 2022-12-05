@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 264259291}
   - component: {fileID: 264259294}
   - component: {fileID: 264259293}
+  - component: {fileID: 264259295}
   m_Layer: 0
   m_Name: gift
   m_TagString: Untagged
@@ -393,6 +394,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &264259295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264259290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf234cfe62f78a4c8284aa124bfa0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0, b: 0, a: 1}
+  animationTime: 0.1
 --- !u!1001 &385266055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -722,6 +737,7 @@ GameObject:
   - component: {fileID: 894392229}
   - component: {fileID: 894392232}
   - component: {fileID: 894392231}
+  - component: {fileID: 894392233}
   m_Layer: 0
   m_Name: cake
   m_TagString: Untagged
@@ -903,6 +919,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &894392233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894392228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf234cfe62f78a4c8284aa124bfa0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0, b: 0, a: 1}
+  animationTime: 0.1
 --- !u!1001 &908126908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1003,6 +1033,7 @@ GameObject:
   - component: {fileID: 1057376771}
   - component: {fileID: 1057376774}
   - component: {fileID: 1057376773}
+  - component: {fileID: 1057376775}
   m_Layer: 0
   m_Name: balloon
   m_TagString: Untagged
@@ -1184,6 +1215,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1057376775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057376770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf234cfe62f78a4c8284aa124bfa0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0, b: 0, a: 1}
+  animationTime: 0.1
 --- !u!1 &1112426983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1272,7 @@ GameObject:
   - component: {fileID: 1277129032}
   - component: {fileID: 1277129035}
   - component: {fileID: 1277129034}
+  - component: {fileID: 1277129036}
   m_Layer: 0
   m_Name: candle
   m_TagString: Untagged
@@ -1408,6 +1454,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1277129036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277129031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf234cfe62f78a4c8284aa124bfa0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0, b: 0, a: 1}
+  animationTime: 0.1
 --- !u!1 &1448812484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,6 +1669,7 @@ GameObject:
   - component: {fileID: 1477287177}
   - component: {fileID: 1477287180}
   - component: {fileID: 1477287179}
+  - component: {fileID: 1477287181}
   m_Layer: 0
   m_Name: partyGlass
   m_TagString: Untagged
@@ -1790,6 +1851,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1477287181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477287176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf234cfe62f78a4c8284aa124bfa0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0, b: 0, a: 1}
+  animationTime: 0.1
 --- !u!1 &1896600161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1802,6 +1877,7 @@ GameObject:
   - component: {fileID: 1896600162}
   - component: {fileID: 1896600165}
   - component: {fileID: 1896600164}
+  - component: {fileID: 1896600166}
   m_Layer: 0
   m_Name: candy
   m_TagString: Untagged
@@ -1983,6 +2059,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1896600166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896600161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf234cfe62f78a4c8284aa124bfa0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0, b: 0, a: 1}
+  animationTime: 0.1
 --- !u!1 &2032180182
 GameObject:
   m_ObjectHideFlags: 0

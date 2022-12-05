@@ -137,7 +137,11 @@ public class ResearchManager_1 : MonoBehaviour
     {
         if (id == _orderOfTheState[_state])
         {
+            GameObject researchObj = GameObject.Find("ResearchObj");
+            FocusController focusControl = researchObj.transform.GetChild(_orderOfTheState[id]).gameObject.GetComponent<FocusController>();
+            if(focusControl.getFocused()){
             NextState();
+            }
         }
     }
 
