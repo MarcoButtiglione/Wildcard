@@ -154,12 +154,10 @@ public class StoryManager_1 : MonoBehaviour
     public void HoverEnteredCharacter()
     {
         _isMoving = true;
-        
     }
     public void HoverExitedCharacter()
     {
         _isMoving = false;
-        SetIdle(_character);
     }
 
     private void Update()
@@ -169,7 +167,11 @@ public class StoryManager_1 : MonoBehaviour
             MoveCharacter();
             SetWalking(_character);
         }
-        SetIdle(_character);
+        else
+        {
+            SetIdle(_character);
+        }
+        
 
         if (Input.GetButtonDown("Jump"))
         {
