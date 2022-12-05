@@ -3759,7 +3759,7 @@ MonoBehaviour:
   _initRot: 0
   _speed: 0.25
   _radius: 5
-  _heigth: 0.5
+  _heigth: 0.4
   _deltaTaken: 0.2
   _spriteIdle: {fileID: 1327313788, guid: ae91a3a0c405aad4691076ea767ce43a, type: 3}
   _spriteWalking: {fileID: 119885505, guid: c879bd6ecd0ea52448867e5c3d311411, type: 3}
@@ -6085,6 +6085,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2826537140195387945, guid: 65e92582573272340935f99800e896c3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1327313788, guid: ae91a3a0c405aad4691076ea767ce43a, type: 3}
     - target: {fileID: 2826537140784257262, guid: 65e92582573272340935f99800e896c3, type: 3}
       propertyPath: m_RootOrder
       value: 5

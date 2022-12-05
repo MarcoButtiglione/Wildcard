@@ -14,6 +14,7 @@ public class ExplorationManager_1 : MonoBehaviour
     private bool _isMovingChar;
     private int _pointedObject;
     private Vector3[] _posPicture;
+    private FocusController[] _focusControllers;
     
     [SerializeField] private float _playerSpeed=2f;
     [SerializeField] private float _speedCharacter = 4f;
@@ -26,11 +27,14 @@ public class ExplorationManager_1 : MonoBehaviour
         _character=GameObject.Find("Character");
         
         GameObject pictures = GameObject.Find("Picture");
-        _posPicture = new Vector3[pictures.transform.childCount];
+        var childCount = pictures.transform.childCount;
+        _posPicture = new Vector3[childCount];
+        _focusControllers = new FocusController[childCount];
         
-        for (int i = 0; i < pictures.transform.childCount; i++)
+        for (int i = 0; i < childCount; i++)
         {
              _posPicture[i] = pictures.transform.GetChild(i).gameObject.transform.position;
+             _focusControllers[i] = pictures.transform.GetChild(i).gameObject.GetComponent<FocusController>();
         }
         _isHover = false;
 
@@ -66,7 +70,7 @@ public class ExplorationManager_1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_isHover)
+        if (_isHover&&_focusControllers[_pointedObject].getFocused())
         {
             MoveTo(_player,_posPicture[_pointedObject],_playerSpeed);
         }

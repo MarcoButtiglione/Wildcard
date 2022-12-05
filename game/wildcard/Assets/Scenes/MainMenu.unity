@@ -13341,6 +13341,10 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 114404013065818992, guid: 596e593361e094a43934c013fa0b5764, type: 3}
+      propertyPath: Settings.LayerMask.m_Bits
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 114404013065818992, guid: 596e593361e094a43934c013fa0b5764, type: 3}
       propertyPath: Settings.AndroidEyeTrackingProviders.Array.data[0].TypeName
       value: Tobii.XR.PicoXRProvider
       objectReference: {fileID: 0}

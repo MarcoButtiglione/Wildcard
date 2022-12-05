@@ -9,7 +9,7 @@ public class CollisionExplorationController : MonoBehaviour
     [SerializeField] private UnityEvent interactAction;
     private void OnTriggerEnter(Collider col)
     {
-        if(col.CompareTag("Player")){
+        if(col.CompareTag("MainCamera")){
             interactAction.Invoke();
         }
     }
