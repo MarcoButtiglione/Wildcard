@@ -1921,11 +1921,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7219864560383262458, guid: 2ba87af0c8104324cb772a890fb9cab4, type: 3}
+      propertyPath: sceneName
+      value: Giulio
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219864560383262458, guid: 2ba87af0c8104324cb772a890fb9cab4, type: 3}
       propertyPath: objToAnalyze
       value: 
       objectReference: {fileID: 8435851187597227650}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ba87af0c8104324cb772a890fb9cab4, type: 3}
+--- !u!1 &1534451289 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7219864560383262456, guid: 2ba87af0c8104324cb772a890fb9cab4, type: 3}
+  m_PrefabInstance: {fileID: 1534451288}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1896600161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2313,6 +2322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f52234ad20dc0245a27f0427d13636c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DataCollector: {fileID: 1534451289}
   boomEffect: {fileID: 1658140284247388912, guid: c9a2e98cb46210a47bc8a81d21f26d4a, type: 3}
   _deltaAngle: 90
   _radius: 12

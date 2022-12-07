@@ -10,12 +10,15 @@ public class GetDataControllerResearch : MonoBehaviour
     //string delimiter = ",";
     //The future path of the files
     //private float passedTime = 0f;
-    string filePath = @"D:\WildcardData\";
+    string filePath;
     [SerializeField] private GameObject objToAnalyze;
     private ResearchManager_1 toAnalyze;
     private int isClickingRight = 0;
     private int isFocusingRight = 0;
     private int currentState = 0;
+    public String sceneName;
+    private GameObject researchObj;
+    private List<bool> objectsSeen;
 
     public class DataToCollect
     {
@@ -45,12 +48,18 @@ public class GetDataControllerResearch : MonoBehaviour
 
     public List<DataToCollect> myDataList = new List<DataToCollect>();
 
+    void Awake()
+    {
+        researchObj = GameObject.Find("ResearchObj");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         //passedTime = 0f;
         toAnalyze = objToAnalyze.GetComponent<ResearchManager_1>();
-        filePath = filePath + "Research Session " + DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss") + ".csv";
+        filePath = Application.persistentDataPath + "/Research/Research Session " + sceneName + " " + DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss") + ".csv";
+        objectsSeen = new List<bool>(researchObj.transform.childCount);
     }
 
     // Update is called once per frame
@@ -59,23 +68,31 @@ public class GetDataControllerResearch : MonoBehaviour
         //passedTime += Time.fixedDeltaTime;
         //if (passedTime > 0.1f)
         //{
+
+
         currentState = toAnalyze.getCurrentState();
-        if (GameObject.Find("ResearchObj").transform.GetChild(currentState).gameObject.GetComponent<FocusController>().getFocused())
+        if (isFocusingRight != 1)
         {
-            isFocusingRight = 1;
+            if (GameObject.Find("ResearchObj").transform.GetChild(currentState).gameObject.GetComponent<FocusController>().getFocused())
+            {
+                isFocusingRight = 1;
+            }
+            else
+            {
+                isFocusingRight = 0;
+            }
         }
-        else
-        {
-            isFocusingRight = 0;
-        }
+
         if (isClickingRight == 1)
         {
             myDataList.Add(new DataToCollect(DateTime.Now.ToString("mm.ss.ff"), isFocusingRight, isClickingRight));
+            isFocusingRight = 0;
             isClickingRight = 0;
         }
         else
         {
             myDataList.Add(new DataToCollect(DateTime.Now.ToString("mm.ss.ff"), isFocusingRight, isClickingRight));
+            isFocusingRight = 0;
         }
 
         WriteCSV();
@@ -118,4 +135,8 @@ public class GetDataControllerResearch : MonoBehaviour
         isClickingRight = 1;
     }
 
+    public void isFocusing()
+    {
+        isFocusingRight = 1;
+    }
 }
