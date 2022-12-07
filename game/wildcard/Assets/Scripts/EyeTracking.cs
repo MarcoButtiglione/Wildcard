@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Tobii.XR;
 using UnityEngine;
 
-public class EyeTrackingController : MonoBehaviour
+public class EyeTracking : MonoBehaviour
 {
     public EyeTrackingData GetEyeTracking()
     {
