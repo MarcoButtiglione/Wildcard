@@ -9,8 +9,13 @@ public class GetDataControllerResearch : MonoBehaviour
     //string filePath = @"D:\Data";
     //string delimiter = ",";
     //The future path of the files
-    private float passedTime = 0f;
-    string filePath = @"D:\Data\";
+    //private float passedTime = 0f;
+    string filePath = @"D:\WildcardData\";
+    [SerializeField] private GameObject objToAnalyze;
+    private ResearchManager_1 toAnalyze;
+    private int isClickingRight = 0;
+    private int isFocusingRight = 0;
+    private int currentState = 0;
 
     public class DataToCollect
     {
@@ -43,20 +48,39 @@ public class GetDataControllerResearch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        passedTime = 0f;
+        //passedTime = 0f;
+        toAnalyze = objToAnalyze.GetComponent<ResearchManager_1>();
         filePath = filePath + "Research Session " + DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss") + ".csv";
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        passedTime += Time.fixedDeltaTime;
-        if (passedTime > 0.1f)
+        //passedTime += Time.fixedDeltaTime;
+        //if (passedTime > 0.1f)
+        //{
+        currentState = toAnalyze.getCurrentState();
+        if (GameObject.Find("ResearchObj").transform.GetChild(currentState).gameObject.GetComponent<FocusController>().getFocused())
         {
-            myDataList.Add(new DataToCollect(DateTime.Now.ToString("mm.ss.ff"), 1, 0));
-            WriteCSV();
-            passedTime = 0;
+            isFocusingRight = 1;
         }
+        else
+        {
+            isFocusingRight = 0;
+        }
+        if (isClickingRight == 1)
+        {
+            myDataList.Add(new DataToCollect(DateTime.Now.ToString("mm.ss.ff"), isFocusingRight, isClickingRight));
+            isClickingRight = 0;
+        }
+        else
+        {
+            myDataList.Add(new DataToCollect(DateTime.Now.ToString("mm.ss.ff"), isFocusingRight, isClickingRight));
+        }
+
+        WriteCSV();
+        //passedTime = 0;
+        //}
         //StartCoroutine("Wait");
     }
 
@@ -88,5 +112,10 @@ public class GetDataControllerResearch : MonoBehaviour
         WriteCSV();
         yield return new WaitForSecondsRealtime(0.1f);
     }*/
+
+    public void isClicking()
+    {
+        isClickingRight = 1;
+    }
 
 }

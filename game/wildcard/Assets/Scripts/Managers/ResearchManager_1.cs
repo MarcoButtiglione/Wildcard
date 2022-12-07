@@ -13,6 +13,7 @@ public class ResearchManager_1 : MonoBehaviour
     private GameObject _camera;
     private Vector3 _cameraPos;
     private GameObject _arrow;
+    [SerializeField] private GameObject DataCollector;
     [SerializeField] private GameObject boomEffect;
 
     [SerializeField] private float _deltaAngle = 30f;
@@ -23,6 +24,7 @@ public class ResearchManager_1 : MonoBehaviour
     [SerializeField] private double _randomDirection = 0f;
     
     private static Random rng = new Random();  
+    
 
     public static void Shuffle (List<int> list)  
     {  
@@ -137,6 +139,7 @@ public class ResearchManager_1 : MonoBehaviour
     {
         if (id == _orderOfTheState[_state])
         {
+            DataCollector.GetComponent<GetDataControllerResearch>().isClicking();
             GameObject researchObj = GameObject.Find("ResearchObj");
             FocusController focusControl = researchObj.transform.GetChild(_orderOfTheState[id]).gameObject.GetComponent<FocusController>();
             if(focusControl.getFocused()){
@@ -150,6 +153,10 @@ public class ResearchManager_1 : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
             NextState();
+    }
+
+    public int getCurrentState(){
+        return _state;
     }
 
     IEnumerator WaitFor(){
