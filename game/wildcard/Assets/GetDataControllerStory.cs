@@ -12,8 +12,8 @@ public class GetDataControllerStory : MonoBehaviour
     //private float passedTime = 0f;
     string filePath;
     [SerializeField] private GameObject objToAnalyze;
-    private ResearchManager_1 toAnalyze;
-    private int isClickingRight = 0;
+    private StoryManager_1 toAnalyze;
+    private int isPointingRight = 0;
     private int isFocusingRight = 0;
     private int currentState = 0;
     private int numOfObjects;
@@ -26,13 +26,13 @@ public class GetDataControllerStory : MonoBehaviour
     {
         string timeFromStart;
         int isFocusing;
-        int isClicking;
+        int isPointing;
 
         public DataToCollect(string v1, int v2, int v3)
         {
             timeFromStart = v1;
             isFocusing = v2;
-            isClicking = v3;
+            isPointing = v3;
         }
         public string GetTime()
         {
@@ -42,9 +42,9 @@ public class GetDataControllerStory : MonoBehaviour
         {
             return isFocusing;
         }
-        public int GetClicking()
+        public int GetPointing()
         {
-            return isClicking;
+            return isPointing;
         }
     }
 
@@ -60,8 +60,8 @@ public class GetDataControllerStory : MonoBehaviour
     void Start()
     {
         //passedTime = 0f;
-        toAnalyze = objToAnalyze.GetComponent<ResearchManager_1>();
-        filePath = Application.persistentDataPath + "/Research/Research_Session_" + sceneName + "_" + DateTime.Now.ToString("yyyy_MM_dd_hh_mm") + ".csv";
+        toAnalyze = objToAnalyze.GetComponent<StoryManager_1>();
+        filePath = Application.persistentDataPath + "/Story/Story_Session_" + sceneName + "_" + DateTime.Now.ToString("yyyy_MM_dd_hh_mm") + ".csv";
         objectsSeen = new List<bool>(researchObj.transform.childCount);
         initializationTime = Time.timeSinceLevelLoad;
     }
@@ -115,7 +115,7 @@ public class GetDataControllerStory : MonoBehaviour
         if (myDataList.Count > 0)
         {
             TextWriter tw = new StreamWriter(filePath, false);
-            tw.WriteLine("TimeStamp,IsFocusing,IsClicking");
+            tw.WriteLine("TimeStamp,IsFocusing,IsPointing");
             tw.Close();
 
             tw = new StreamWriter(filePath, true);
@@ -124,7 +124,7 @@ public class GetDataControllerStory : MonoBehaviour
             {
                 tw.WriteLine(myDataList[i].GetTime() +
                 "," + myDataList[i].GetFocusing() +
-                "," + myDataList[i].GetClicking());
+                "," + myDataList[i].GetPointing());
             }
             tw.Close();
 
@@ -138,12 +138,16 @@ public class GetDataControllerStory : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.1f);
     }*/
 
-    public void isClicking()
+    public void IsPointing()
     {
-        isClickingRight = 1;
+        isPointingRight = 1;
+    }
+    public void IsNotPointing()
+    {
+        isPointingRight = 0;
     }
 
-    public void isFocusing()
+    public void IsFocusing()
     {
         isFocusingRight = 1;
     }
