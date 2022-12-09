@@ -16,6 +16,7 @@ public class GetDataControllerResearch : MonoBehaviour
     private int isClickingRight = 0;
     private int isFocusingRight = 0;
     private int currentState = 0;
+    private int numOfObjects;
     public String sceneName;
     private GameObject researchObj;
     private List<bool> objectsSeen;
@@ -51,6 +52,7 @@ public class GetDataControllerResearch : MonoBehaviour
     void Awake()
     {
         researchObj = GameObject.Find("ResearchObj");
+        numOfObjects = researchObj.transform.childCount;
     }
 
     // Start is called before the first frame update
@@ -58,7 +60,7 @@ public class GetDataControllerResearch : MonoBehaviour
     {
         //passedTime = 0f;
         toAnalyze = objToAnalyze.GetComponent<ResearchManager_1>();
-        filePath = Application.persistentDataPath + "/Research/Research Session " + sceneName + " " + DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss") + ".csv";
+        filePath = Application.persistentDataPath + "/Research/Research_Session_" + sceneName + "_" + DateTime.Now.ToString("yyyy_MM_dd_hh_mm") + ".csv";
         objectsSeen = new List<bool>(researchObj.transform.childCount);
     }
 
@@ -86,6 +88,10 @@ public class GetDataControllerResearch : MonoBehaviour
         if (isClickingRight == 1)
         {
             myDataList.Add(new DataToCollect(DateTime.Now.ToString("mm.ss.ff"), isFocusingRight, isClickingRight));
+            if (isFocusingRight == 1 && currentState == numOfObjects - 1)
+            {
+                WriteCSV();
+            }
             isFocusingRight = 0;
             isClickingRight = 0;
         }
@@ -95,7 +101,7 @@ public class GetDataControllerResearch : MonoBehaviour
             isFocusingRight = 0;
         }
 
-        WriteCSV();
+        //WriteCSV();
         //passedTime = 0;
         //}
         //StartCoroutine("Wait");

@@ -142,7 +142,7 @@ public class ResearchManager_1 : MonoBehaviour
 
         if (id == _orderOfTheState[_state])
         {
-             DataCollector.GetComponent<GetDataControllerResearch>().isClicking();
+            DataCollector.GetComponent<GetDataControllerResearch>().isClicking();
             GameObject researchObj = GameObject.Find("ResearchObj");
             FocusController focusControl = researchObj.transform.GetChild(_orderOfTheState[id]).gameObject.GetComponent<FocusController>();
             if (focusControl.getFocused())
