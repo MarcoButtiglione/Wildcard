@@ -29,7 +29,6 @@ public class StoryManager_1 : MonoBehaviour
     private bool _isSpriteIdle=true;
     private bool isFinished = false;
     
-    [SerializeField] private UnityEvent writeCsvEyeTracking;
     [SerializeField] private UnityEvent setFinishedDataCollector;
     [SerializeField] private UnityEvent setPointing;
     [SerializeField] private UnityEvent setNotPointing;
@@ -141,7 +140,6 @@ public class StoryManager_1 : MonoBehaviour
             //If the game is finished
             if (_state + 1 == _gameObject.Length && !isFinished)
             {
-                writeCsvEyeTracking.Invoke();
                 setFinishedDataCollector.Invoke();
                 isFinished = true;
                 StartCoroutine("WaitFor");

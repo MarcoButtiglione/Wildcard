@@ -5,11 +5,12 @@ using UnityEngine;
 public class EyeRayController : MonoBehaviour
 {
     [SerializeField] private EyeTracking _eyeController;
-    [SerializeField] private EyeTrackingCollector _eyeTrackingCollector;
+    [SerializeField] private DataCollectorStoryManager _dataCollectorStoryManager;
     
-
+    //This updata add a sample in the list for the csv
     void Update()
     {
+        /*
         var _eyeData = _eyeController.GetEyeTracking();
         RaycastHit hit;
         if (_eyeData.isGazeRayValid)
@@ -19,12 +20,13 @@ public class EyeRayController : MonoBehaviour
             LayerMask mask = LayerMask.GetMask("EyeTrackingSphere");
             if (Physics.Raycast(pos + direction * 100, -direction, out hit, 100f,mask))
             {
-                _eyeTrackingCollector.SetHitData(hit.point,_eyeData);
+                _dataCollectorStoryManager.SetHitData(hit.point,_eyeData);
             }
         }
         else
         {
-            _eyeTrackingCollector.SetInvalidData(_eyeData);
+            _dataCollectorStoryManager.SetInvalidData(_eyeData);
         }
+        */
     }
 }
