@@ -91,6 +91,7 @@ public class GetDataControllerExploration : MonoBehaviour
 
             myDataList.Add(new DataToCollect(TimeSpan.FromSeconds(Time.timeSinceLevelLoad - initializationTime).ToString(@"mm\:ss\.ff"), isFocusingRight, isPointingRight));
             isFocusingRight = 0;
+            canEnterFocus = false;
 
         }
 
