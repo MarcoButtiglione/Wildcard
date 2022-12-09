@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class StoryManager_1 : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class StoryManager_1 : MonoBehaviour
     [SerializeField] private Sprite _spriteWalking;
     private bool _isSpriteIdle=true;
     private bool isFinished = false;
+    
+    [SerializeField] private UnityEvent writeCsvEyeTracking;
 
 
     private void Awake()
@@ -134,6 +137,7 @@ public class StoryManager_1 : MonoBehaviour
             //If the game is finished
             if (_state + 1 == _gameObject.Length && !isFinished)
             {
+                writeCsvEyeTracking.Invoke();
                 isFinished = true;
                 StartCoroutine("WaitFor");
                 

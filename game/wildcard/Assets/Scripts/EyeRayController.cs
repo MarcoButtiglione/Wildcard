@@ -16,11 +16,10 @@ public class EyeRayController : MonoBehaviour
         {
             var pos = _eyeData.rayOrigin;
             var direction = _eyeData.rayDirection;
-            
-            if (Physics.Raycast(pos + direction * 100, -direction, out hit, 100f))
+            LayerMask mask = LayerMask.GetMask("EyeTrackingSphere");
+            if (Physics.Raycast(pos + direction * 100, -direction, out hit, 100f,mask))
             {
                 _eyeTrackingCollector.SetHitData(hit.point,_eyeData);
-                
             }
         }
         else
