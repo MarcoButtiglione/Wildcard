@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17557892, g: 0.21969754, b: 0.3020215, a: 1}
+  m_IndirectSpecularColor: {r: 0.17557916, g: 0.21969774, b: 0.30202216, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1358,6 +1358,85 @@ MonoBehaviour:
   - {fileID: 639941856}
   - {fileID: 661289029}
   - {fileID: 558805451}
+  writeCsvEyeTracking:
+    m_PersistentCalls:
+      m_Calls: []
+  setFinishedDataCollector:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 733646649}
+        m_TargetAssemblyTypeName: GetDataControllerExploration, Assembly-CSharp
+        m_MethodName: FinishLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  setFocusing:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 733646647}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  setPointing:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 733646649}
+        m_TargetAssemblyTypeName: GetDataControllerExploration, Assembly-CSharp
+        m_MethodName: IsPointing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  setNotPointing:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 733646649}
+        m_TargetAssemblyTypeName: GetDataControllerExploration, Assembly-CSharp
+        m_MethodName: IsNotPointing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &733646647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6869847480285236735, guid: c790b774978011f49896dae965196804, type: 3}
+  m_PrefabInstance: {fileID: 6869847479827366600}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &733646649 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6869847480285236721, guid: c790b774978011f49896dae965196804, type: 3}
+  m_PrefabInstance: {fileID: 6869847479827366600}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733646647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d57457da69081104ba02fcdeca26afc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &736369454
 GameObject:
   m_ObjectHideFlags: 0
@@ -5601,6 +5680,63 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &6869847479827366600
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6869847480285236720, guid: c790b774978011f49896dae965196804, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869847480285236720, guid: c790b774978011f49896dae965196804, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.092133
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869847480285236720, guid: c790b774978011f49896dae965196804, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.4690433
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869847480285236720, guid: c790b774978011f49896dae965196804, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.4733734
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869847480285236720, guid: c790b774978011f49896dae965196804, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869847480285236720, guid: c790b774978011f49896dae965196804, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869847480285236720, guid: c790b774978011f49896dae965196804, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869847480285236720, guid: c790b774978011f49896dae965196804, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869847480285236720, guid: c790b774978011f49896dae965196804, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869847480285236720, guid: c790b774978011f49896dae965196804, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869847480285236720, guid: c790b774978011f49896dae965196804, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869847480285236735, guid: c790b774978011f49896dae965196804, type: 3}
+      propertyPath: m_Name
+      value: EDataCollector
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c790b774978011f49896dae965196804, type: 3}
 --- !u!136 &8082654143508638027
 CapsuleCollider:
   m_ObjectHideFlags: 0

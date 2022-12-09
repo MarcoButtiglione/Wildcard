@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class ExplorationManager_1 : MonoBehaviour
@@ -19,6 +20,10 @@ public class ExplorationManager_1 : MonoBehaviour
     [SerializeField] private float _playerSpeed=2f;
     [SerializeField] private float _speedCharacter = 4f;
     [SerializeField] private GameObject[] _checkpoints;
+    [SerializeField] private UnityEvent writeCsvEyeTracking;
+    [SerializeField] private UnityEvent setFinishedDataCollector;
+    [SerializeField] private UnityEvent setPointing;
+    [SerializeField] private UnityEvent setNotPointing;
     
     // Start is called before the first frame update
     void Awake()
@@ -112,6 +117,7 @@ public class ExplorationManager_1 : MonoBehaviour
         {
             if (_currentCheckpoint + 1 == _checkpoints.Length)
             {
+                setFinishedDataCollector.Invoke();
                 LevelManager.Instance.PlayMainMenu();
             }
             else
@@ -132,12 +138,14 @@ public class ExplorationManager_1 : MonoBehaviour
 
     public void HoverEnteredCharacter(int id)
     {
+        setPointing.Invoke();
         _isHover = true;
         _pointedObject = id;
 
     }
     public void HoverExitedCharacter()
     {
+        setNotPointing.Invoke();
         _isHover = false;
     }
 }
