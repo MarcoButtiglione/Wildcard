@@ -1,10 +1,10 @@
-using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using System.Collections;
+using System;
 
-public class GetDataControllerResearch : MonoBehaviour
+public class GetDataControllerStory : MonoBehaviour
 {
     //string filePath = @"D:\Data";
     //string delimiter = ",";
