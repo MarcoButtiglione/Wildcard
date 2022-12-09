@@ -504,6 +504,17 @@ PrefabInstance:
       objectReference: {fileID: 8435851187597227650}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ba87af0c8104324cb772a890fb9cab4, type: 3}
+--- !u!114 &157683776 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7219864560383262458, guid: 2ba87af0c8104324cb772a890fb9cab4, type: 3}
+  m_PrefabInstance: {fileID: 157683775}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401026905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc51599b27f48ab4ca7d3e39084583c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &186225610
 GameObject:
   m_ObjectHideFlags: 0
@@ -3697,3 +3708,51 @@ MonoBehaviour:
   _heigth: 1
   _deltaArrow: 1
   _randomDirection: 0
+  writeCsvEyeTracking:
+    m_PersistentCalls:
+      m_Calls: []
+  setFinishedDataCollector:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 157683776}
+        m_TargetAssemblyTypeName: GetDataControllerResearch, Assembly-CSharp
+        m_MethodName: FinishLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  setFocusing:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 157683776}
+        m_TargetAssemblyTypeName: GetDataControllerResearch, Assembly-CSharp
+        m_MethodName: isFocusing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  setClicking:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 157683776}
+        m_TargetAssemblyTypeName: GetDataControllerResearch, Assembly-CSharp
+        m_MethodName: isClicking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

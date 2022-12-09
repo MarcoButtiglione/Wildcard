@@ -16,11 +16,10 @@ public class GetDataControllerResearch : MonoBehaviour
     private int isClickingRight = 0;
     private int isFocusingRight = 0;
     private int currentState = 0;
-    private int numOfObjects;
     public string sceneName;
     private GameObject researchObj;
-    private List<bool> objectsSeen;
     private float initializationTime;
+    private bool finishedLevel = false;
 
     public class DataToCollect
     {
@@ -53,7 +52,6 @@ public class GetDataControllerResearch : MonoBehaviour
     void Awake()
     {
         researchObj = GameObject.Find("ResearchObj");
-        numOfObjects = researchObj.transform.childCount;
     }
 
     // Start is called before the first frame update
@@ -62,7 +60,6 @@ public class GetDataControllerResearch : MonoBehaviour
         //passedTime = 0f;
         toAnalyze = objToAnalyze.GetComponent<ResearchManager_1>();
         filePath = Application.persistentDataPath + "/Research/Research_Session_" + sceneName + "_" + DateTime.Now.ToString("yyyy_MM_dd_hh_mm") + ".csv";
-        objectsSeen = new List<bool>(researchObj.transform.childCount);
         initializationTime = Time.timeSinceLevelLoad;
     }
 
@@ -72,37 +69,25 @@ public class GetDataControllerResearch : MonoBehaviour
         //passedTime += Time.fixedDeltaTime;
         //if (passedTime > 0.1f)
         //{
-
-
-        currentState = toAnalyze.getCurrentState();
-        if (isFocusingRight != 1)
+        if (!finishedLevel)
         {
-            if (GameObject.Find("ResearchObj").transform.GetChild(currentState).gameObject.GetComponent<FocusController>().getFocused())
+            currentState = toAnalyze.GetCurrentState();
+            if (isFocusingRight != 1)
             {
-                isFocusingRight = 1;
+                if (GameObject.Find("ResearchObj").transform.GetChild(currentState).gameObject.GetComponent<FocusController>().getFocused())
+                {
+                    isFocusingRight = 1;
+                }
+                else
+                {
+                    isFocusingRight = 0;
+                }
             }
-            else
-            {
-                isFocusingRight = 0;
-            }
-        }
 
-        if (isClickingRight == 1)
-        {
             myDataList.Add(new DataToCollect(TimeSpan.FromSeconds(Time.timeSinceLevelLoad - initializationTime).ToString(@"mm\:ss\.ff"), isFocusingRight, isClickingRight));
-            if (isFocusingRight == 1 && currentState == numOfObjects - 1)
-            {
-                WriteCSV();
-            }
             isFocusingRight = 0;
             isClickingRight = 0;
         }
-        else
-        {
-            myDataList.Add(new DataToCollect(TimeSpan.FromSeconds(Time.timeSinceLevelLoad - initializationTime).ToString(@"mm\:ss\.ff"), isFocusingRight, isClickingRight));
-            isFocusingRight = 0;
-        }
-
         //WriteCSV();
         //passedTime = 0;
         //}
@@ -146,5 +131,13 @@ public class GetDataControllerResearch : MonoBehaviour
     public void isFocusing()
     {
         isFocusingRight = 1;
+    }
+    public void FinishLevel()
+    {
+        finishedLevel = true;
+        isClickingRight = 1;
+        isFocusingRight = 1;
+        myDataList.Add(new DataToCollect(TimeSpan.FromSeconds(Time.timeSinceLevelLoad - initializationTime).ToString(@"mm\:ss\.ff"), isFocusingRight, isClickingRight));
+        WriteCSV();
     }
 }

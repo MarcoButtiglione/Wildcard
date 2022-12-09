@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = System.Random;
 
 
@@ -22,6 +23,11 @@ public class ResearchManager_1 : MonoBehaviour
     [SerializeField] private float _heigth = 1f;
     [SerializeField] private float _deltaArrow = 1f;
     [SerializeField] private double _randomDirection = 0f;
+
+    [SerializeField] private UnityEvent writeCsvEyeTracking;
+    [SerializeField] private UnityEvent setFinishedDataCollector;
+    [SerializeField] private UnityEvent setFocusing;
+    [SerializeField] private UnityEvent setClicking;
 
     private static Random rng = new Random();
 
@@ -142,13 +148,13 @@ public class ResearchManager_1 : MonoBehaviour
 
         if (id == _orderOfTheState[_state])
         {
-            DataCollector.GetComponent<GetDataControllerResearch>().isClicking();
+            setClicking.Invoke();
             GameObject researchObj = GameObject.Find("ResearchObj");
             FocusController focusControl = researchObj.transform.GetChild(_orderOfTheState[id]).gameObject.GetComponent<FocusController>();
             if (focusControl.getFocused())
             {
                 NextState();
-                DataCollector.GetComponent<GetDataControllerResearch>().isFocusing();
+                setFocusing.Invoke();
             }
         }
     }
@@ -160,7 +166,7 @@ public class ResearchManager_1 : MonoBehaviour
             NextState();
     }
 
-    public int getCurrentState()
+    public int GetCurrentState()
     {
         return _state;
     }
