@@ -59,7 +59,7 @@ public class GetDataControllerResearch : MonoBehaviour
     {
         //passedTime = 0f;
         toAnalyze = objToAnalyze.GetComponent<ResearchManager_1>();
-        filePath = Application.persistentDataPath + "/Research/Research_Session_" + sceneName + "_" + DateTime.Now.ToString("yyyy_MM_dd_hh_mm") + ".csv";
+        filePath = Application.persistentDataPath + "/Research/Research_Session_Binary_" + sceneName + "_" + DateTime.Now.ToString("yyyy_MM_dd_hh_mm") + ".csv";
         initializationTime = Time.timeSinceLevelLoad;
     }
 
