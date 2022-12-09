@@ -273,6 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a40181475487f874c853c3afaff2d0ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: Giulio
 --- !u!1 &348940079
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,6 +639,21 @@ MonoBehaviour:
   _deltaTaken: 0.2
   _spriteIdle: {fileID: 21300000, guid: b323bdbdac9823b44be9946f4c95c76d, type: 3}
   _spriteWalking: {fileID: 21300000, guid: b6e08c028c1e06549b81388e01e17be9, type: 3}
+  writeCsvEyeTracking:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 247845392}
+        m_TargetAssemblyTypeName: EyeTrackingCollector, Assembly-CSharp
+        m_MethodName: WriteCSV
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1650271072620656058
 PrefabInstance:
   m_ObjectHideFlags: 0
