@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.31877172, g: 0.49605823, b: 0.4201938, a: 1}
+  m_IndirectSpecularColor: {r: 0.31877017, g: 0.49540508, b: 0.42011502, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -152,6 +152,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 649272113018451057}
+  - {fileID: 1181033819}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -315,6 +316,83 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1181033818
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 198992034}
+    m_Modifications:
+    - target: {fileID: 8032513802640513094, guid: 78cd1584fb6e7c041828a725b7f13159, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032513802640513094, guid: 78cd1584fb6e7c041828a725b7f13159, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032513802640513094, guid: 78cd1584fb6e7c041828a725b7f13159, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032513802640513094, guid: 78cd1584fb6e7c041828a725b7f13159, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032513802640513094, guid: 78cd1584fb6e7c041828a725b7f13159, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032513802640513094, guid: 78cd1584fb6e7c041828a725b7f13159, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032513802640513094, guid: 78cd1584fb6e7c041828a725b7f13159, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032513802640513094, guid: 78cd1584fb6e7c041828a725b7f13159, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032513802640513094, guid: 78cd1584fb6e7c041828a725b7f13159, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032513802640513094, guid: 78cd1584fb6e7c041828a725b7f13159, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032513802640513094, guid: 78cd1584fb6e7c041828a725b7f13159, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032513802640513096, guid: 78cd1584fb6e7c041828a725b7f13159, type: 3}
+      propertyPath: m_Name
+      value: DataCollectorStoryManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8032513802640513097, guid: 78cd1584fb6e7c041828a725b7f13159, type: 3}
+      propertyPath: sceneName
+      value: Tobia
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 78cd1584fb6e7c041828a725b7f13159, type: 3}
+--- !u!4 &1181033819 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8032513802640513094, guid: 78cd1584fb6e7c041828a725b7f13159, type: 3}
+  m_PrefabInstance: {fileID: 1181033818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1181033820 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8032513802640513097, guid: 78cd1584fb6e7c041828a725b7f13159, type: 3}
+  m_PrefabInstance: {fileID: 1181033818}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b7dcbbae714c646958e50db7b268fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1805695113
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,78 +424,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1941737093
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 9085699442912672588, guid: e373fd4c689759549b60389632deaaaf, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 9085699442912672588, guid: e373fd4c689759549b60389632deaaaf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6.092133
-      objectReference: {fileID: 0}
-    - target: {fileID: 9085699442912672588, guid: e373fd4c689759549b60389632deaaaf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.4690433
-      objectReference: {fileID: 0}
-    - target: {fileID: 9085699442912672588, guid: e373fd4c689759549b60389632deaaaf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.4733734
-      objectReference: {fileID: 0}
-    - target: {fileID: 9085699442912672588, guid: e373fd4c689759549b60389632deaaaf, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9085699442912672588, guid: e373fd4c689759549b60389632deaaaf, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9085699442912672588, guid: e373fd4c689759549b60389632deaaaf, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9085699442912672588, guid: e373fd4c689759549b60389632deaaaf, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9085699442912672588, guid: e373fd4c689759549b60389632deaaaf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9085699442912672588, guid: e373fd4c689759549b60389632deaaaf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9085699442912672588, guid: e373fd4c689759549b60389632deaaaf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9085699442912672626, guid: e373fd4c689759549b60389632deaaaf, type: 3}
-      propertyPath: m_Name
-      value: SDataCollector
-      objectReference: {fileID: 0}
-    - target: {fileID: 9085699442912672627, guid: e373fd4c689759549b60389632deaaaf, type: 3}
-      propertyPath: sceneName
-      value: Tobia
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e373fd4c689759549b60389632deaaaf, type: 3}
---- !u!114 &1941737094 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9085699442912672627, guid: e373fd4c689759549b60389632deaaaf, type: 3}
-  m_PrefabInstance: {fileID: 1941737093}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 505a4429eab111a499d627e7f87b1f8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &649272113018451056
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,14 +483,11 @@ MonoBehaviour:
   _deltaTaken: 0.2
   _spriteIdle: {fileID: 21300000, guid: 639a5c9684e0a6b42b9ded6c585e5710, type: 3}
   _spriteWalking: {fileID: 21300000, guid: 08ddaec0098a4b947abd738fea8997a9, type: 3}
-  writeCsvEyeTracking:
-    m_PersistentCalls:
-      m_Calls: []
   setFinishedDataCollector:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1941737094}
-        m_TargetAssemblyTypeName: GetDataControllerStory, Assembly-CSharp
+      - m_Target: {fileID: 1181033820}
+        m_TargetAssemblyTypeName: DataCollectorStoryManager, Assembly-CSharp
         m_MethodName: FinishLevel
         m_Mode: 1
         m_Arguments:
@@ -498,8 +501,8 @@ MonoBehaviour:
   setPointing:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1941737094}
-        m_TargetAssemblyTypeName: GetDataControllerStory, Assembly-CSharp
+      - m_Target: {fileID: 1181033820}
+        m_TargetAssemblyTypeName: DataCollectorStoryManager, Assembly-CSharp
         m_MethodName: IsPointing
         m_Mode: 1
         m_Arguments:
@@ -513,8 +516,8 @@ MonoBehaviour:
   setNotPointing:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1941737094}
-        m_TargetAssemblyTypeName: GetDataControllerStory, Assembly-CSharp
+      - m_Target: {fileID: 1181033820}
+        m_TargetAssemblyTypeName: DataCollectorStoryManager, Assembly-CSharp
         m_MethodName: IsNotPointing
         m_Mode: 1
         m_Arguments:

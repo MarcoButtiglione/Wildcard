@@ -17,12 +17,14 @@ public class DataCollectorStoryManager : MonoBehaviour
     private int _isFocusing = 0;
     private bool levelFinished = false;
     private bool isWrittenCSV = false;
+    private float initTime;
 
     
     // Start is called before the first frame update
     void Start()
     {
         filePath = Application.persistentDataPath + "/Story/Story_Session_" + sceneName + "_" + DateTime.Now.ToString("yyyy_MM_dd_hh_mm") + ".csv";
+        initTime = _eyeTracking.GetEyeTracking().timestamp;
         _eyeTrackingSamples = new List<EyeTrackingSample>();
         _focusControllerCharacter = GameObject.Find("CharacterParent").transform.GetChild(0).gameObject
             .GetComponent<FocusController>();
@@ -48,7 +50,7 @@ public class DataCollectorStoryManager : MonoBehaviour
         //Creation of a new sample
         var eyeData = new EyeTrackingSample()
         {
-            timestamp = eyeTrackingData.timestamp,
+            timestamp = eyeTrackingData.timestamp-initTime,
             isGazeRayValid = eyeTrackingData.isGazeRayValid,
             hitPoint2Dx = 0f,
             hitPoint2Dy = 0f,
@@ -82,7 +84,7 @@ public class DataCollectorStoryManager : MonoBehaviour
 
         var eyeData = new EyeTrackingSample()
         {
-            timestamp = eyeTrackingData.timestamp,
+            timestamp = eyeTrackingData.timestamp-initTime,
             isGazeRayValid = eyeTrackingData.isGazeRayValid,
             hitPoint2Dx = hitX,
             hitPoint2Dy = hitY,
@@ -120,7 +122,7 @@ public class DataCollectorStoryManager : MonoBehaviour
         if (_eyeTrackingSamples.Count > 0)
         {
             TextWriter tw = new StreamWriter(filePath, false);
-            tw.WriteLine("TimeStamp,IsGazeRayValid,HitPointX,HitPointY,IsLeftEyeBlinking,IsRightEyeBlinking,IsFocusing,isPointing");
+            tw.WriteLine("TimeStamp,IsGazeRayValid,HitPointX,HitPointY,IsLeftEyeBlinking,IsRightEyeBlinking,IsFocusing,IsPointing");
             tw.Close();
 
             tw = new StreamWriter(filePath, true);
@@ -213,7 +215,7 @@ public class DataCollectorStoryManager : MonoBehaviour
         _isPointing = 1;
         var eyeData = new EyeTrackingSample()
         {
-            timestamp = _eyeData.timestamp,
+            timestamp = _eyeData.timestamp-initTime,
             isGazeRayValid = _eyeData.isGazeRayValid,
             hitPoint2Dx = hitX,
             hitPoint2Dy = hitY,
