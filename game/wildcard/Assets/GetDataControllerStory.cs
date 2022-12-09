@@ -11,16 +11,11 @@ public class GetDataControllerStory : MonoBehaviour
     //The future path of the files
     //private float passedTime = 0f;
     string filePath;
-    [SerializeField] private GameObject objToAnalyze;
-    private StoryManager_1 toAnalyze;
     private int isPointingRight = 0;
     private int isFocusingRight = 0;
-    private int currentState = 0;
-    private int numOfObjects;
     public string sceneName;
-    private GameObject researchObj;
-    private List<bool> objectsSeen;
     private float initializationTime;
+    private bool levelFinished = false;
 
     public class DataToCollect
     {
@@ -50,19 +45,12 @@ public class GetDataControllerStory : MonoBehaviour
 
     public List<DataToCollect> myDataList = new List<DataToCollect>();
 
-    void Awake()
-    {
-        researchObj = GameObject.Find("ResearchObj");
-        numOfObjects = researchObj.transform.childCount;
-    }
-
+    
     // Start is called before the first frame update
     void Start()
     {
         //passedTime = 0f;
-        toAnalyze = objToAnalyze.GetComponent<StoryManager_1>();
         filePath = Application.persistentDataPath + "/Story/Story_Session_" + sceneName + "_" + DateTime.Now.ToString("yyyy_MM_dd_hh_mm") + ".csv";
-        objectsSeen = new List<bool>(researchObj.transform.childCount);
         initializationTime = Time.timeSinceLevelLoad;
     }
 
@@ -74,10 +62,10 @@ public class GetDataControllerStory : MonoBehaviour
         //{
 
 
-        currentState = toAnalyze.getCurrentState();
-        if (isFocusingRight != 1)
+        if (!levelFinished)
         {
-            if (GameObject.Find("ResearchObj").transform.GetChild(currentState).gameObject.GetComponent<FocusController>().getFocused())
+
+            if (GameObject.Find("CharacterParent").transform.GetChild(0).gameObject.GetComponent<FocusController>().getFocused())
             {
                 isFocusingRight = 1;
             }
@@ -85,22 +73,11 @@ public class GetDataControllerStory : MonoBehaviour
             {
                 isFocusingRight = 0;
             }
-        }
+            //TimeSpan.FromSeconds(Time.timeSinceLevelLoad - initializationTime).ToString(@"%s\.ff");
 
-        if (isClickingRight == 1)
-        {
-            myDataList.Add(new DataToCollect((Time.timeSinceLevelLoad-initializationTime).ToString("mm.ss.ff"), isFocusingRight, isClickingRight));
-            if (isFocusingRight == 1 && currentState == numOfObjects - 1)
-            {
-                WriteCSV();
-            }
+            myDataList.Add(new DataToCollect(TimeSpan.FromSeconds(Time.timeSinceLevelLoad - initializationTime).ToString(@"mm\:ss\.ff"), isFocusingRight, isPointingRight));
             isFocusingRight = 0;
-            isClickingRight = 0;
-        }
-        else
-        {
-            myDataList.Add(new DataToCollect((Time.timeSinceLevelLoad-initializationTime).ToString("mm.ss.ff"), isFocusingRight, isClickingRight));
-            isFocusingRight = 0;
+
         }
 
         //WriteCSV();
@@ -120,7 +97,7 @@ public class GetDataControllerStory : MonoBehaviour
 
             tw = new StreamWriter(filePath, true);
 
-            for (int i = 0; i < myDataList.Count; i++)
+            for (int i = 1; i < myDataList.Count; i++)
             {
                 tw.WriteLine(myDataList[i].GetTime() +
                 "," + myDataList[i].GetFocusing() +
@@ -147,8 +124,12 @@ public class GetDataControllerStory : MonoBehaviour
         isPointingRight = 0;
     }
 
-    public void IsFocusing()
+    public void FinishLevel()
     {
+        levelFinished = true;
         isFocusingRight = 1;
+        isPointingRight = 1;
+        myDataList.Add(new DataToCollect(TimeSpan.FromSeconds(Time.timeSinceLevelLoad - initializationTime).ToString(@"mm\:ss\.ff"), isFocusingRight, isPointingRight));
+        WriteCSV();
     }
 }

@@ -89,7 +89,7 @@ public class GetDataControllerResearch : MonoBehaviour
 
         if (isClickingRight == 1)
         {
-            myDataList.Add(new DataToCollect((Time.timeSinceLevelLoad-initializationTime).ToString("mm.ss.ff"), isFocusingRight, isClickingRight));
+            myDataList.Add(new DataToCollect(TimeSpan.FromSeconds(Time.timeSinceLevelLoad - initializationTime).ToString(@"mm\:ss\.ff"), isFocusingRight, isClickingRight));
             if (isFocusingRight == 1 && currentState == numOfObjects - 1)
             {
                 WriteCSV();
@@ -99,7 +99,7 @@ public class GetDataControllerResearch : MonoBehaviour
         }
         else
         {
-            myDataList.Add(new DataToCollect((Time.timeSinceLevelLoad-initializationTime).ToString("mm.ss.ff"), isFocusingRight, isClickingRight));
+            myDataList.Add(new DataToCollect(TimeSpan.FromSeconds(Time.timeSinceLevelLoad - initializationTime).ToString(@"mm\:ss\.ff"), isFocusingRight, isClickingRight));
             isFocusingRight = 0;
         }
 
@@ -120,7 +120,7 @@ public class GetDataControllerResearch : MonoBehaviour
 
             tw = new StreamWriter(filePath, true);
 
-            for (int i = 0; i < myDataList.Count; i++)
+            for (int i = 1; i < myDataList.Count; i++)
             {
                 tw.WriteLine(myDataList[i].GetTime() +
                 "," + myDataList[i].GetFocusing() +

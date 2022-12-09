@@ -30,6 +30,10 @@ public class StoryManager_1 : MonoBehaviour
     private bool isFinished = false;
     
     [SerializeField] private UnityEvent writeCsvEyeTracking;
+    [SerializeField] private UnityEvent setFinishedDataCollector;
+    [SerializeField] private UnityEvent setPointing;
+    [SerializeField] private UnityEvent setNotPointing;
+   
 
 
     private void Awake()
@@ -138,6 +142,7 @@ public class StoryManager_1 : MonoBehaviour
             if (_state + 1 == _gameObject.Length && !isFinished)
             {
                 writeCsvEyeTracking.Invoke();
+                setFinishedDataCollector.Invoke();
                 isFinished = true;
                 StartCoroutine("WaitFor");
                 
@@ -157,10 +162,12 @@ public class StoryManager_1 : MonoBehaviour
 
     public void HoverEnteredCharacter()
     {
+        setPointing.Invoke();
         _isMoving = true;
     }
     public void HoverExitedCharacter()
     {
+        setNotPointing.Invoke();
         _isMoving = false;
     }
 
