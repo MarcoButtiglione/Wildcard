@@ -46,7 +46,8 @@ public class DataCollectorExplorationManager : MonoBehaviour
             isRightEyeBlinking = 1;
         }
         //Focusing update
-        UpdateFocusing();
+        //UpdateFocusing();
+        _isFocusing = 0;
         
         //Creation of a new sample
         var eyeData = new EyeTrackingSampleExploration()
@@ -65,10 +66,16 @@ public class DataCollectorExplorationManager : MonoBehaviour
         };
         _eyeTrackingSamples.Add(eyeData);
     }
-    public void SetHitData(Vector3 hitPoint, EyeTrackingData eyeTrackingData,int isLookingSky)
+    public void SetHitData(Vector3 hitPoint, EyeTrackingData eyeTrackingData,int isLookingSky, bool isLookingPicture)
     {
-        var hitX = hitPoint.x;
-        var hitY = hitPoint.z;
+        var hitX = 0f;
+        var hitY = 0f;
+        if(isLookingSky==0)
+        {
+            hitX = hitPoint.x; 
+            hitY = hitPoint.z;
+        } 
+        
         
         //Bool to int convertion
         var isLeftEyeBlinking = 0;
@@ -82,7 +89,12 @@ public class DataCollectorExplorationManager : MonoBehaviour
             isRightEyeBlinking = 1;
         }
         //Update focusing
-        UpdateFocusing();
+        //UpdateFocusing();
+        _isFocusing = 0;
+        if (isLookingPicture)
+        {
+            _isFocusing = 1;
+        }
 
         var eyeData = new EyeTrackingSampleExploration()
         {
@@ -111,16 +123,23 @@ public class DataCollectorExplorationManager : MonoBehaviour
         {
             var pos = _eyeData.rayOrigin;
             var direction = _eyeData.rayDirection;
-            string[] layerName = {"EyeTrackingExplorationMaze","EyeTrackingExplorationChild"};
+            string[] layerName = {"EyeTrackingExplorationMaze","EyeTrackingExplorationChild","EyeTrackingExplorationPicture"};
             LayerMask mask = LayerMask.GetMask(layerName);
             LayerMask maskSky = LayerMask.GetMask("EyeTrackingExplorationSky");
             if (Physics.Raycast(pos, direction, out hit, 100f,mask))
             {
-                SetHitData(hit.point,_eyeData,0);
+                if (hit.collider.CompareTag("Picture"))
+                {
+                    SetHitData(hit.point,_eyeData,0,true);
+                }
+                else
+                {
+                    SetHitData(hit.point,_eyeData,0,false);
+                }
             }
-            else if(Physics.Raycast(pos, direction, out hit, 100f,maskSky))
+            else
             {
-                SetHitData(hit.point,_eyeData,1);
+                SetHitData(hit.point,_eyeData,1,false);
             }
         }
         else
@@ -194,7 +213,7 @@ public class DataCollectorExplorationManager : MonoBehaviour
         {
             var pos = _eyeData.rayOrigin;
             var direction = _eyeData.rayDirection;
-            string[] layerName = {"EyeTrackingExplorationMaze","EyeTrackingExplorationChild"};
+            string[] layerName = {"EyeTrackingExplorationMaze","EyeTrackingExplorationChild","EyeTrackingExplorationPicture"};
             LayerMask mask = LayerMask.GetMask(layerName);
             LayerMask maskSky = LayerMask.GetMask("EyeTrackingExplorationSky");
             if (Physics.Raycast(pos, direction, out hit, 100f,mask))
@@ -203,7 +222,7 @@ public class DataCollectorExplorationManager : MonoBehaviour
                 hitX = hit.point.x;
                 hitY = hit.point.z;
             }
-            else if(Physics.Raycast(pos, direction, out hit, 100f,maskSky))
+            else
             {
                 isLookingSky = 1;
             }

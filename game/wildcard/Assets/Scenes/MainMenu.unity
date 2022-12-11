@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13004,7 +13004,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114404013065818992, guid: 596e593361e094a43934c013fa0b5764, type: 3}
       propertyPath: Settings.LayerMask.m_Bits
-      value: 55
+      value: 3895
       objectReference: {fileID: 0}
     - target: {fileID: 114404013065818992, guid: 596e593361e094a43934c013fa0b5764, type: 3}
       propertyPath: Settings.AndroidEyeTrackingProviders.Array.data[0].TypeName
