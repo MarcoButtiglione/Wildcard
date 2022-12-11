@@ -10,7 +10,8 @@ public class DataCollectorExplorationManager : MonoBehaviour
     [SerializeField] private EyeTracking _eyeTracking;
     
     private List<EyeTrackingSampleExploration> _eyeTrackingSamples;
-    private FocusController _focusControllerCharacter;
+    private GameObject pictures;
+    private GameObject _camera;
     private string filePath;
     public string sceneName;
     private int _isPointing = 0;
@@ -25,8 +26,9 @@ public class DataCollectorExplorationManager : MonoBehaviour
         filePath = Application.persistentDataPath + "/Exploration/Exploration_Session_" + sceneName + "_" + DateTime.Now.ToString("yyyy_MM_dd_hh_mm") + ".csv";
         initTime = _eyeTracking.GetEyeTracking().timestamp;
         _eyeTrackingSamples = new List<EyeTrackingSampleExploration>();
-        _focusControllerCharacter = GameObject.Find("CharacterParent").transform.GetChild(0).gameObject
-            .GetComponent<FocusController>();
+        pictures = GameObject.Find("Picture");
+        _camera = GameObject.Find("Main Camera");
+
     }
 
     // Update is called once per frame
@@ -53,27 +55,20 @@ public class DataCollectorExplorationManager : MonoBehaviour
             isGazeRayValid = eyeTrackingData.isGazeRayValid,
             hitPoint2Dx = 0f,
             hitPoint2Dy = 0f,
+            cameraPos2Dx = _camera.transform.position.x,
+            cameraPos2Dy = _camera.transform.position.z,
             isLeftEyeBlinking = isLeftEyeBlinking,
             isRightEyeBlinking = isRightEyeBlinking,
             isFocusing = _isFocusing,
-            isPointing = _isPointing
+            isPointing = _isPointing,
+            isLookingSky = 0,
         };
         _eyeTrackingSamples.Add(eyeData);
     }
-    public void SetHitData(Vector3 hitPoint, EyeTrackingData eyeTrackingData)
+    public void SetHitData(Vector3 hitPoint, EyeTrackingData eyeTrackingData,int isLookingSky)
     {
-        //Hit point calc
-        var tan = hitPoint.x/hitPoint.z;
-        float hitX;
-        if (hitPoint.z > 0)
-        {
-            hitX = (float) Math.Atan(tan);
-        }
-        else
-        {
-            hitX = (float) (Math.Atan(tan)+Math.PI);
-        }
-        var hitY = hitPoint.y;
+        var hitX = hitPoint.x;
+        var hitY = hitPoint.z;
         
         //Bool to int convertion
         var isLeftEyeBlinking = 0;
@@ -95,13 +90,17 @@ public class DataCollectorExplorationManager : MonoBehaviour
             isGazeRayValid = eyeTrackingData.isGazeRayValid,
             hitPoint2Dx = hitX,
             hitPoint2Dy = hitY,
+            cameraPos2Dx = _camera.transform.position.x,
+            cameraPos2Dy = _camera.transform.position.z,
             isLeftEyeBlinking = isLeftEyeBlinking,
             isRightEyeBlinking = isRightEyeBlinking,
             isFocusing = _isFocusing,
-            isPointing = _isPointing
+            isPointing = _isPointing,
+            isLookingSky = isLookingSky
         };
         _eyeTrackingSamples.Add(eyeData);
     }
+    
     
 
     private void GetEyeDataRaycast()
@@ -112,10 +111,16 @@ public class DataCollectorExplorationManager : MonoBehaviour
         {
             var pos = _eyeData.rayOrigin;
             var direction = _eyeData.rayDirection;
-            LayerMask mask = LayerMask.GetMask("EyeTrackingSphere");
-            if (Physics.Raycast(pos + direction * 100, -direction, out hit, 100f,mask))
+            string[] layerName = {"EyeTrackingExplorationMaze","EyeTrackingExplorationChild"};
+            LayerMask mask = LayerMask.GetMask(layerName);
+            LayerMask maskSky = LayerMask.GetMask("EyeTrackingExplorationSky");
+            if (Physics.Raycast(pos, direction, out hit, 100f,mask))
             {
-                SetHitData(hit.point,_eyeData);
+                SetHitData(hit.point,_eyeData,0);
+            }
+            else if(Physics.Raycast(pos, direction, out hit, 100f,maskSky))
+            {
+                SetHitData(hit.point,_eyeData,1);
             }
         }
         else
@@ -129,7 +134,7 @@ public class DataCollectorExplorationManager : MonoBehaviour
         if (_eyeTrackingSamples.Count > 0)
         {
             TextWriter tw = new StreamWriter(filePath, false);
-            tw.WriteLine("TimeStamp,IsGazeRayValid,HitPointX,HitPointY,IsLeftEyeBlinking,IsRightEyeBlinking,IsFocusing,IsPointing");
+            tw.WriteLine("TimeStamp,IsGazeRayValid,HitPointX,HitPointY,ChildPositionX,ChildPositionY,IsLeftEyeBlinking,IsRightEyeBlinking,IsFocusing,IsPointing,IsLookingSky");
             tw.Close();
 
             tw = new StreamWriter(filePath, true);
@@ -140,10 +145,13 @@ public class DataCollectorExplorationManager : MonoBehaviour
                              "," + _eyeTrackingSamples[i].isGazeRayValid +
                              "," + _eyeTrackingSamples[i].hitPoint2Dx +
                              "," + _eyeTrackingSamples[i].hitPoint2Dy +
+                             "," + _eyeTrackingSamples[i].cameraPos2Dx +
+                             "," + _eyeTrackingSamples[i].cameraPos2Dy +
                              "," + _eyeTrackingSamples[i].isLeftEyeBlinking +
                              "," + _eyeTrackingSamples[i].isRightEyeBlinking +
                              "," + _eyeTrackingSamples[i].isFocusing +
-                             "," + _eyeTrackingSamples[i].isPointing
+                             "," + _eyeTrackingSamples[i].isPointing +
+                             "," + _eyeTrackingSamples[i].isLookingSky
                 );
             }
             tw.Close();
@@ -153,14 +161,14 @@ public class DataCollectorExplorationManager : MonoBehaviour
 
     private void UpdateFocusing()
     {
-        if (_focusControllerCharacter.getFocused()) 
-        { 
-            _isFocusing = 1;
+        _isFocusing = 0;
+        for (int i = 0; i < pictures.transform.childCount; i++)
+        {
+            if (pictures.transform.GetChild(i).gameObject.GetComponent<FocusController>().getFocused())
+            {
+                _isFocusing = 1;
+            }
         }
-        else 
-        { 
-            _isFocusing = 0;
-        } 
     }
     public void IsPointing()
     {
@@ -178,6 +186,7 @@ public class DataCollectorExplorationManager : MonoBehaviour
         var hitY = 0f;
         var isLeftEyeBlinking = 0;
         var isRightEyeBlinking = 0;
+        var isLookingSky = 0;
         
         var _eyeData = _eyeTracking.GetEyeTracking();
         RaycastHit hit;
@@ -185,33 +194,28 @@ public class DataCollectorExplorationManager : MonoBehaviour
         {
             var pos = _eyeData.rayOrigin;
             var direction = _eyeData.rayDirection;
-            LayerMask mask = LayerMask.GetMask("EyeTrackingSphere");
-            if (Physics.Raycast(pos + direction * 100, -direction, out hit, 100f,mask))
+            string[] layerName = {"EyeTrackingExplorationMaze","EyeTrackingExplorationChild"};
+            LayerMask mask = LayerMask.GetMask(layerName);
+            LayerMask maskSky = LayerMask.GetMask("EyeTrackingExplorationSky");
+            if (Physics.Raycast(pos, direction, out hit, 100f,mask))
             {
                 //Hit point calc
-                var tan = hit.point.x / hit.point.z;
-                if (hit.point.z > 0)
-                {
-                    hitX = (float) Math.Atan(tan);
-                }
-                else
-                {
-                    hitX = (float) (Math.Atan(tan)+Math.PI);
-                }
+                hitX = hit.point.x;
+                hitY = hit.point.z;
+            }
+            else if(Physics.Raycast(pos, direction, out hit, 100f,maskSky))
+            {
+                isLookingSky = 1;
+            }
+            //Bool to int convertion
                 
-                
-                hitY = hit.point.y;
-        
-                //Bool to int convertion
-                
-                if (_eyeData.isLeftEyeBlinking)
-                {
-                    isLeftEyeBlinking = 1;
-                }
-                if (_eyeData.isRightEyeBlinking)
-                {
-                    isRightEyeBlinking = 1;
-                }
+            if (_eyeData.isLeftEyeBlinking)
+            {
+                isLeftEyeBlinking = 1;
+            }
+            if (_eyeData.isRightEyeBlinking)
+            {
+                isRightEyeBlinking = 1;
             }
         }
         else
@@ -235,10 +239,13 @@ public class DataCollectorExplorationManager : MonoBehaviour
             isGazeRayValid = _eyeData.isGazeRayValid,
             hitPoint2Dx = hitX,
             hitPoint2Dy = hitY,
+            cameraPos2Dx = _camera.transform.position.x,
+            cameraPos2Dy = _camera.transform.position.z,
             isLeftEyeBlinking = isLeftEyeBlinking,
             isRightEyeBlinking = isRightEyeBlinking,
             isFocusing = _isFocusing,
-            isPointing = _isPointing
+            isPointing = _isPointing,
+            isLookingSky = isLookingSky
         };
         _eyeTrackingSamples.Add(eyeData);
         WriteCSV();
@@ -261,8 +268,11 @@ public struct EyeTrackingSampleExploration
     public bool isGazeRayValid;
     public float hitPoint2Dx;
     public float hitPoint2Dy;
+    public float cameraPos2Dx;
+    public float cameraPos2Dy;
     public int isLeftEyeBlinking;
     public int isRightEyeBlinking;
     public int isFocusing;
     public int isPointing;
+    public int isLookingSky;
 }

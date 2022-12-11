@@ -20,7 +20,6 @@ public class ExplorationManager_1 : MonoBehaviour
     [SerializeField] private float _playerSpeed=2f;
     [SerializeField] private float _speedCharacter = 4f;
     [SerializeField] private GameObject[] _checkpoints;
-    [SerializeField] private UnityEvent writeCsvEyeTracking;
     [SerializeField] private UnityEvent setFinishedDataCollector;
     [SerializeField] private UnityEvent setPointing;
     [SerializeField] private UnityEvent setNotPointing;
