@@ -4,16 +4,18 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class DataCollectorStoryManager : MonoBehaviour
+public class DataCollectorResearchManager : MonoBehaviour
 {
     
     [SerializeField] private EyeTracking _eyeTracking;
+    private GameObject _researchObj;
+    private ResearchManager_1 _researchManager1;
+    private int _currentState;
     
-    private List<EyeTrackingSampleStory> _eyeTrackingSamples;
-    private FocusController _focusControllerCharacter;
+    private List<EyeTrackingSampleResearch> _eyeTrackingSamples;
     private string filePath;
     public string sceneName;
-    private int _isPointing = 0;
+    private int _isClicking = 0;
     private int _isFocusing = 0;
     private bool levelFinished = false;
     private float initTime;
@@ -22,11 +24,14 @@ public class DataCollectorStoryManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        filePath = Application.persistentDataPath + "/Story/Story_Session_" + sceneName + "_" + DateTime.Now.ToString("yyyy_MM_dd_hh_mm") + ".csv";
+        _researchObj = GameObject.Find("ResearchObj");
+        _researchManager1 = GameObject.Find("ResearchManager").GetComponent<ResearchManager_1>();
+        
+        
+        filePath = Application.persistentDataPath + "/Research/Research_Session_" + sceneName + "_" + DateTime.Now.ToString("yyyy_MM_dd_hh_mm") + ".csv";
         initTime = _eyeTracking.GetEyeTracking().timestamp;
-        _eyeTrackingSamples = new List<EyeTrackingSampleStory>();
-        _focusControllerCharacter = GameObject.Find("CharacterParent").transform.GetChild(0).gameObject
-            .GetComponent<FocusController>();
+        _eyeTrackingSamples = new List<EyeTrackingSampleResearch>();
+        
     }
 
     // Update is called once per frame
@@ -47,7 +52,7 @@ public class DataCollectorStoryManager : MonoBehaviour
         UpdateFocusing();
         
         //Creation of a new sample
-        var eyeData = new EyeTrackingSampleStory()
+        var eyeData = new EyeTrackingSampleResearch()
         {
             timestamp = eyeTrackingData.timestamp-initTime,
             isGazeRayValid = eyeTrackingData.isGazeRayValid,
@@ -56,7 +61,7 @@ public class DataCollectorStoryManager : MonoBehaviour
             isLeftEyeBlinking = isLeftEyeBlinking,
             isRightEyeBlinking = isRightEyeBlinking,
             isFocusing = _isFocusing,
-            isPointing = _isPointing
+            isClicking = _isClicking
         };
         _eyeTrackingSamples.Add(eyeData);
     }
@@ -73,6 +78,8 @@ public class DataCollectorStoryManager : MonoBehaviour
         {
             hitX = (float) (Math.Atan(tan)+Math.PI);
         }
+
+        
         var hitY = hitPoint.y;
         
         //Bool to int convertion
@@ -89,7 +96,7 @@ public class DataCollectorStoryManager : MonoBehaviour
         //Update focusing
         UpdateFocusing();
 
-        var eyeData = new EyeTrackingSampleStory()
+        var eyeData = new EyeTrackingSampleResearch()
         {
             timestamp = eyeTrackingData.timestamp-initTime,
             isGazeRayValid = eyeTrackingData.isGazeRayValid,
@@ -98,9 +105,10 @@ public class DataCollectorStoryManager : MonoBehaviour
             isLeftEyeBlinking = isLeftEyeBlinking,
             isRightEyeBlinking = isRightEyeBlinking,
             isFocusing = _isFocusing,
-            isPointing = _isPointing
+            isClicking = _isClicking
         };
         _eyeTrackingSamples.Add(eyeData);
+        
     }
     
 
@@ -129,7 +137,7 @@ public class DataCollectorStoryManager : MonoBehaviour
         if (_eyeTrackingSamples.Count > 0)
         {
             TextWriter tw = new StreamWriter(filePath, false);
-            tw.WriteLine("TimeStamp,IsGazeRayValid,HitPointX,HitPointY,IsLeftEyeBlinking,IsRightEyeBlinking,IsFocusing,IsPointing");
+            tw.WriteLine("TimeStamp,IsGazeRayValid,HitPointX,HitPointY,IsLeftEyeBlinking,IsRightEyeBlinking,IsFocusing,IsClicking");
             tw.Close();
 
             tw = new StreamWriter(filePath, true);
@@ -143,7 +151,7 @@ public class DataCollectorStoryManager : MonoBehaviour
                              "," + _eyeTrackingSamples[i].isLeftEyeBlinking +
                              "," + _eyeTrackingSamples[i].isRightEyeBlinking +
                              "," + _eyeTrackingSamples[i].isFocusing +
-                             "," + _eyeTrackingSamples[i].isPointing
+                             "," + _eyeTrackingSamples[i].isClicking
                 );
             }
             tw.Close();
@@ -153,22 +161,18 @@ public class DataCollectorStoryManager : MonoBehaviour
 
     private void UpdateFocusing()
     {
-        if (_focusControllerCharacter.getFocused()) 
-        { 
+        if (_researchObj.transform.GetChild(_currentState).gameObject.GetComponent<FocusController>().getFocused())
+        {
             _isFocusing = 1;
         }
-        else 
-        { 
+        else
+        {
             _isFocusing = 0;
-        } 
+        }
     }
-    public void IsPointing()
+    public void isClicking()
     {
-        _isPointing = 1;
-    }
-    public void IsNotPointing()
-    {
-        _isPointing = 0;
+        _isClicking = 1;
     }
 
     public void FinishLevel()
@@ -189,7 +193,7 @@ public class DataCollectorStoryManager : MonoBehaviour
             if (Physics.Raycast(pos + direction * 100, -direction, out hit, 100f,mask))
             {
                 //Hit point calc
-                var tan = hit.point.x / hit.point.z;
+                var tan =  hit.point.x/hit.point.z;
                 if (hit.point.z > 0)
                 {
                     hitX = (float) Math.Atan(tan);
@@ -200,6 +204,7 @@ public class DataCollectorStoryManager : MonoBehaviour
                 }
                 
                 
+
                 hitY = hit.point.y;
         
                 //Bool to int convertion
@@ -228,8 +233,8 @@ public class DataCollectorStoryManager : MonoBehaviour
         }
 
         _isFocusing = 1;
-        _isPointing = 1;
-        var eyeData = new EyeTrackingSampleStory()
+        _isClicking = 1;
+        var eyeData = new EyeTrackingSampleResearch()
         {
             timestamp = _eyeData.timestamp-initTime,
             isGazeRayValid = _eyeData.isGazeRayValid,
@@ -238,7 +243,7 @@ public class DataCollectorStoryManager : MonoBehaviour
             isLeftEyeBlinking = isLeftEyeBlinking,
             isRightEyeBlinking = isRightEyeBlinking,
             isFocusing = _isFocusing,
-            isPointing = _isPointing
+            isClicking = _isClicking
         };
         _eyeTrackingSamples.Add(eyeData);
         WriteCSV();
@@ -249,13 +254,15 @@ public class DataCollectorStoryManager : MonoBehaviour
     {
         if (!levelFinished)
         {
+            _currentState = _researchManager1.GetCurrentState();
             GetEyeDataRaycast();
+            _isClicking = 0;
         }
 
     }
 }
 
-public struct EyeTrackingSampleStory
+public struct EyeTrackingSampleResearch
 {
     public float timestamp;
     public bool isGazeRayValid;
@@ -264,5 +271,5 @@ public struct EyeTrackingSampleStory
     public int isLeftEyeBlinking;
     public int isRightEyeBlinking;
     public int isFocusing;
-    public int isPointing;
+    public int isClicking;
 }

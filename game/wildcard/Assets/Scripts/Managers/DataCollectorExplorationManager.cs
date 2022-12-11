@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class DataCollectorStoryManager : MonoBehaviour
+public class DataCollectorExplorationManager : MonoBehaviour
 {
     
     [SerializeField] private EyeTracking _eyeTracking;
     
-    private List<EyeTrackingSampleStory> _eyeTrackingSamples;
+    private List<EyeTrackingSampleExploration> _eyeTrackingSamples;
     private FocusController _focusControllerCharacter;
     private string filePath;
     public string sceneName;
@@ -22,9 +22,9 @@ public class DataCollectorStoryManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        filePath = Application.persistentDataPath + "/Story/Story_Session_" + sceneName + "_" + DateTime.Now.ToString("yyyy_MM_dd_hh_mm") + ".csv";
+        filePath = Application.persistentDataPath + "/Exploration/Exploration_Session_" + sceneName + "_" + DateTime.Now.ToString("yyyy_MM_dd_hh_mm") + ".csv";
         initTime = _eyeTracking.GetEyeTracking().timestamp;
-        _eyeTrackingSamples = new List<EyeTrackingSampleStory>();
+        _eyeTrackingSamples = new List<EyeTrackingSampleExploration>();
         _focusControllerCharacter = GameObject.Find("CharacterParent").transform.GetChild(0).gameObject
             .GetComponent<FocusController>();
     }
@@ -47,7 +47,7 @@ public class DataCollectorStoryManager : MonoBehaviour
         UpdateFocusing();
         
         //Creation of a new sample
-        var eyeData = new EyeTrackingSampleStory()
+        var eyeData = new EyeTrackingSampleExploration()
         {
             timestamp = eyeTrackingData.timestamp-initTime,
             isGazeRayValid = eyeTrackingData.isGazeRayValid,
@@ -89,7 +89,7 @@ public class DataCollectorStoryManager : MonoBehaviour
         //Update focusing
         UpdateFocusing();
 
-        var eyeData = new EyeTrackingSampleStory()
+        var eyeData = new EyeTrackingSampleExploration()
         {
             timestamp = eyeTrackingData.timestamp-initTime,
             isGazeRayValid = eyeTrackingData.isGazeRayValid,
@@ -229,7 +229,7 @@ public class DataCollectorStoryManager : MonoBehaviour
 
         _isFocusing = 1;
         _isPointing = 1;
-        var eyeData = new EyeTrackingSampleStory()
+        var eyeData = new EyeTrackingSampleExploration()
         {
             timestamp = _eyeData.timestamp-initTime,
             isGazeRayValid = _eyeData.isGazeRayValid,
@@ -255,7 +255,7 @@ public class DataCollectorStoryManager : MonoBehaviour
     }
 }
 
-public struct EyeTrackingSampleStory
+public struct EyeTrackingSampleExploration
 {
     public float timestamp;
     public bool isGazeRayValid;
