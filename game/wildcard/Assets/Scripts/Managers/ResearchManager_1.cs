@@ -14,7 +14,6 @@ public class ResearchManager_1 : MonoBehaviour
     private GameObject _camera;
     private Vector3 _cameraPos;
     private GameObject _arrow;
-    [SerializeField] private GameObject DataCollector;
     [SerializeField] private GameObject boomEffect;
 
     [SerializeField] private float _deltaAngle = 30f;
@@ -24,9 +23,7 @@ public class ResearchManager_1 : MonoBehaviour
     [SerializeField] private float _deltaArrow = 1f;
     [SerializeField] private double _randomDirection = 0f;
 
-    [SerializeField] private UnityEvent writeCsvEyeTracking;
     [SerializeField] private UnityEvent setFinishedDataCollector;
-    [SerializeField] private UnityEvent setFocusing;
     [SerializeField] private UnityEvent setClicking;
 
     private static Random rng = new Random();
@@ -132,6 +129,7 @@ public class ResearchManager_1 : MonoBehaviour
     {
         if (_state + 1 == GameObject.Find("ResearchObj").transform.childCount)
         {
+            setFinishedDataCollector.Invoke();
             StartCoroutine("WaitFor");
             //_arrow = GameObject.Find("Arrow");
             //_arrow.transform.position =  GameObject.Find("ResearchObj").transform.GetChild(0).gameObject.transform.position+ new Vector3(0,_deltaArrow,0);
@@ -154,7 +152,6 @@ public class ResearchManager_1 : MonoBehaviour
             if (focusControl.getFocused())
             {
                 NextState();
-                setFocusing.Invoke();
             }
         }
     }
