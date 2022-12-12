@@ -1649,7 +1649,7 @@ GameObject:
   - component: {fileID: 1165790933}
   - component: {fileID: 1165790934}
   m_Layer: 11
-  m_Name: Plane (2)
+  m_Name: 3
   m_TagString: Picture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2337,7 +2337,7 @@ GameObject:
   - component: {fileID: 1278009284}
   - component: {fileID: 1278009285}
   m_Layer: 11
-  m_Name: Plane (6)
+  m_Name: 7
   m_TagString: Picture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2652,7 +2652,7 @@ GameObject:
   - component: {fileID: 1359305607}
   - component: {fileID: 1359305608}
   m_Layer: 11
-  m_Name: Plane (4)
+  m_Name: 5
   m_TagString: Picture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2901,7 +2901,7 @@ GameObject:
   - component: {fileID: 1479994362}
   - component: {fileID: 1479994363}
   m_Layer: 11
-  m_Name: Plane
+  m_Name: 1
   m_TagString: Picture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3119,7 +3119,7 @@ GameObject:
   - component: {fileID: 1756788076}
   - component: {fileID: 1756788077}
   m_Layer: 11
-  m_Name: Plane (3)
+  m_Name: 4
   m_TagString: Picture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3756,7 +3756,7 @@ GameObject:
   - component: {fileID: 1979105073}
   - component: {fileID: 1979105074}
   m_Layer: 11
-  m_Name: Plane (5)
+  m_Name: 6
   m_TagString: Picture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4051,7 +4051,7 @@ GameObject:
   - component: {fileID: 2051155249}
   - component: {fileID: 2051155250}
   m_Layer: 11
-  m_Name: Plane (1)
+  m_Name: 2
   m_TagString: Picture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

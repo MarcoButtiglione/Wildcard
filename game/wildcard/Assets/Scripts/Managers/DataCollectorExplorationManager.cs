@@ -8,6 +8,7 @@ public class DataCollectorExplorationManager : MonoBehaviour
 {
     
     [SerializeField] private EyeTracking _eyeTracking;
+    private ExplorationManager_1 _explorationManager;
     
     private List<EyeTrackingSampleExploration> _eyeTrackingSamples;
     private GameObject pictures;
@@ -28,7 +29,7 @@ public class DataCollectorExplorationManager : MonoBehaviour
         _eyeTrackingSamples = new List<EyeTrackingSampleExploration>();
         pictures = GameObject.Find("Picture");
         _camera = GameObject.Find("Main Camera");
-
+        _explorationManager = GameObject.Find("ExplorationManager_1").GetComponent<ExplorationManager_1>();
     }
 
     // Update is called once per frame
@@ -130,21 +131,27 @@ public class DataCollectorExplorationManager : MonoBehaviour
             {
                 if (hit.collider.CompareTag("Picture"))
                 {
+                    var name = hit.collider.name;
+                    var id = Int32.Parse(name) - 1;
                     SetHitData(hit.point,_eyeData,0,true);
+                    _explorationManager.IsFocusingObj(id);
                 }
                 else
                 {
                     SetHitData(hit.point,_eyeData,0,false);
+                    _explorationManager.IsNotFocusingObj();
                 }
             }
             else
             {
                 SetHitData(hit.point,_eyeData,1,false);
+                _explorationManager.IsNotFocusingObj();
             }
         }
         else
         {
             SetInvalidData(_eyeData);
+            _explorationManager.IsNotFocusingObj();
         }
     }
     

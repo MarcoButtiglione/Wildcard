@@ -9,11 +9,14 @@ public class ExplorationManager_1 : MonoBehaviour
     private GameObject _player;
     private GameObject _character;
     private bool _isHover=false;
+    private int _pointedObject;
+    private bool _isFocus=false;
+    private int _focusedObject;
     
 
     private int _currentCheckpoint;
     private bool _isMovingChar;
-    private int _pointedObject;
+    
     private Vector3[] _posPicture;
     private FocusController[] _focusControllers;
     
@@ -74,7 +77,7 @@ public class ExplorationManager_1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_isHover&&_focusControllers[_pointedObject].getFocused())
+        if (_isHover&&_isFocus&&_pointedObject==_focusedObject)
         {
             MoveTo(_player,_posPicture[_pointedObject],_playerSpeed);
         }
@@ -146,5 +149,15 @@ public class ExplorationManager_1 : MonoBehaviour
     {
         setNotPointing.Invoke();
         _isHover = false;
+    }
+
+    public void IsFocusingObj(int id)
+    {
+        _isFocus = true;
+        _focusedObject = id;
+    }
+    public void IsNotFocusingObj()
+    {
+        _isFocus = false;
     }
 }
