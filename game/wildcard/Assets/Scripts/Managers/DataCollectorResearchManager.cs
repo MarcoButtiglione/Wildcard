@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class DataCollectorResearchManager : MonoBehaviour
 {
@@ -11,11 +12,14 @@ public class DataCollectorResearchManager : MonoBehaviour
     private GameObject _researchObj;
     private ResearchManager_1 _researchManager1;
     private int _currentState;
+
+    private XRController _xrController;
     
     private List<EyeTrackingSampleResearch> _eyeTrackingSamples;
     private string filePath;
     public string sceneName;
     private int _isClicking = 0;
+    private int _isClickingRight = 0;
     private int _isFocusing = 0;
     private bool levelFinished = false;
     private float initTime;
@@ -61,7 +65,8 @@ public class DataCollectorResearchManager : MonoBehaviour
             isLeftEyeBlinking = isLeftEyeBlinking,
             isRightEyeBlinking = isRightEyeBlinking,
             isFocusing = _isFocusing,
-            isClicking = _isClicking
+            isClicking = _isClicking,
+            isClickingRight = _isClickingRight
         };
         _eyeTrackingSamples.Add(eyeData);
     }
@@ -105,7 +110,8 @@ public class DataCollectorResearchManager : MonoBehaviour
             isLeftEyeBlinking = isLeftEyeBlinking,
             isRightEyeBlinking = isRightEyeBlinking,
             isFocusing = _isFocusing,
-            isClicking = _isClicking
+            isClicking = _isClicking,
+            isClickingRight = _isClickingRight
         };
         _eyeTrackingSamples.Add(eyeData);
         
@@ -137,7 +143,7 @@ public class DataCollectorResearchManager : MonoBehaviour
         if (_eyeTrackingSamples.Count > 0)
         {
             TextWriter tw = new StreamWriter(filePath, false);
-            tw.WriteLine("TimeStamp,IsGazeRayValid,HitPointX,HitPointY,IsLeftEyeBlinking,IsRightEyeBlinking,IsFocusing,IsClicking");
+            tw.WriteLine("TimeStamp,IsGazeRayValid,HitPointX,HitPointY,IsLeftEyeBlinking,IsRightEyeBlinking,IsFocusing,IsClicking,IsClickingRight");
             tw.Close();
 
             tw = new StreamWriter(filePath, true);
@@ -151,7 +157,8 @@ public class DataCollectorResearchManager : MonoBehaviour
                              "," + _eyeTrackingSamples[i].isLeftEyeBlinking +
                              "," + _eyeTrackingSamples[i].isRightEyeBlinking +
                              "," + _eyeTrackingSamples[i].isFocusing +
-                             "," + _eyeTrackingSamples[i].isClicking
+                             "," + _eyeTrackingSamples[i].isClicking +
+                             "," + _eyeTrackingSamples[i].isClickingRight
                 );
             }
             tw.Close();
@@ -173,6 +180,10 @@ public class DataCollectorResearchManager : MonoBehaviour
     public void isClicking()
     {
         _isClicking = 1;
+    }
+    public void isClickingRight()
+    {
+        _isClickingRight = 1;
     }
 
     public void FinishLevel()
@@ -234,6 +245,7 @@ public class DataCollectorResearchManager : MonoBehaviour
 
         _isFocusing = 1;
         _isClicking = 1;
+        _isClickingRight = 1;
         var eyeData = new EyeTrackingSampleResearch()
         {
             timestamp = _eyeData.timestamp-initTime,
@@ -243,7 +255,8 @@ public class DataCollectorResearchManager : MonoBehaviour
             isLeftEyeBlinking = isLeftEyeBlinking,
             isRightEyeBlinking = isRightEyeBlinking,
             isFocusing = _isFocusing,
-            isClicking = _isClicking
+            isClicking = _isClicking,
+            isClickingRight = _isClickingRight
         };
         _eyeTrackingSamples.Add(eyeData);
         WriteCSV();
@@ -255,8 +268,24 @@ public class DataCollectorResearchManager : MonoBehaviour
         if (!levelFinished)
         {
             _currentState = _researchManager1.GetCurrentState();
+            
+            
+            var inputDevices = new List<UnityEngine.XR.InputDevice>();
+            UnityEngine.XR.InputDevices.GetDevices(inputDevices);
+
+            foreach (var device in inputDevices)
+            {
+                bool triggerValue;
+                if (device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && triggerValue)
+                {
+                    Debug.Log("Trigger button is pressed.");
+                }
+            }
+            
+            
             GetEyeDataRaycast();
             _isClicking = 0;
+            _isClickingRight = 0;
         }
 
     }
@@ -272,4 +301,5 @@ public struct EyeTrackingSampleResearch
     public int isRightEyeBlinking;
     public int isFocusing;
     public int isClicking;
+    public int isClickingRight;
 }

@@ -25,6 +25,7 @@ public class ResearchManager_1 : MonoBehaviour
 
     [SerializeField] private UnityEvent setFinishedDataCollector;
     [SerializeField] private UnityEvent setClicking;
+    [SerializeField] private UnityEvent setClickingRight;
 
     private static Random rng = new Random();
 
@@ -142,11 +143,10 @@ public class ResearchManager_1 : MonoBehaviour
 
     public void OnSelectGameObj(int id)
     {
-       
-
+        setClicking.Invoke();
         if (id == _orderOfTheState[_state])
         {
-            setClicking.Invoke();
+            setClickingRight.Invoke();
             GameObject researchObj = GameObject.Find("ResearchObj");
             FocusController focusControl = researchObj.transform.GetChild(_orderOfTheState[id]).gameObject.GetComponent<FocusController>();
             if (focusControl.getFocused())
