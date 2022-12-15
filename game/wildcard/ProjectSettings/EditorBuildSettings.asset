@@ -4,8 +4,96 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 0dfef1971e513454887b582f2349fbcd
+  - enabled: 1
+    path: Assets/Scenes/Research/SuzyR.unity
+    guid: 2f3e084746039934a911afbb41e678de
+  - enabled: 1
+    path: Assets/Scenes/Research/TobiaR.unity
+    guid: 5a2fad5cbdfcd7147a633c30d03df556
+  - enabled: 1
+    path: Assets/Scenes/Research/BendyR.unity
+    guid: 21e89a5b14f94a143b3142269977378b
+  - enabled: 1
+    path: Assets/Scenes/Research/LauraR.unity
+    guid: 62542c7d921f0dd43a17228c1786cd84
+  - enabled: 1
+    path: Assets/Scenes/Research/TullioR.unity
+    guid: 7e3bc7cce8a032543bbff7443c0e139c
+  - enabled: 1
+    path: Assets/Scenes/Story/SuzyS.unity
+    guid: f538eeb762ba391449f4b2eca7f8e585
+  - enabled: 1
+    path: Assets/Scenes/Story/TullioS.unity
+    guid: 9b763ad1a0bd68340b8b0178b1db712e
+  - enabled: 1
+    path: Assets/Scenes/Story/TobiaS.unity
+    guid: 5ac24a4fddd03454bbd7e07e35b02cf3
+  - enabled: 1
+    path: Assets/Scenes/Story/BendyS.unity
+    guid: fe3e452d2e5b97b4cb2e597917094481
+  - enabled: 1
+    path: Assets/Scenes/Exploration/BendyE.unity
+    guid: f5352f3f5eaf6f54fa006bdf863cb39c
+  - enabled: 1
+    path: Assets/Scenes/Exploration/LauraE.unity
+    guid: fae4266efb554114394ff52c9e33f6e1
+  - enabled: 1
+    path: Assets/Scenes/Exploration/SuzyE.unity
+    guid: ff0c093324fe48740abc5dee889a97f9
+  - enabled: 1
+    path: Assets/Scenes/Exploration/TobiaE.unity
+    guid: 860124b52afc36347befcbc289d52aa4
+  - enabled: 1
+    path: Assets/Scenes/Exploration/TullioE.unity
+    guid: 1240047da7780d841871bad71d00fc80
+  - enabled: 1
+    path: Assets/Scenes/Exploration1.0/GiulioE1.0.unity
+    guid: f29565f0442f5584192145fe0aaba8b9
+  - enabled: 1
+    path: Assets/Scenes/Exploration1.0/PimpaE1.0.unity
+    guid: 3576f9262cdb8324591b9ef9c53f9734
+  - enabled: 1
+    path: Assets/Scenes/Exploration1.0/SuzyE1.0.unity
+    guid: e60527171b48c4a4989823ad2a000670
+  - enabled: 1
+    path: Assets/Scenes/Exploration1.0/TobiaE1.0.unity
+    guid: 02323b249480a824b8cd806053e1008c
+  - enabled: 1
+    path: Assets/Scenes/Research1.0/GiulioR1.0.unity
+    guid: 1c6c760cb18520548948f247f1fe7632
+  - enabled: 1
+    path: Assets/Scenes/Research1.0/PimpaR1.0.unity
+    guid: 245d10efd44386241a8a00c67ce793e4
+  - enabled: 1
+    path: Assets/Scenes/Research1.0/SuzyR1.0.unity
+    guid: 82b3cafb1baa12645b9894906e8ec57f
+  - enabled: 1
+    path: Assets/Scenes/Research1.0/TobiaR1.0.unity
+    guid: c869b92446391c049a40c880c80dd473
+  - enabled: 1
+    path: Assets/Scenes/Story1.0/GiulioS.1.unity
+    guid: e9c6d7567efc15f4fb315708494edf4d
+  - enabled: 1
+    path: Assets/Scenes/Story1.0/PimpaS.1.unity
+    guid: 5b052d1a314903f4ea1632fe2265a690
+  - enabled: 1
+    path: Assets/Scenes/Story1.0/SuzyS.1.unity
+    guid: 94d10370723d2ca418dc1c457790e97b
+  - enabled: 1
+    path: Assets/Scenes/Story1.0/TobiaS.1.unity
+    guid: 8f8d1925a4261344292f2c87932e2443
+  - enabled: 1
+    path: Assets/Scenes/Research1.0/PiggyR1.0.unity
+    guid: 14d2cdbd36ee5b04283588cfdf125392
+  - enabled: 1
+    path: Assets/Scenes/Story1.0/PiggyS.1.unity
+    guid: cb5baa529fb59264aafa1862831c3590
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 112665d6d3b1df9449c313e563bbcece, type: 2}
+    Unity.XR.PXR.Settings: {fileID: 11400000, guid: 25fc732a8498626418da0bcf4782efc4, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e1aba473c1f4c6b4da644926d2469198, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: f3e1fd5c53ecb3844bb3e7bf06cc62c1, type: 2}

@@ -1,0 +1,23 @@
+
+   texture pavimento:https://assetstore.unity.com/packages/2d/textures-materials/14-stylized-textures-pack-205772
+   texture pareti:https://assetstore.unity.com/?q=textures%20materials&orderBy=4&rows=96
+
+    texture pavimento:https://assetstore.unity.com/?q=textures&orderBy=4&rows=96
+                      https://assetstore.unity.com/packages/2d/textures-materials/lowpoly-textures-pack-140717
+   
+https://assetstore.unity.com/?free=true&q=animals%20low%20poly&orderBy=5&rows=96
+https://assetstore.unity.com/?category=3d%2Fcharacters&free=true&orderBy=5&rows=96
+https://assetstore.unity.com/?category=3d%2Fcharacters&free=true&orderBy=5&page=1&rows=96
+https://assetstore.unity.com/?category=3d%2Fcharacters&free=true&orderBy=5&page=2&rows=96
+
+https://poly.pizza/m/eEcIqgJzJ1   FORZIERE
+https://poly.pizza/m/0CiZ4f1cZaF  PAINTING
+https://poly.pizza/m/62zn39CRkbG
+https://poly.pizza/m/0CiZ4f1cZaF
+https://poly.pizza/m/rsZqX75a8x
+https://poly.pizza/m/bg6e1lfNsO   CHIAVE  
+https://poly.pizza/m/FsCIGEfTEs   LIBRO
+https://poly.pizza/m/e29LlIx3T2F  TRANCIO DI PIZZA
+https://poly.pizza/m/eke7qcu_FR2  HAMBURGER
+https://poly.pizza/m/oaDwxwtjij   GELATO
+https://poly.pizza/m/Ed5NPaeT2N   COSCIA DI 
